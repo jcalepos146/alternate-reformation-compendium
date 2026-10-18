@@ -14,13 +14,13 @@ RH = "Real person in a hypothetical role."
 
 
 def E(id, t, name, st, when, y, sum, body, facts=None, faith=None, office=None, rel=None,
-      y2=None, color=None, basis=None, open_q=None, branch_of=None, role=None, wiki=None):
+      y2=None, color=None, basis=None, open_q=None, branch_of=None, role=None, wiki=None, table=None):
     ENT.append(dict(
         id=id, t=t, name=name, st=st, when=when, y=y, y2=y2, sum=sum,
         body=body if isinstance(body, list) else [body],
         facts=facts or [], faith=faith or [], office=office, rel=rel or [],
         color=color, basis=basis, open_q=open_q or [], branch_of=branch_of,
-        role=role, wiki=wiki,
+        role=role, wiki=wiki, table=table,
         beliefs=[], structure=[], theologians=[],
     ))
 

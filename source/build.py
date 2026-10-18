@@ -3,7 +3,7 @@ BASE = os.path.dirname(os.path.abspath(__file__))
 sys.path.insert(0, BASE)
 from common import ENT
 
-for m in ("c_faiths", "c_people", "c_monarchs", "c_factions", "c_battles", "c_docs", "c_people_a", "c_people_b", "c_people_c", "c_monarchs_b", "c_battles_b", "c_docs_b", "c_people_d", "c_decisions"):
+for m in ("c_faiths", "c_people", "c_monarchs", "c_factions", "c_battles", "c_docs", "c_people_a", "c_people_b", "c_people_c", "c_monarchs_b", "c_battles_b", "c_docs_b", "c_people_d", "c_decisions", "c_library"):
     importlib.import_module(m)
 
 FAMILIES = [
@@ -29,7 +29,8 @@ for fid, d in c_faith_detail.DETAIL.items():
             e["beliefs"], e["structure"], e["theologians"] = d.get("beliefs", []), d.get("structure", []), d.get("theologians", [])
     else:
         pass
-RESERVED = {"faiths", "leaders", "factions", "battles", "monarchs", "documents", "timeline", "about"}
+importlib.import_module("c_handouts")
+RESERVED = {"library", "faiths", "leaders", "factions", "battles", "monarchs", "documents", "timeline", "about"}
 ids = [e["id"] for e in ENT]
 errors = []
 dupes = {i for i in ids if ids.count(i) > 1}
