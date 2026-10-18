@@ -1,0 +1,434 @@
+<title>Alternate Reformation Compendium</title>
+<meta name="claude:viewport-fit-sides" content="cover">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=IM+Fell+English+SC&family=IM+Fell+English:ital@0;1&family=Alegreya+Sans:wght@400;500;700&display=swap">
+<style>
+/* Layout: an atlas companion. A ledger rail on the left lists the six kinds of entry; the plate on the right is one article at a time, with a facts panel beside it. Colours match the map site. */
+:root {
+  --bg: #E7ECEA; --panel: #F5F7F6; --ink: #1D2A2D; --muted: #586A6D; --line: #C6D1CF; --chip: #E0E8E6;
+  --accent: #2E6C66; --accent-ink: #FFFFFF; --link: #1F5A8A;
+  --canon: #2E6C66; --canon-bg: #D5E6E3;
+  --hist: #4F5F72; --hist-bg: #DDE3EA;
+  --prop: #8A5516; --prop-bg: #F2E4CD;
+  --f-display: "IM Fell English SC", "IM Fell English", Georgia, "Times New Roman", serif;
+  --f-note: "IM Fell English", Georgia, "Times New Roman", serif;
+  --f-ui: "Alegreya Sans", "Gill Sans", "Segoe UI", system-ui, sans-serif;
+  --rail-w: 292px;
+}
+@media (prefers-color-scheme: dark) { :root:not([data-theme="light"]) {
+  --bg: #11191B; --panel: #172124; --ink: #E2E9E7; --muted: #94A5A7; --line: #2A393C; --chip: #203034;
+  --accent: #7DBDB4; --accent-ink: #0E1A19; --link: #8FBDE6;
+  --canon: #7DBDB4; --canon-bg: #1E3A38;
+  --hist: #A9B8C9; --hist-bg: #25303B;
+  --prop: #E3AC62; --prop-bg: #3A2D1A; color-scheme: dark } }
+:root[data-theme="dark"] {
+  --bg: #11191B; --panel: #172124; --ink: #E2E9E7; --muted: #94A5A7; --line: #2A393C; --chip: #203034;
+  --accent: #7DBDB4; --accent-ink: #0E1A19; --link: #8FBDE6;
+  --canon: #7DBDB4; --canon-bg: #1E3A38;
+  --hist: #A9B8C9; --hist-bg: #25303B;
+  --prop: #E3AC62; --prop-bg: #3A2D1A; color-scheme: dark }
+
+* { box-sizing: border-box; }
+html { scroll-padding-top: 12px; }
+body { margin: 0; background: var(--bg); color: var(--ink); font-family: var(--f-ui); font-size: 17px; line-height: 1.55;
+  padding-left: max(16px, env(safe-area-inset-left, 0px)); padding-right: max(16px, env(safe-area-inset-right, 0px)); }
+a { color: var(--link); text-decoration-thickness: 1px; text-underline-offset: 2px; }
+a:hover { text-decoration-thickness: 2px; }
+:focus-visible { outline: 2px solid var(--accent); outline-offset: 2px; border-radius: 3px; }
+button { font: inherit; color: inherit; }
+
+.app { display: grid; grid-template-columns: var(--rail-w) minmax(0, 1fr); gap: 0 40px; max-width: 1280px; margin: 0 auto; }
+.rail { position: sticky; top: env(safe-area-inset-top, 0px); align-self: start; max-height: 100vh; overflow-y: auto;
+  padding-block: 24px; display: flex; flex-direction: column; gap: 18px; min-width: 0; }
+.brand { display: block; text-decoration: none; color: var(--ink); }
+.brand small { display: block; font-size: 12px; letter-spacing: .09em; text-transform: uppercase; color: var(--muted); font-weight: 500; }
+.brand b { display: block; font-family: var(--f-display); font-weight: 400; font-size: 26px; line-height: 1.1; margin-top: 2px; text-wrap: balance; }
+.menu-btn { display: none; }
+.search { width: 100%; padding: 9px 12px; border: 1px solid var(--line); border-radius: 6px; background: var(--panel); color: var(--ink); font: inherit; font-size: 16px; }
+.nav { display: flex; flex-direction: column; gap: 2px; }
+.nav a { display: flex; justify-content: space-between; align-items: baseline; gap: 12px; padding: 7px 10px; border-radius: 6px; color: var(--ink); text-decoration: none; font-weight: 500; }
+.nav a:hover { background: var(--chip); }
+.nav a[aria-current="page"] { background: var(--accent); color: var(--accent-ink); }
+.nav .n { font-variant-numeric: tabular-nums; font-size: 14px; color: var(--muted); font-weight: 400; }
+.nav a[aria-current="page"] .n { color: var(--accent-ink); opacity: .85; }
+.nav hr { border: 0; border-top: 1px solid var(--line); margin: 8px 0; width: 100%; }
+.key { font-size: 14px; color: var(--muted); display: grid; gap: 6px; }
+.key div { display: flex; gap: 8px; align-items: baseline; }
+.tool { align-self: flex-start; background: none; border: 1px solid var(--line); border-radius: 6px; padding: 5px 10px; cursor: pointer; font-size: 14px; color: var(--muted); }
+.tool:hover { background: var(--chip); }
+
+main { min-width: 0; padding-block: 32px 72px; }
+.eyebrow { font-size: 12px; letter-spacing: .09em; text-transform: uppercase; color: var(--muted); font-weight: 500; display: flex; flex-wrap: wrap; gap: 6px 12px; align-items: center; }
+h1 { font-family: var(--f-display); font-weight: 400; font-size: clamp(30px, 5vw, 44px); line-height: 1.08; margin: 6px 0 4px; text-wrap: balance; }
+h2 { font-family: var(--f-display); font-weight: 400; font-size: 24px; line-height: 1.2; margin: 0 0 10px; text-wrap: balance; }
+h3 { font-size: 13px; letter-spacing: .09em; text-transform: uppercase; color: var(--muted); font-weight: 700; margin: 0 0 8px; }
+.when { font-family: var(--f-note); font-style: italic; color: var(--muted); font-size: 19px; }
+.lede { font-family: var(--f-note); font-size: 21px; line-height: 1.42; margin: 14px 0 22px; max-width: 62ch; text-wrap: pretty; }
+
+.badge { display: inline-block; font-size: 12px; letter-spacing: .06em; text-transform: uppercase; font-weight: 700; padding: 1px 8px; border-radius: 3px; line-height: 1.6; white-space: nowrap; }
+.badge.canon { background: var(--canon-bg); color: var(--canon); border: 1px solid var(--canon); }
+.badge.hist { background: var(--hist-bg); color: var(--hist); border: 1px solid var(--hist); }
+.badge.prop { background: var(--prop-bg); color: var(--prop); border: 1px dashed var(--prop); }
+
+.layout { display: block; }
+.facts { border: 1px solid var(--line); background: var(--panel); border-radius: 4px; padding: 14px 16px; margin: 0 0 24px; font-size: 15px; }
+.facts dl { margin: 0; display: grid; grid-template-columns: auto 1fr; gap: 6px 14px; }
+.facts dt { color: var(--muted); font-weight: 500; }
+.facts dd { margin: 0; min-width: 0; overflow-wrap: anywhere; }
+.facts .basis { margin: 10px 0 0; padding-top: 10px; border-top: 1px solid var(--line); color: var(--muted); font-size: 14px; }
+.swatch { display: inline-block; width: 14px; height: 14px; border-radius: 2px; border: 1px solid rgba(0,0,0,.25); vertical-align: -1px; flex: none; }
+.body p { margin: 0 0 14px; max-width: 66ch; text-wrap: pretty; }
+a.x { text-decoration-style: dotted; }
+.sec { margin-top: 34px; padding-top: 18px; border-top: 1px solid var(--line); }
+.openq { border: 1px dashed var(--prop); background: var(--prop-bg); border-radius: 4px; padding: 12px 16px; margin-top: 28px; max-width: 66ch; }
+.openq h3 { color: var(--prop); }
+.openq ul { margin: 0; padding-left: 20px; }
+
+.chips { display: flex; flex-wrap: wrap; gap: 8px; margin: 0 0 18px; }
+.chip { border: 1px solid var(--line); background: var(--panel); border-radius: 999px; padding: 4px 12px; font-size: 15px; cursor: pointer; display: inline-flex; gap: 6px; align-items: center; text-decoration: none; color: var(--ink); }
+.chip[aria-pressed="true"] { background: var(--accent); color: var(--accent-ink); border-color: var(--accent); }
+.chip .n { font-variant-numeric: tabular-nums; opacity: .7; font-size: 13px; }
+a.chip:hover { background: var(--chip); }
+
+.cards { display: grid; grid-template-columns: repeat(auto-fill, minmax(260px, 1fr)); gap: 12px; margin: 0 0 28px; }
+.card { display: flex; flex-direction: column; gap: 4px; padding: 12px 14px; background: var(--panel); border: 1px solid var(--line); border-radius: 4px; text-decoration: none; color: var(--ink); min-width: 0; }
+.card:hover { border-color: var(--accent); }
+.card .t { display: flex; gap: 8px; align-items: baseline; justify-content: space-between; }
+.card b { font-family: var(--f-display); font-weight: 400; font-size: 19px; line-height: 1.2; }
+.card .w { font-family: var(--f-note); font-style: italic; color: var(--muted); font-size: 15px; }
+.card p { margin: 2px 0 0; font-size: 15px; color: var(--muted); line-height: 1.4; }
+.card .sw { display: flex; gap: 8px; align-items: baseline; min-width: 0; }
+
+.group h2 { margin-top: 28px; }
+.table { width: 100%; border-collapse: collapse; font-size: 16px; }
+.table th { text-align: left; font-size: 13px; letter-spacing: .08em; text-transform: uppercase; color: var(--muted); font-weight: 700; padding: 4px 12px 6px 0; border-bottom: 1px solid var(--line); }
+.table td { padding: 7px 12px 7px 0; border-bottom: 1px solid var(--line); vertical-align: top; }
+.table td.y { font-family: var(--f-note); font-style: italic; color: var(--muted); white-space: nowrap; }
+.scroll { overflow-x: auto; }
+
+.band { margin-top: 30px; }
+.band h2 { display: flex; gap: 12px; align-items: baseline; flex-wrap: wrap; }
+.band h2 small { font-family: var(--f-note); font-style: italic; font-size: 17px; color: var(--muted); }
+.trow { display: grid; grid-template-columns: 88px minmax(0, 1fr); gap: 0 14px; padding: 8px 0; border-bottom: 1px solid var(--line); }
+.trow .y { font-family: var(--f-note); font-style: italic; color: var(--muted); }
+.trow .m { min-width: 0; }
+.trow .m a.nm { font-weight: 500; }
+.trow .m span.k { font-size: 12px; letter-spacing: .08em; text-transform: uppercase; color: var(--muted); margin-left: 8px; }
+.trow .m p { margin: 2px 0 0; font-size: 15px; color: var(--muted); }
+.empty { border: 1px dashed var(--line); padding: 14px 16px; border-radius: 4px; color: var(--muted); max-width: 66ch; }
+
+.pn { display: flex; justify-content: space-between; gap: 16px; margin-top: 40px; padding-top: 16px; border-top: 1px solid var(--line); font-size: 15px; flex-wrap: wrap; }
+.forks { counter-reset: none; list-style: none; padding: 0; margin: 0 0 8px; display: grid; gap: 0; }
+.forks li { display: grid; grid-template-columns: 70px minmax(0, 1fr); gap: 0 14px; padding: 9px 0; border-bottom: 1px solid var(--line); }
+.forks .y { font-family: var(--f-note); font-style: italic; color: var(--muted); }
+.stat { display: flex; flex-wrap: wrap; gap: 10px 26px; margin: 4px 0 22px; color: var(--muted); font-size: 15px; }
+.stat b { font-family: var(--f-display); font-weight: 400; font-size: 26px; color: var(--ink); margin-right: 4px; font-variant-numeric: tabular-nums; }
+
+.maplink { margin: 8px 0 16px; display: flex; flex-wrap: wrap; gap: 8px; align-items: center; }
+.note { color: var(--muted); font-size: 14px; }
+img.ph { width: 100%; aspect-ratio: 4 / 3; object-fit: cover; object-position: top; border-radius: 3px; background: var(--chip); margin-bottom: 4px; }
+img.portrait { display: block; width: 100%; max-height: 360px; object-fit: contain; border-radius: 3px; margin: 0 0 12px; background: var(--chip); }
+.beliefs { margin: 0; display: grid; gap: 4px 0; }
+.beliefs dt { font-family: var(--f-display); font-size: 19px; margin-top: 12px; }
+.beliefs dd { margin: 0; max-width: 68ch; }
+@media (min-width: 900px) {
+  .facts { float: right; width: 290px; margin: 4px 0 20px 28px; }
+}
+@media (max-width: 899px) {
+  body::before { content: ""; position: fixed; inset: 0 0 auto; height: env(safe-area-inset-top, 0px); z-index: 10; background: var(--bg); }
+  .app { display: block; }
+  .rail { position: sticky; top: env(safe-area-inset-top, 0px); z-index: 9; max-height: none; overflow: visible; background: var(--bg); padding-block: 10px; gap: 10px; border-bottom: 1px solid var(--line); }
+  .rail-head { display: flex; align-items: center; justify-content: space-between; gap: 12px; }
+  .brand b { font-size: 20px; }
+  .brand small { display: none; }
+  .menu-btn { display: inline-block; background: var(--panel); border: 1px solid var(--line); border-radius: 6px; padding: 6px 12px; cursor: pointer; }
+  .rail-body { display: none; max-height: 70vh; overflow-y: auto; }
+  .rail.open .rail-body { display: flex; flex-direction: column; gap: 18px; }
+  main { padding-top: 20px; }
+  .trow { grid-template-columns: 62px minmax(0, 1fr); }
+}
+@media (prefers-reduced-motion: no-preference) { html { scroll-behavior: smooth; } }
+</style>
+
+<div class="app">
+  <aside class="rail" id="rail">
+    <div class="rail-head">
+      <a class="brand" href="#"><small>Alternate Reformation Atlas</small><b>Alternate Reformation Compendium</b></a>
+      <button class="menu-btn" id="menuBtn" aria-expanded="false" aria-controls="railBody">Menu</button>
+    </div>
+    <div class="rail-body" id="railBody">
+      <input class="search" id="q" type="search" placeholder="Search every entry" aria-label="Search every entry" autocomplete="off">
+      <nav class="nav" id="nav" aria-label="Sections"></nav>
+      <div class="key" aria-label="Status key">
+        <div><span class="badge canon">Canon</span> settled in the map project</div>
+        <div><span class="badge hist">Historical</span> as in our history</div>
+        <div><span class="badge prop">Proposed</span> new here, for your approval</div>
+      </div>
+      <button class="tool" id="themeBtn" type="button">Switch light / dark</button>
+    </div>
+  </aside>
+  <main id="main" tabindex="-1"></main>
+</div>
+
+<script type="application/json" id="data">/*DATA*/</script>
+<script>
+(function () {
+  var ENT = JSON.parse(document.getElementById('data').textContent);
+  var META = ENT.meta; ENT = ENT.entities;
+  var ID = {}; ENT.forEach(function (e) { ID[e.id] = e; });
+  var TYPES = { faith: 'Faith', person: 'Person', monarch: 'Monarch', faction: 'Faction', battle: 'Battle or war', doc: 'Council or document' };
+  var SEC = [
+    ['faiths', 'Faiths', 'faith'], ['leaders', 'People', 'person'], ['factions', 'Political factions', 'faction'],
+    ['battles', 'Battles and wars', 'battle'], ['monarchs', 'Monarchs', 'monarch'], ['documents', 'Councils and documents', 'doc']
+  ];
+  var SNAP = [1500, 1525, 1550, 1575, 1600, 1618, 1635];
+  function snapFor(y) { var r = SNAP[0]; SNAP.forEach(function (s) { if (s <= y) r = s; }); return r; }
+  function mapHref(e) { return 'atlas.html#' + snapFor(e.y) + (e.t === 'faith' ? '-conf' : ''); }
+  function mapLink(e) {
+    var s = snapFor(e.y), late = e.y > 1635;
+    return '<p class="maplink"><a class="chip" href="' + mapHref(e) + '">View on the ' + s + ' map</a>' + (late ? ' <span class="note">The atlas ends at 1635; later snapshots are outlined.</span>' : '') + '</p>';
+  }
+  var STATUS = { canon: 'Canon', hist: 'Historical', prop: 'Proposed' };
+  var main = document.getElementById('main'), nav = document.getElementById('nav'), q = document.getElementById('q');
+  var filter = { status: 'all', role: 'all' };
+  var ROLES = { leader: 'Religious leaders', theologian: 'Theologians', general: 'Generals and admirals', statesman: 'Statesmen', scholar: 'Scholars and scientists', artist: 'Artists and composers' };
+
+  function esc(s) { return String(s == null ? '' : s).replace(/&/g, '&amp;').replace(/</g, '&lt;').replace(/>/g, '&gt;').replace(/"/g, '&quot;'); }
+  function rich(s) {
+    return esc(s).replace(/\[\[([a-z0-9-]+)(?:\|([^\]]+))?\]\]/g, function (m, id, label) {
+      var e = ID[id]; if (!e) return label || id;
+      return '<a class="x" href="#' + id + '">' + (label || esc(e.name)) + '</a>';
+    });
+  }
+  function byY(a, b) { return (a.y - b.y) || a.name.localeCompare(b.name); }
+  function badge(st) { return '<span class="badge ' + st + '">' + STATUS[st] + '</span>'; }
+  function sw(c) { return c ? '<span class="swatch" style="background:' + esc(c) + '" aria-hidden="true"></span>' : ''; }
+  function ofType(t) { return ENT.filter(function (e) { return e.t === t; }).sort(byY); }
+
+  /* backlinks */
+  var BACK = {};
+  ENT.forEach(function (e) {
+    var blob = e.sum + ' ' + e.body.join(' ') + ' ' + e.rel.map(function (r) { return r[1]; }).join(' ') + ' ' + e.open_q.join(' ');
+    var re = /\[\[([a-z0-9-]+)/g, m, seen = {};
+    while ((m = re.exec(blob))) { if (m[1] !== e.id && !seen[m[1]]) { seen[m[1]] = 1; (BACK[m[1]] = BACK[m[1]] || []).push(e); } }
+  });
+
+  function card(e) {
+    return '<a class="card" href="#' + e.id + '">' + (e.img ? '<img class="ph" src="' + esc(e.img) + '" alt="" loading="lazy">' : '') + '<div class="t"><span class="sw">' + sw(e.color) + '<b>' + esc(e.name) + '</b></span>' + badge(e.st) + '</div>' +
+      '<span class="w">' + esc(e.when) + (e.role && e.t === 'person' ? ' · ' + ROLES[e.role].toLowerCase() : '') + '</span><p>' + esc(e.sum) + '</p></a>';
+  }
+  function statusChips(list) {
+    var c = { all: list.length, canon: 0, hist: 0, prop: 0 };
+    list.forEach(function (e) { c[e.st]++; });
+    return '<div class="chips" role="group" aria-label="Filter by status">' + ['all', 'canon', 'hist', 'prop'].map(function (k) {
+      return '<button class="chip" type="button" data-st="' + k + '" aria-pressed="' + (filter.status === k) + '">' + (k === 'all' ? 'All' : STATUS[k]) + ' <span class="n">' + c[k] + '</span></button>';
+    }).join('') + '</div>';
+  }
+  function passes(e) { return filter.status === 'all' || e.st === filter.status; }
+
+  /* ------------------------------------------------------------ views */
+  function viewHome() {
+    var forks = ['marignano', 'council-of-trent', 'lambeth-council', 'bohemian-union-1575', 'poissy', 'brest', 'xanten', 'white-mountain', 'filaret-catechism', 'english-war', 'peace-1648', 'catechism-1685']
+      .map(function (id) { return ID[id]; }).filter(Boolean);
+    var counts = SEC.map(function (s) { return '<span><b>' + ofType(s[2]).length + '</b>' + s[1].toLowerCase() + '</span>'; }).join('');
+    var feat = ['roman-catholic', 'gallican-church', 'gnesio-catholic', 'cranmerian', 'hardline-reformed', 'western-rite-orthodox', 'russian-orthodox', 'byzantinists'].map(function (id) { return ID[id]; });
+    return '<div class="eyebrow">Companion to the map of 1500–1789</div><h1>Alternate Reformation Compendium</h1>' +
+      '<p class="lede">An encyclopedia of a world in which Zwingli dies at Marignano in 1515 and the Reformation reorders itself: a Gnesio-Catholic church that keeps seven sacraments, a Gallican France under the Primate of Lyon, a Russian church with a Lutheran-flavoured catechism, and an English king who leads the reformers.</p>' +
+      '<div class="stat">' + counts + '</div>' +
+      '<div class="body"><p>Each faith has a page, with its leaders, rulers, rivals and open questions. Leaders, monarchs, factions, battles and documents each have their own entries, all cross-linked. Every entry carries a status mark: <b>canon</b> if the map project settled it, <b>historical</b> if it is carried over from our history, and <b>proposed</b> if it is new here and waiting for your decision. The map itself is the <a href="https://claude.ai/code/artifact/71fe4da5-2d43-42d4-9ce3-f06505ce4cae">Alternate Reformation Atlas</a>.</p></div>' +
+      '<div class="sec"><h2>Start with a faith</h2><div class="cards">' + feat.map(card).join('') + '</div><p><a href="#faiths">All ' + ofType('faith').length + ' faiths</a></p></div>' +
+      '<div class="sec"><h2>The twelve forks</h2><p class="body" style="margin-bottom:6px">The points where this timeline leaves ours, in order.</p><ol class="forks">' +
+      forks.map(function (e) { return '<li><span class="y">' + e.y + '</span><span><a href="#' + e.id + '"><b>' + esc(e.name) + '</b></a> ' + badge(e.st) + '<br><span style="color:var(--muted);font-size:15px">' + esc(e.sum) + '</span></span></li>'; }).join('') +
+      '</ol></div>' +
+      '<div class="sec"><h2>What is still open</h2><p class="body">The ' + ENT.reduce(function (n, e) { return n + e.open_q.length; }, 0) + ' open threads are gathered on <a href="#about">one page</a>, along with the 1700–1789 stretch, which is not yet written.</p></div>';
+  }
+
+  var FAMILY = META.families;
+  function viewFaiths() {
+    var all = ofType('faith').filter(function (e) { return !e.branch_of; });
+    var html = '<div class="eyebrow">Faiths</div><h1>Faiths</h1><p class="lede">Every confession and jurisdiction on the map, with the Gnesio-Catholic branches shown under their parent.</p>' + statusChips(all);
+    FAMILY.forEach(function (fam) {
+      var items = fam[1].map(function (id) { return ID[id]; }).filter(function (e) { return e && passes(e); });
+      if (!items.length) return;
+      html += '<div class="group"><h2>' + esc(fam[0]) + '</h2><div class="cards">' + items.map(card).join('') + '</div></div>';
+    });
+    return html;
+  }
+  function viewLeaders() {
+    var all = ofType('person'), list = all.filter(function (p) { return filter.role === 'all' || p.role === filter.role; });
+    var rc = '<div class="chips" role="group" aria-label="Filter by role">' + ['all'].concat(Object.keys(ROLES)).map(function (k) {
+      var n = k === 'all' ? all.length : all.filter(function (p) { return p.role === k; }).length;
+      return n || k === 'all' ? '<button class="chip" type="button" data-role="' + k + '" aria-pressed="' + (filter.role === k) + '">' + (k === 'all' ? 'Everyone' : ROLES[k]) + ' <span class="n">' + n + '</span></button>' : '';
+    }).join('') + '</div>';
+    var html = '<div class="eyebrow">People</div><h1>People</h1><p class="lede">Religious leaders, theologians, generals, statesmen, scholars and artists, grouped by community. Everyone is a real person; some are placed in roles history did not give them, and those are marked as proposed. Heads of state have their own page under Monarchs.</p>' + rc + statusChips(list);
+    var seen = {};
+    META.leader_families.forEach(function (fam) {
+      fam[1].forEach(function (fid) {
+        var items = list.filter(function (p) { return p.faith[0] === fid && passes(p); });
+        items.forEach(function (p) { seen[p.id] = 1; });
+        if (!items.length) return;
+        html += '<div class="group"><h2>' + sw(ID[fid].color) + ' <a href="#' + fid + '" style="color:inherit;text-decoration:none">' + esc(ID[fid].name) + '</a></h2><div class="cards">' + items.map(card).join('') + '</div></div>';
+      });
+    });
+    var rest = list.filter(function (p) { return !seen[p.id] && passes(p); });
+    if (rest.length) html += '<div class="group"><h2>Other communities</h2><div class="cards">' + rest.map(card).join('') + '</div></div>';
+    return html;
+  }
+  function viewList(sec) {
+    var list = ofType(sec[2]);
+    var lede = { faction: 'Parties, blocs and schools, from the Philippists to the West Country.', battle: 'Battles, sieges and wars, with their effect on belief.', monarch: 'Rulers whose faith or policy shapes the map.', doc: 'Councils, treaties, confessions and edicts.' }[sec[2]];
+    return '<div class="eyebrow">' + esc(sec[1]) + '</div><h1>' + esc(sec[1]) + '</h1><p class="lede">' + esc(lede) + '</p>' + statusChips(list) +
+      '<div class="cards">' + list.filter(passes).map(card).join('') + '</div>';
+  }
+  var BANDS = [
+    [1500, 1549, 'Before and after the divergence', '1500–1549'], [1550, 1599, 'Interim, communion and settlement', '1550–1599'],
+    [1600, 1647, 'The great war', '1600–1647'], [1648, 1699, 'After the peace', '1648–1699'], [1700, 1789, 'The eighteenth century', '1700–1789']
+  ];
+  function viewTimeline() {
+    var types = filter.type || 'all';
+    var html = '<div class="eyebrow">Timeline</div><h1>Timeline</h1><p class="lede">Every dated entry in order. Use the filters to follow one kind of event.</p>';
+    html += '<div class="chips" role="group" aria-label="Filter by kind"><button class="chip" type="button" data-ty="all" aria-pressed="' + (types === 'all') + '">All</button>' +
+      Object.keys(TYPES).map(function (t) { return '<button class="chip" type="button" data-ty="' + t + '" aria-pressed="' + (types === t) + '">' + TYPES[t] + '</button>'; }).join('') + '</div>';
+    BANDS.forEach(function (b) {
+      var items = ENT.filter(function (e) { return e.y >= b[0] && e.y <= b[1] && (types === 'all' || e.t === types); }).sort(byY);
+      html += '<section class="band"><h2>' + esc(b[2]) + ' <small>' + b[3] + '</small></h2>';
+      if (!items.length) {
+        html += '<div class="empty">' + (b[0] >= 1700 ? 'Not yet written. The map has no snapshot after 1700 yet, and the eighteenth century is the next stretch to plan.' : 'Nothing in this filter.') + '</div>';
+      } else {
+        html += items.map(function (e) {
+          return '<div class="trow"><span class="y">' + esc(e.when.length > 14 ? e.y : e.when) + '</span><div class="m"><a class="nm" href="#' + e.id + '">' + esc(e.name) + '</a><span class="k">' + TYPES[e.t] + '</span> ' + badge(e.st) + '<p>' + esc(e.sum) + '</p></div></div>';
+        }).join('');
+      }
+      html += '</section>';
+    });
+    return html;
+  }
+  function viewAbout() {
+    var open = [];
+    ENT.forEach(function (e) { e.open_q.forEach(function (t) { open.push([e, t]); }); });
+    var c = { canon: 0, hist: 0, prop: 0 }; ENT.forEach(function (e) { c[e.st]++; });
+    return '<div class="eyebrow">About this compendium</div><h1>Open threads</h1>' +
+      '<p class="lede">What the compendium rests on, and what is still undecided.</p>' +
+      '<div class="body"><p>The entries draw on the decisions recorded in the map project through the 1635 snapshot, together with the notes for the 1648, 1660, 1685 and 1700 maps. <b>' + c.canon + '</b> entries are canon, <b>' + c.hist + '</b> follow our history, and <b>' + c.prop + '</b> are proposed here. Everyone in the compendium is a real person. Proposed entries put a real person in a role history did not give them, or add a battle or document the map project has not fixed, and say which.</p>' +
+      '<p>Nothing is written yet for the 1700–1789 stretch. The 1648–1700 snapshots are only outlined, so entries from those years are brief.</p></div>' +
+      (META.credits && META.credits.length ? '<div class="sec"><h2>Portrait credits</h2><div class="scroll"><table class="table"><thead><tr><th>Person</th><th>Artist</th><th>License</th><th>Source</th></tr></thead><tbody>' + META.credits.map(function (c) { return '<tr><td>' + esc(c.name) + '</td><td>' + esc(c.artist || 'Unknown') + '</td><td>' + esc(c.license || '') + '</td><td>' + (c.source_url ? '<a href="' + esc(c.source_url) + '" rel="noopener">Commons</a>' : '') + '</td></tr>'; }).join('') + '</tbody></table></div></div>' : '') +
+      '<div class="sec"><h2>' + open.length + ' open threads</h2><div class="scroll"><table class="table"><thead><tr><th>Entry</th><th>Question</th></tr></thead><tbody>' +
+      open.sort(function (a, b) { return byY(a[0], b[0]); }).map(function (r) { return '<tr><td><a href="#' + r[0].id + '">' + esc(r[0].name) + '</a></td><td>' + esc(r[1]) + '</td></tr>'; }).join('') +
+      '</tbody></table></div></div>';
+  }
+
+  function viewEntity(e) {
+    var h = '<div class="eyebrow"><span>' + TYPES[e.t] + '</span>' + badge(e.st) + '</div>';
+    h += '<h1>' + (e.t === 'faith' ? sw(e.color) + ' ' : '') + esc(e.name) + '</h1><div class="when">' + esc(e.when) + '</div>';
+    h += '<p class="lede">' + esc(e.sum) + '</p>';
+    if (e.t !== 'faction') h += mapLink(e);
+    var f = e.facts.slice();
+    if (e.office && e.t !== 'faith') f.unshift(['Office', e.office]);
+    if (e.t === 'person' && e.role) f.unshift(['Role', ROLES[e.role].replace(/s$/, '').replace('Religious leader', 'Religious leader')]);
+    var fh = '';
+    if (f.length || e.basis || e.img) {
+      fh = '<aside class="facts" aria-label="Facts">' + (e.img ? '<img class="portrait" src="' + esc(e.img) + '" alt="Portrait of ' + esc(e.name) + '">' : '') + (e.wiki ? '' : '') + '<dl>' + f.map(function (r) { return '<dt>' + esc(r[0]) + '</dt><dd>' + esc(r[1]) + '</dd>'; }).join('') + '</dl>';
+      if (e.faith.length && e.t !== 'faith') {
+        fh += '<p class="basis" style="margin-top:' + (f.length ? 10 : 0) + 'px"><b>Community:</b> ' + e.faith.map(function (id) { var x = ID[id]; return sw(x.color) + ' <a href="#' + id + '">' + esc(x.name) + '</a>'; }).join(', ') + '</p>';
+      }
+      if (e.basis) fh += '<p class="basis">' + esc(e.basis) + '</p>';
+      fh += '</aside>';
+    }
+    h += '<div class="layout">' + fh + '<div class="body">' + e.body.map(function (p) { return '<p>' + rich(p) + '</p>'; }).join('') + '</div></div>';
+    h += '<div style="clear:both"></div>';
+
+    if (e.t === 'faith') {
+      var ids = [e.id].concat(ENT.filter(function (x) { return x.branch_of === e.id; }).map(function (x) { return x.id; }));
+      var kids = ENT.filter(function (x) { return x.branch_of === e.id; }).sort(byY);
+      if (e.beliefs && e.beliefs.length) h += '<div class="sec"><h3>Beliefs</h3><dl class="beliefs">' + e.beliefs.map(function (r) { return '<dt>' + esc(r[0]) + '</dt><dd>' + rich(r[1]) + '</dd>'; }).join('') + '</dl></div>';
+      if (e.structure && e.structure.length) h += '<div class="sec"><h3>Structure and governance</h3><div class="body">' + e.structure.map(function (p) { return '<p>' + rich(p) + '</p>'; }).join('') + '</div></div>';
+      if (e.theologians && e.theologians.length) h += '<div class="sec"><h3>Principal theologians and figures</h3><div class="cards">' + e.theologians.map(function (id) { return ID[id]; }).filter(Boolean).map(card).join('') + '</div></div>';
+      if (kids.length) h += '<div class="sec"><h3>Branches</h3><div class="cards">' + kids.map(card).join('') + '</div></div>';
+      if (e.rel.length) h += '<div class="sec"><h3>Relations</h3><div class="scroll"><table class="table"><tbody>' + e.rel.map(function (r) { var x = ID[r[0]]; return '<tr><td>' + (x ? sw(x.color) + ' <a href="#' + x.id + '">' + esc(x.name) + '</a>' : esc(r[0])) + '</td><td>' + rich(r[1]) + '</td></tr>'; }).join('') + '</tbody></table></div></div>';
+      var people = ENT.filter(function (x) { return x.t === 'person' && x.faith.some(function (id) { return ids.indexOf(id) >= 0; }); }).sort(byY);
+      if (people.length) {
+        var groups = {}, order = [];
+        people.forEach(function (p) { var k = p.office || 'Other'; if (!groups[k]) { groups[k] = []; order.push(k); } groups[k].push(p); });
+        h += '<div class="sec"><h3>Leaders by office</h3><div class="scroll"><table class="table"><thead><tr><th>Office</th><th>Holder</th><th>Dates</th></tr></thead><tbody>' +
+          order.map(function (k) { return groups[k].map(function (p, i) { return '<tr><td>' + (i === 0 ? esc(k) : '') + '</td><td><a href="#' + p.id + '">' + esc(p.name) + '</a> ' + (p.st === 'prop' ? badge('prop') : '') + '</td><td class="y">' + esc(p.when) + '</td></tr>'; }).join(''); }).join('') + '</tbody></table></div></div>';
+      }
+      var rulers = ENT.filter(function (x) { return x.t === 'monarch' && x.faith.some(function (id) { return ids.indexOf(id) >= 0; }); }).sort(byY);
+      if (rulers.length) h += '<div class="sec"><h3>Rulers of this faith</h3><div class="scroll"><table class="table"><tbody>' + rulers.map(function (p) { return '<tr><td><a href="#' + p.id + '">' + esc(p.name) + '</a></td><td>' + esc(p.office || '') + '</td><td class="y">' + esc(p.when) + '</td></tr>'; }).join('') + '</tbody></table></div></div>';
+      var evs = ENT.filter(function (x) { return (x.t === 'battle' || x.t === 'doc' || x.t === 'faction') && x.faith.some(function (id) { return ids.indexOf(id) >= 0; }); }).sort(byY);
+      if (evs.length) h += '<div class="sec"><h3>Events, parties and documents</h3><div class="scroll"><table class="table"><tbody>' + evs.map(function (p) { return '<tr><td class="y">' + p.y + '</td><td><a href="#' + p.id + '">' + esc(p.name) + '</a></td><td>' + TYPES[p.t] + '</td></tr>'; }).join('') + '</tbody></table></div></div>';
+    } else if (e.rel.length) {
+      h += '<div class="sec"><h3>Relations</h3><div class="scroll"><table class="table"><tbody>' + e.rel.map(function (r) { var x = ID[r[0]]; return '<tr><td>' + (x ? '<a href="#' + x.id + '">' + esc(x.name) + '</a>' : esc(r[0])) + '</td><td>' + rich(r[1]) + '</td></tr>'; }).join('') + '</tbody></table></div></div>';
+    }
+    if (e.open_q.length) h += '<div class="openq"><h3>Open questions</h3><ul>' + e.open_q.map(function (t) { return '<li>' + esc(t) + '</li>'; }).join('') + '</ul></div>';
+    var back = (BACK[e.id] || []).slice().sort(byY);
+    if (back.length) {
+      h += '<div class="sec"><h3>Mentioned in</h3><div class="chips">' + back.map(function (b) { return '<a class="chip" href="#' + b.id + '">' + esc(b.name) + '</a>'; }).join('') + '</div></div>';
+    }
+    var sibs = ofType(e.t), i = sibs.indexOf(e), sec = SEC.filter(function (s) { return s[2] === e.t; })[0];
+    h += '<nav class="pn" aria-label="Neighbouring entries"><span>' + (i > 0 ? '← <a href="#' + sibs[i - 1].id + '">' + esc(sibs[i - 1].name) + '</a>' : '') + '</span><a href="#' + sec[0] + '">All ' + esc(sec[1].toLowerCase()) + '</a><span>' + (i < sibs.length - 1 ? '<a href="#' + sibs[i + 1].id + '">' + esc(sibs[i + 1].name) + '</a> →' : '') + '</span></nav>';
+    return h;
+  }
+
+  function viewSearch(term) {
+    var t = term.toLowerCase(), res = [];
+    ENT.forEach(function (e) {
+      var s = 0, n = e.name.toLowerCase();
+      if (n.indexOf(t) === 0) s += 6; else if (n.indexOf(t) >= 0) s += 4;
+      if (e.sum.toLowerCase().indexOf(t) >= 0) s += 2;
+      if (e.body.join(' ').toLowerCase().indexOf(t) >= 0) s += 1;
+      if (e.office && e.office.toLowerCase().indexOf(t) >= 0) s += 2;
+      if (s) res.push([s, e]);
+    });
+    res.sort(function (a, b) { return b[0] - a[0] || byY(a[1], b[1]); });
+    return '<div class="eyebrow">Search</div><h1>' + res.length + ' result' + (res.length === 1 ? '' : 's') + ' for “' + esc(term) + '”</h1>' +
+      (res.length ? '<div class="cards" style="margin-top:20px">' + res.slice(0, 60).map(function (r) { return card(r[1]); }).join('') + '</div>' : '<p class="empty">No entries match. Try a place, a person or a doctrine.</p>');
+  }
+
+  /* ------------------------------------------------------------ routing */
+  function current() { return decodeURIComponent((location.hash || '').replace(/^#/, '')); }
+  function render() {
+    var h = current(), html, active = '';
+    var term = q.value.trim();
+    if (term.length > 1) { html = viewSearch(term); }
+    else if (!h) { html = viewHome(); }
+    else if (h === 'timeline') { html = viewTimeline(); active = h; }
+    else if (h === 'about') { html = viewAbout(); active = h; }
+    else {
+      var sec = SEC.filter(function (s) { return s[0] === h; })[0];
+      if (sec) { active = h; html = h === 'faiths' ? viewFaiths() : h === 'leaders' ? viewLeaders() : viewList(sec); }
+      else if (ID[h]) { var e = ID[h]; active = SEC.filter(function (s) { return s[2] === e.t; })[0][0]; html = viewEntity(e); document.title = e.name + ' | Alternate Reformation Compendium'; }
+      else { html = '<h1>Entry not found</h1><p class="empty">There is no entry called “' + esc(h) + '”. <a href="#">Return to the start</a>.</p>'; }
+    }
+    if (!ID[h]) document.title = 'Alternate Reformation Compendium';
+    main.innerHTML = html;
+    drawNav(active);
+  }
+  function drawNav(active) {
+    nav.innerHTML = '<a href="#"' + (active === '' && !current() ? ' aria-current="page"' : '') + '>Overview</a><a href="#timeline"' + (active === 'timeline' ? ' aria-current="page"' : '') + '>Timeline</a><hr>' +
+      SEC.map(function (s) { return '<a href="#' + s[0] + '"' + (active === s[0] ? ' aria-current="page"' : '') + '>' + s[1] + '<span class="n">' + ofType(s[2]).length + '</span></a>'; }).join('') +
+      '<hr><a href="atlas.html#1550">Map (atlas)</a><a href="#about"' + (active === 'about' ? ' aria-current="page"' : '') + '>Open threads</a>';
+  }
+
+  window.addEventListener('hashchange', function () { q.value = ''; render(); window.scrollTo(0, 0); document.getElementById('rail').classList.remove('open'); document.getElementById('menuBtn').setAttribute('aria-expanded', 'false'); });
+  q.addEventListener('input', render);
+  main.addEventListener('click', function (ev) {
+    var b = ev.target.closest('button.chip'); if (!b) return;
+    if (b.dataset.st) filter.status = b.dataset.st;
+    if (b.dataset.role) filter.role = b.dataset.role;
+    if (b.dataset.ty) filter.type = b.dataset.ty;
+    render();
+  });
+  document.getElementById('menuBtn').addEventListener('click', function () {
+    var r = document.getElementById('rail'), o = r.classList.toggle('open'); this.setAttribute('aria-expanded', o ? 'true' : 'false');
+  });
+  document.getElementById('themeBtn').addEventListener('click', function () {
+    var root = document.documentElement, cur = root.getAttribute('data-theme');
+    var dark = cur ? cur === 'dark' : window.matchMedia('(prefers-color-scheme: dark)').matches;
+    var next = dark ? 'light' : 'dark'; root.setAttribute('data-theme', next);
+    try { localStorage.setItem('arc-theme', next); } catch (e) {}
+  });
+  try { var t = localStorage.getItem('arc-theme'); if (t === 'light' || t === 'dark') document.documentElement.setAttribute('data-theme', t); } catch (e) {}
+  render();
+})();
+</script>

@@ -1,0 +1,2266 @@
+[
+ {
+  "id": "julius-ii",
+  "name": "Julius II",
+  "wiki": "Pope Julius II",
+  "role": "leader",
+  "kind": "person",
+  "when": "pope 1503–13"
+ },
+ {
+  "id": "leo-x",
+  "name": "Leo X",
+  "wiki": "Pope Leo X",
+  "role": "leader",
+  "kind": "person",
+  "when": "pope 1513–21"
+ },
+ {
+  "id": "paul-iii",
+  "name": "Paul III",
+  "wiki": "Pope Paul III",
+  "role": "leader",
+  "kind": "person",
+  "when": "pope 1534–49"
+ },
+ {
+  "id": "urban-viii",
+  "name": "Urban VIII",
+  "wiki": "Pope Urban VIII",
+  "role": "leader",
+  "kind": "person",
+  "when": "pope 1623–44"
+ },
+ {
+  "id": "reginald-pole",
+  "name": "Reginald Pole",
+  "wiki": "Reginald Pole",
+  "role": "leader",
+  "kind": "person",
+  "when": "1500–58"
+ },
+ {
+  "id": "giovanni-morone",
+  "name": "Giovanni Morone",
+  "wiki": "Giovanni Morone",
+  "role": "leader",
+  "kind": "person",
+  "when": "1509–80"
+ },
+ {
+  "id": "gasparo-contarini",
+  "name": "Gasparo Contarini",
+  "wiki": "Gasparo Contarini",
+  "role": "theologian",
+  "kind": "person",
+  "when": "1483–1542"
+ },
+ {
+  "id": "cajetan",
+  "name": "Thomas de Vio, Cardinal Cajetan",
+  "wiki": "Thomas Cajetan",
+  "role": "theologian",
+  "kind": "person",
+  "when": "1469–1534"
+ },
+ {
+  "id": "pierre-d-epinac",
+  "name": "Pierre d’Épinac",
+  "wiki": "Pierre d'Épinac",
+  "role": "leader",
+  "kind": "person",
+  "when": "Archbishop of Lyon 1574–99"
+ },
+ {
+  "id": "alphonse-de-richelieu",
+  "name": "Alphonse de Richelieu",
+  "wiki": "Alphonse-Louis du Plessis de Richelieu",
+  "role": "leader",
+  "kind": "person",
+  "when": "Archbishop of Lyon 1628–53"
+ },
+ {
+  "id": "tournon",
+  "name": "Cardinal François de Tournon",
+  "wiki": "François de Tournon",
+  "role": "leader",
+  "kind": "person",
+  "when": "1489–1562"
+ },
+ {
+  "id": "cardinal-of-lorraine",
+  "name": "Charles, Cardinal of Lorraine",
+  "wiki": "Charles, Cardinal of Lorraine",
+  "role": "statesman",
+  "kind": "person",
+  "when": "1524–74"
+ },
+ {
+  "id": "baius",
+  "name": "Michael Baius",
+  "wiki": "Michael Baius",
+  "role": "theologian",
+  "kind": "person",
+  "when": "1513–89"
+ },
+ {
+  "id": "jansen",
+  "name": "Cornelius Jansen",
+  "wiki": "Cornelius Jansen",
+  "role": "theologian",
+  "kind": "person",
+  "when": "1585–1638"
+ },
+ {
+  "id": "flacius",
+  "name": "Matthias Flacius Illyricus",
+  "wiki": "Matthias Flacius",
+  "role": "theologian",
+  "kind": "person",
+  "when": "1520–75"
+ },
+ {
+  "id": "amsdorf",
+  "name": "Nikolaus von Amsdorf",
+  "wiki": "Nikolaus von Amsdorf",
+  "role": "theologian",
+  "kind": "person",
+  "when": "1483–1565"
+ },
+ {
+  "id": "john-frederick-i",
+  "name": "John Frederick I of Saxony",
+  "wiki": "John Frederick I, Elector of Saxony",
+  "role": "monarch",
+  "kind": "monarch",
+  "when": "1503–54"
+ },
+ {
+  "id": "john-william-saxe-weimar",
+  "name": "John William of Saxe-Weimar",
+  "wiki": "John William, Duke of Saxe-Weimar",
+  "role": "monarch",
+  "kind": "monarch",
+  "when": "1530–73"
+ },
+ {
+  "id": "john-iii-sweden",
+  "name": "John III of Sweden",
+  "wiki": "John III of Sweden",
+  "role": "monarch",
+  "kind": "monarch",
+  "when": "1537–92"
+ },
+ {
+  "id": "abraham-angermannus",
+  "name": "Abraham Angermannus",
+  "wiki": "Abraham Angermannus",
+  "role": "leader",
+  "kind": "person",
+  "when": "c.1540–99"
+ },
+ {
+  "id": "albert-of-prussia",
+  "name": "Albert of Prussia",
+  "wiki": "Albert, Duke of Prussia",
+  "role": "monarch",
+  "kind": "monarch",
+  "when": "1490–1568"
+ },
+ {
+  "id": "osiander",
+  "name": "Andreas Osiander",
+  "wiki": "Andreas Osiander",
+  "role": "theologian",
+  "kind": "person",
+  "when": "1498–1552"
+ },
+ {
+  "id": "wolfgang-wilhelm",
+  "name": "Wolfgang Wilhelm of Palatinate-Neuburg",
+  "wiki": "Wolfgang Wilhelm, Count Palatine of Neuburg",
+  "role": "monarch",
+  "kind": "monarch",
+  "when": "1578–1653"
+ },
+ {
+  "id": "cranmer",
+  "name": "Thomas Cranmer",
+  "wiki": "Thomas Cranmer",
+  "role": "leader",
+  "kind": "person",
+  "when": "1489–1556"
+ },
+ {
+  "id": "melanchthon",
+  "name": "Philip Melanchthon",
+  "wiki": "Philip Melanchthon",
+  "role": "theologian",
+  "kind": "person",
+  "when": "1497–1560"
+ },
+ {
+  "id": "bucer",
+  "name": "Martin Bucer",
+  "wiki": "Martin Bucer",
+  "role": "theologian",
+  "kind": "person",
+  "when": "1491–1551"
+ },
+ {
+  "id": "a-lasco",
+  "name": "Jan Łaski (John à Lasco)",
+  "wiki": "Jan Łaski",
+  "role": "theologian",
+  "kind": "person",
+  "when": "1499–1560"
+ },
+ {
+  "id": "vermigli",
+  "name": "Peter Martyr Vermigli",
+  "wiki": "Peter Martyr Vermigli",
+  "role": "theologian",
+  "kind": "person",
+  "when": "1499–1562"
+ },
+ {
+  "id": "hemmingsen",
+  "name": "Niels Hemmingsen",
+  "wiki": "Niels Hemmingsen",
+  "role": "theologian",
+  "kind": "person",
+  "when": "1513–1600"
+ },
+ {
+  "id": "bullinger",
+  "name": "Heinrich Bullinger",
+  "wiki": "Heinrich Bullinger",
+  "role": "theologian",
+  "kind": "person",
+  "when": "1504–75"
+ },
+ {
+  "id": "leo-jud",
+  "name": "Leo Jud",
+  "wiki": "Leo Jud",
+  "role": "leader",
+  "kind": "person",
+  "when": "1482–1542"
+ },
+ {
+  "id": "brenz",
+  "name": "Johannes Brenz",
+  "wiki": "Johannes Brenz",
+  "role": "theologian",
+  "kind": "person",
+  "when": "1499–1570"
+ },
+ {
+  "id": "frederick-v",
+  "name": "Frederick V, Elector Palatine",
+  "wiki": "Frederick V, Elector Palatine",
+  "role": "leader",
+  "kind": "person",
+  "when": "1596–1632"
+ },
+ {
+  "id": "laud",
+  "name": "William Laud",
+  "wiki": "William Laud",
+  "role": "leader",
+  "kind": "person",
+  "when": "1573–1645"
+ },
+ {
+  "id": "comenius",
+  "name": "Jan Amos Comenius",
+  "wiki": "Jan Amos Comenius",
+  "role": "theologian",
+  "kind": "person",
+  "when": "1592–1670"
+ },
+ {
+  "id": "calvin",
+  "name": "John Calvin",
+  "wiki": "John Calvin",
+  "role": "theologian",
+  "kind": "person",
+  "when": "1509–64"
+ },
+ {
+  "id": "beza",
+  "name": "Theodore Beza",
+  "wiki": "Theodore Beza",
+  "role": "theologian",
+  "kind": "person",
+  "when": "1519–1605"
+ },
+ {
+  "id": "knox",
+  "name": "John Knox",
+  "wiki": "John Knox",
+  "role": "leader",
+  "kind": "person",
+  "when": "1514–72"
+ },
+ {
+  "id": "andrew-melville",
+  "name": "Andrew Melville",
+  "wiki": "Andrew Melville",
+  "role": "theologian",
+  "kind": "person",
+  "when": "1545–1622"
+ },
+ {
+  "id": "jeanne-d-albret",
+  "name": "Jeanne d’Albret",
+  "wiki": "Jeanne d'Albret",
+  "role": "monarch",
+  "kind": "monarch",
+  "when": "1528–72"
+ },
+ {
+  "id": "harrach",
+  "name": "Ernst Adalbert von Harrach",
+  "wiki": "Ernst Adalbert von Harrach",
+  "role": "leader",
+  "kind": "person",
+  "when": "Archbishop of Prague 1623–67"
+ },
+ {
+  "id": "budovec",
+  "name": "Wenceslas Budovec",
+  "wiki": "Wenceslas Budovec",
+  "role": "statesman",
+  "kind": "person",
+  "when": "1547–1621"
+ },
+ {
+  "id": "thurn",
+  "name": "Matthias Thurn",
+  "wiki": "Heinrich Matthias von Thurn",
+  "role": "general",
+  "kind": "person",
+  "when": "1567–1640"
+ },
+ {
+  "id": "ivan-iv",
+  "name": "Ivan IV",
+  "wiki": "Ivan the Terrible",
+  "role": "monarch",
+  "kind": "monarch",
+  "when": "1530–84"
+ },
+ {
+  "id": "job",
+  "name": "Patriarch Job",
+  "wiki": "Patriarch Job of Moscow",
+  "role": "leader",
+  "kind": "person",
+  "when": "c.1525–1607"
+ },
+ {
+  "id": "godunov-boris",
+  "name": "Boris Godunov",
+  "wiki": "Boris Godunov",
+  "role": "monarch",
+  "kind": "monarch",
+  "when": "c.1551–1605"
+ },
+ {
+  "id": "filaret",
+  "name": "Patriarch Filaret",
+  "wiki": "Patriarch Filaret of Moscow",
+  "role": "leader",
+  "kind": "person",
+  "when": "c.1553–1633"
+ },
+ {
+  "id": "joasaph-i",
+  "name": "Patriarch Joasaph I",
+  "wiki": "Joasaph I of Moscow",
+  "role": "leader",
+  "kind": "person",
+  "when": "Patriarch of Moscow 1634–40"
+ },
+ {
+  "id": "jeremias-ii",
+  "name": "Jeremias II of Constantinople",
+  "wiki": "Jeremias II of Constantinople",
+  "role": "leader",
+  "kind": "person",
+  "when": "c.1536–95"
+ },
+ {
+  "id": "cyril-lucaris",
+  "name": "Cyril Lucaris",
+  "wiki": "Cyril Lucaris",
+  "role": "leader",
+  "kind": "person",
+  "when": "1572–1638"
+ },
+ {
+  "id": "peter-mohyla",
+  "name": "Peter Mohyla",
+  "wiki": "Peter Mogila",
+  "role": "leader",
+  "kind": "person",
+  "when": "1596–1647"
+ },
+ {
+  "id": "hypatius-pociej",
+  "name": "Hypatius Pociej",
+  "wiki": "Hypatius Pociej",
+  "role": "leader",
+  "kind": "person",
+  "when": "1541–1613"
+ },
+ {
+  "id": "josyf-rutsky",
+  "name": "Josyf Rutsky",
+  "wiki": "Josyf Rutsky",
+  "role": "leader",
+  "kind": "person",
+  "when": "Uniate Metropolitan of Kiev 1613–37"
+ },
+ {
+  "id": "gedeon-balaban",
+  "name": "Gedeon Balaban",
+  "wiki": "Gedeon Balaban",
+  "role": "leader",
+  "kind": "person",
+  "when": "Orthodox bishop of Lviv"
+ },
+ {
+  "id": "ostrozky",
+  "name": "Konstanty Ostrozky",
+  "wiki": "Konstanty Wasyl Ostrogski",
+  "role": "leader",
+  "kind": "person",
+  "when": "1526–1608"
+ },
+ {
+  "id": "menno-simons",
+  "name": "Menno Simons",
+  "wiki": "Menno Simons",
+  "role": "leader",
+  "kind": "person",
+  "when": "1496–1561"
+ },
+ {
+  "id": "ferenc-david",
+  "name": "Ferenc Dávid",
+  "wiki": "Ferenc Dávid",
+  "role": "leader",
+  "kind": "person",
+  "when": "1520–79"
+ },
+ {
+  "id": "faustus-socinus",
+  "name": "Faustus Socinus",
+  "wiki": "Faustus Socinus",
+  "role": "theologian",
+  "kind": "person",
+  "when": "1539–1604"
+ },
+ {
+  "id": "ebussuud",
+  "name": "Ebussuud Efendi",
+  "wiki": "Ebussuud Efendi",
+  "role": "leader",
+  "kind": "person",
+  "when": "1490–1574"
+ },
+ {
+  "id": "shaykh-bahai",
+  "name": "Shaykh Bahai",
+  "wiki": "Baha al-Din al-Amili",
+  "role": "theologian",
+  "kind": "person",
+  "when": "1547–1621"
+ },
+ {
+  "id": "joseph-karo",
+  "name": "Joseph Karo",
+  "wiki": "Joseph Karo",
+  "role": "theologian",
+  "kind": "person",
+  "when": "1488–1575"
+ },
+ {
+  "id": "maharal",
+  "name": "Judah Loew (the Maharal)",
+  "wiki": "Judah Loew ben Bezalel",
+  "role": "theologian",
+  "kind": "person",
+  "when": "c.1520–1609"
+ },
+ {
+  "id": "susenyos",
+  "name": "Susenyos of Ethiopia",
+  "wiki": "Susenyos I",
+  "role": "monarch",
+  "kind": "monarch",
+  "when": "1572–1632"
+ },
+ {
+  "id": "charles-v",
+  "name": "Charles V",
+  "wiki": "Charles V, Holy Roman Emperor",
+  "role": "monarch",
+  "kind": "monarch",
+  "when": "Emperor 1519–56"
+ },
+ {
+  "id": "ferdinand-i",
+  "name": "Ferdinand I",
+  "wiki": "Ferdinand I, Holy Roman Emperor",
+  "role": "monarch",
+  "kind": "monarch",
+  "when": "Emperor 1556–64"
+ },
+ {
+  "id": "maximilian-ii",
+  "name": "Maximilian II",
+  "wiki": "Maximilian II, Holy Roman Emperor",
+  "role": "monarch",
+  "kind": "monarch",
+  "when": "Emperor 1564–76"
+ },
+ {
+  "id": "rudolf-ii",
+  "name": "Rudolf II",
+  "wiki": "Rudolf II, Holy Roman Emperor",
+  "role": "monarch",
+  "kind": "monarch",
+  "when": "Emperor 1576–1612"
+ },
+ {
+  "id": "ferdinand-ii",
+  "name": "Ferdinand II",
+  "wiki": "Ferdinand II, Holy Roman Emperor",
+  "role": "monarch",
+  "kind": "monarch",
+  "when": "Emperor 1619–37"
+ },
+ {
+  "id": "philip-ii",
+  "name": "Philip II of Spain",
+  "wiki": "Philip II of Spain",
+  "role": "monarch",
+  "kind": "monarch",
+  "when": "1556–98"
+ },
+ {
+  "id": "philip-iv",
+  "name": "Philip IV of Spain",
+  "wiki": "Philip IV of Spain",
+  "role": "monarch",
+  "kind": "monarch",
+  "when": "1621–65"
+ },
+ {
+  "id": "francis-i",
+  "name": "Francis I of France",
+  "wiki": "Francis I of France",
+  "role": "monarch",
+  "kind": "monarch",
+  "when": "1515–47"
+ },
+ {
+  "id": "charles-ix",
+  "name": "Charles IX of France",
+  "wiki": "Charles IX of France",
+  "role": "monarch",
+  "kind": "monarch",
+  "when": "1560–74"
+ },
+ {
+  "id": "henry-iv",
+  "name": "Henry IV of France",
+  "wiki": "Henry IV of France",
+  "role": "monarch",
+  "kind": "monarch",
+  "when": "1589–1610"
+ },
+ {
+  "id": "louis-xiii",
+  "name": "Louis XIII of France",
+  "wiki": "Louis XIII",
+  "role": "monarch",
+  "kind": "monarch",
+  "when": "1610–43"
+ },
+ {
+  "id": "gustavus-adolphus",
+  "name": "Gustavus Adolphus",
+  "wiki": "Gustavus Adolphus",
+  "role": "monarch",
+  "kind": "monarch",
+  "when": "King of Sweden 1611–32"
+ },
+ {
+  "id": "charles-ix-sweden",
+  "name": "Charles IX of Sweden",
+  "wiki": "Charles IX of Sweden",
+  "role": "monarch",
+  "kind": "monarch",
+  "when": "regent from 1599, king 1604–11"
+ },
+ {
+  "id": "sigismund-iii",
+  "name": "Sigismund III",
+  "wiki": "Sigismund III Vasa",
+  "role": "monarch",
+  "kind": "monarch",
+  "when": "Poland 1587–1632; Sweden 1592–99"
+ },
+ {
+  "id": "wladyslaw-iv",
+  "name": "Władysław IV",
+  "wiki": "Władysław IV Vasa",
+  "role": "monarch",
+  "kind": "monarch",
+  "when": "King of Poland 1632–48"
+ },
+ {
+  "id": "christian-iv",
+  "name": "Christian IV of Denmark",
+  "wiki": "Christian IV of Denmark",
+  "role": "monarch",
+  "kind": "monarch",
+  "when": "1588–1648"
+ },
+ {
+  "id": "henry-viii",
+  "name": "Henry VIII",
+  "wiki": "Henry VIII",
+  "role": "monarch",
+  "kind": "monarch",
+  "when": "1509–47"
+ },
+ {
+  "id": "edward-vi",
+  "name": "Edward VI",
+  "wiki": "Edward VI",
+  "role": "monarch",
+  "kind": "monarch",
+  "when": "1547–53"
+ },
+ {
+  "id": "elizabeth-i",
+  "name": "Elizabeth I",
+  "wiki": "Elizabeth I",
+  "role": "monarch",
+  "kind": "monarch",
+  "when": "1558–1603"
+ },
+ {
+  "id": "james-vi-i",
+  "name": "James VI and I",
+  "wiki": "James VI and I",
+  "role": "monarch",
+  "kind": "monarch",
+  "when": "Scotland 1567; England 1603–25"
+ },
+ {
+  "id": "charles-i-england",
+  "name": "Charles I (the reforming king)",
+  "wiki": "Charles I of England",
+  "role": "monarch",
+  "kind": "monarch",
+  "when": "1625–"
+ },
+ {
+  "id": "william-iii",
+  "name": "William III of Orange",
+  "wiki": "William III of England",
+  "role": "monarch",
+  "kind": "monarch",
+  "when": "Stadholder 1672–; England c.1688–89"
+ },
+ {
+  "id": "maurice-of-saxony",
+  "name": "Maurice of Saxony",
+  "wiki": "Maurice, Elector of Saxony",
+  "role": "monarch",
+  "kind": "monarch",
+  "when": "Elector 1547–53"
+ },
+ {
+  "id": "john-george-i",
+  "name": "John George I of Saxony",
+  "wiki": "John George I, Elector of Saxony",
+  "role": "monarch",
+  "kind": "monarch",
+  "when": "Elector 1611–56"
+ },
+ {
+  "id": "george-william-brandenburg",
+  "name": "George William of Brandenburg",
+  "wiki": "George William, Elector of Brandenburg",
+  "role": "monarch",
+  "kind": "monarch",
+  "when": "Elector 1619–40"
+ },
+ {
+  "id": "maximilian-i-bavaria",
+  "name": "Maximilian I of Bavaria",
+  "wiki": "Maximilian I, Elector of Bavaria",
+  "role": "monarch",
+  "kind": "monarch",
+  "when": "1597–1651"
+ },
+ {
+  "id": "michael-romanov",
+  "name": "Michael Romanov",
+  "wiki": "Michael of Russia",
+  "role": "monarch",
+  "kind": "monarch",
+  "when": "Tsar 1613–45"
+ },
+ {
+  "id": "suleiman",
+  "name": "Suleiman I",
+  "wiki": "Suleiman the Magnificent",
+  "role": "monarch",
+  "kind": "monarch",
+  "when": "Sultan 1520–66"
+ },
+ {
+  "id": "murad-iv",
+  "name": "Murad IV",
+  "wiki": "Murad IV",
+  "role": "monarch",
+  "kind": "monarch",
+  "when": "Sultan 1623–40"
+ },
+ {
+  "id": "abbas-i",
+  "name": "Shah Abbas I",
+  "wiki": "Abbas I of Persia",
+  "role": "monarch",
+  "kind": "monarch",
+  "when": "Shah 1588–1629"
+ },
+ {
+  "id": "ahmad-al-mansur",
+  "name": "Ahmad al-Mansur",
+  "wiki": "Ahmad al-Mansur",
+  "role": "monarch",
+  "kind": "monarch",
+  "when": "Sultan of Morocco 1578–1603"
+ },
+ {
+  "id": "john-sigismund",
+  "name": "John Sigismund Zápolya",
+  "wiki": "John Sigismund Zápolya",
+  "role": "monarch",
+  "kind": "monarch",
+  "when": "1540–71"
+ },
+ {
+  "id": "gabriel-bethlen",
+  "name": "Gabriel Bethlen",
+  "wiki": "Gabriel Bethlen",
+  "role": "monarch",
+  "kind": "monarch",
+  "when": "Prince of Transylvania 1613–29"
+ },
+ {
+  "id": "george-rakoczi-i",
+  "name": "George I Rákóczi",
+  "wiki": "George I Rákóczi",
+  "role": "monarch",
+  "kind": "monarch",
+  "when": "Prince of Transylvania 1630–48"
+ },
+ {
+  "id": "martin-luther",
+  "name": "Martin Luther",
+  "wiki": "Martin Luther",
+  "role": "theologian",
+  "kind": "person",
+  "when": "1483–1546"
+ },
+ {
+  "id": "johannes-bugenhagen",
+  "name": "Johannes Bugenhagen",
+  "wiki": "Johannes Bugenhagen",
+  "role": "theologian",
+  "kind": "person",
+  "when": "1485–1558"
+ },
+ {
+  "id": "johann-eck",
+  "name": "Johann Eck",
+  "wiki": "Johann Eck",
+  "role": "theologian",
+  "kind": "person",
+  "when": "1486–1543"
+ },
+ {
+  "id": "johann-gerhard",
+  "name": "Johann Gerhard",
+  "wiki": "Johann Gerhard",
+  "role": "theologian",
+  "kind": "person",
+  "when": "1582–1637"
+ },
+ {
+  "id": "martin-chemnitz",
+  "name": "Martin Chemnitz",
+  "wiki": "Martin Chemnitz",
+  "role": "theologian",
+  "kind": "person",
+  "when": "1522–86"
+ },
+ {
+  "id": "johannes-wigand",
+  "name": "Johannes Wigand",
+  "wiki": "Johannes Wigand",
+  "role": "theologian",
+  "kind": "person",
+  "when": "1523–87"
+ },
+ {
+  "id": "laurentius-petri",
+  "name": "Laurentius Petri",
+  "wiki": "Laurentius Petri",
+  "role": "leader",
+  "kind": "person",
+  "when": "1499–1573"
+ },
+ {
+  "id": "petrus-magni",
+  "name": "Petrus Magni",
+  "wiki": "Petrus Magni",
+  "role": "leader",
+  "kind": "person",
+  "when": "c.1470–1534"
+ },
+ {
+  "id": "jonas-bretkunas",
+  "name": "Jonas Bretkūnas",
+  "wiki": "Jonas Bretkūnas",
+  "role": "leader",
+  "kind": "person",
+  "when": "1536–1602"
+ },
+ {
+  "id": "john-cosin",
+  "name": "John Cosin",
+  "wiki": "John Cosin",
+  "role": "theologian",
+  "kind": "person",
+  "when": "1595–1672"
+ },
+ {
+  "id": "richard-hooker",
+  "name": "Richard Hooker",
+  "wiki": "Richard Hooker",
+  "role": "theologian",
+  "kind": "person",
+  "when": "1554–1600"
+ },
+ {
+  "id": "lancelot-andrewes",
+  "name": "Lancelot Andrewes",
+  "wiki": "Lancelot Andrewes",
+  "role": "theologian",
+  "kind": "person",
+  "when": "1555–1626"
+ },
+ {
+  "id": "john-jewel",
+  "name": "John Jewel",
+  "wiki": "John Jewel",
+  "role": "theologian",
+  "kind": "person",
+  "when": "1522–71"
+ },
+ {
+  "id": "matthew-parker",
+  "name": "Matthew Parker",
+  "wiki": "Matthew Parker",
+  "role": "leader",
+  "kind": "person",
+  "when": "1504–75"
+ },
+ {
+  "id": "edmund-grindal",
+  "name": "Edmund Grindal",
+  "wiki": "Edmund Grindal",
+  "role": "leader",
+  "kind": "person",
+  "when": "1519–83"
+ },
+ {
+  "id": "john-whitgift",
+  "name": "John Whitgift",
+  "wiki": "John Whitgift",
+  "role": "leader",
+  "kind": "person",
+  "when": "1530–1604"
+ },
+ {
+  "id": "richard-bancroft",
+  "name": "Richard Bancroft",
+  "wiki": "Richard Bancroft",
+  "role": "leader",
+  "kind": "person",
+  "when": "1544–1610"
+ },
+ {
+  "id": "george-abbot",
+  "name": "George Abbot",
+  "wiki": "George Abbot (archbishop of Canterbury)",
+  "role": "leader",
+  "kind": "person",
+  "when": "1562–1633"
+ },
+ {
+  "id": "edward-pococke",
+  "name": "Edward Pococke",
+  "wiki": "Edward Pococke",
+  "role": "scholar",
+  "kind": "person",
+  "when": "1604–91"
+ },
+ {
+  "id": "patrick-young",
+  "name": "Patrick Young",
+  "wiki": "Patrick Young",
+  "role": "scholar",
+  "kind": "person",
+  "when": "1584–1652"
+ },
+ {
+  "id": "thomas-roe",
+  "name": "Thomas Roe",
+  "wiki": "Thomas Roe (diplomat)",
+  "role": "statesman",
+  "kind": "person",
+  "when": "c.1581–1644"
+ },
+ {
+  "id": "erasmus",
+  "name": "Desiderius Erasmus",
+  "wiki": "Desiderius Erasmus",
+  "role": "scholar",
+  "kind": "person",
+  "when": "1466–1536"
+ },
+ {
+  "id": "thomas-more",
+  "name": "Thomas More",
+  "wiki": "Thomas More",
+  "role": "statesman",
+  "kind": "person",
+  "when": "1478–1535"
+ },
+ {
+  "id": "ignatius-loyola",
+  "name": "Ignatius of Loyola",
+  "wiki": "Ignatius of Loyola",
+  "role": "leader",
+  "kind": "person",
+  "when": "1491–1556"
+ },
+ {
+  "id": "peter-canisius",
+  "name": "Peter Canisius",
+  "wiki": "Peter Canisius",
+  "role": "theologian",
+  "kind": "person",
+  "when": "1521–97"
+ },
+ {
+  "id": "robert-bellarmine",
+  "name": "Robert Bellarmine",
+  "wiki": "Robert Bellarmine",
+  "role": "theologian",
+  "kind": "person",
+  "when": "1542–1621"
+ },
+ {
+  "id": "francisco-suarez",
+  "name": "Francisco Suárez",
+  "wiki": "Francisco Suárez",
+  "role": "theologian",
+  "kind": "person",
+  "when": "1548–1617"
+ },
+ {
+  "id": "luis-de-molina",
+  "name": "Luis de Molina",
+  "wiki": "Luis de Molina",
+  "role": "theologian",
+  "kind": "person",
+  "when": "1535–1600"
+ },
+ {
+  "id": "charles-borromeo",
+  "name": "Charles Borromeo",
+  "wiki": "Charles Borromeo",
+  "role": "leader",
+  "kind": "person",
+  "when": "1538–84"
+ },
+ {
+  "id": "teresa-of-avila",
+  "name": "Teresa of Ávila",
+  "wiki": "Teresa of Ávila",
+  "role": "leader",
+  "kind": "person",
+  "when": "1515–82"
+ },
+ {
+  "id": "gian-pietro-carafa",
+  "name": "Gian Pietro Carafa",
+  "wiki": "Pope Paul IV",
+  "role": "leader",
+  "kind": "person",
+  "when": "1476–1559"
+ },
+ {
+  "id": "paolo-sarpi",
+  "name": "Paolo Sarpi",
+  "wiki": "Paolo Sarpi",
+  "role": "scholar",
+  "kind": "person",
+  "when": "1552–1623"
+ },
+ {
+  "id": "francis-de-sales",
+  "name": "Francis de Sales",
+  "wiki": "Francis de Sales",
+  "role": "leader",
+  "kind": "person",
+  "when": "1567–1622"
+ },
+ {
+  "id": "pierre-de-berulle",
+  "name": "Pierre de Bérulle",
+  "wiki": "Pierre de Bérulle",
+  "role": "leader",
+  "kind": "person",
+  "when": "1575–1629"
+ },
+ {
+  "id": "du-perron",
+  "name": "Jacques Davy Du Perron",
+  "wiki": "Jacques Davy Duperron",
+  "role": "leader",
+  "kind": "person",
+  "when": "1556–1618"
+ },
+ {
+  "id": "bossuet",
+  "name": "Jacques-Bénigne Bossuet",
+  "wiki": "Jacques-Bénigne Bossuet",
+  "role": "theologian",
+  "kind": "person",
+  "when": "1627–1704"
+ },
+ {
+  "id": "zacharias-ursinus",
+  "name": "Zacharias Ursinus",
+  "wiki": "Zacharias Ursinus",
+  "role": "theologian",
+  "kind": "person",
+  "when": "1534–83"
+ },
+ {
+  "id": "caspar-olevian",
+  "name": "Caspar Olevian",
+  "wiki": "Caspar Olevian",
+  "role": "theologian",
+  "kind": "person",
+  "when": "1536–87"
+ },
+ {
+  "id": "arminius",
+  "name": "Jacobus Arminius",
+  "wiki": "Jacobus Arminius",
+  "role": "theologian",
+  "kind": "person",
+  "when": "1560–1609"
+ },
+ {
+  "id": "gomarus",
+  "name": "Franciscus Gomarus",
+  "wiki": "Franciscus Gomarus",
+  "role": "theologian",
+  "kind": "person",
+  "when": "1563–1641"
+ },
+ {
+  "id": "jan-blahoslav",
+  "name": "Jan Blahoslav",
+  "wiki": "Jan Blahoslav",
+  "role": "theologian",
+  "kind": "person",
+  "when": "1523–71"
+ },
+ {
+  "id": "jan-rokyta",
+  "name": "Jan Rokyta",
+  "wiki": "Jan Rokyta",
+  "role": "theologian",
+  "kind": "person",
+  "when": "active 1570"
+ },
+ {
+  "id": "balthasar-hubmaier",
+  "name": "Balthasar Hubmaier",
+  "wiki": "Balthasar Hubmaier",
+  "role": "theologian",
+  "kind": "person",
+  "when": "1480–1528"
+ },
+ {
+  "id": "thomas-muntzer",
+  "name": "Thomas Müntzer",
+  "wiki": "Thomas Müntzer",
+  "role": "leader",
+  "kind": "person",
+  "when": "1489–1525"
+ },
+ {
+  "id": "jakob-hutter",
+  "name": "Jakob Hutter",
+  "wiki": "Jacob Hutter",
+  "role": "leader",
+  "kind": "person",
+  "when": "c.1500–36"
+ },
+ {
+  "id": "giorgio-biandrata",
+  "name": "Giorgio Biandrata",
+  "wiki": "Giorgio Biandrata",
+  "role": "leader",
+  "kind": "person",
+  "when": "c.1515–88"
+ },
+ {
+  "id": "maximus-the-greek",
+  "name": "Maximus the Greek",
+  "wiki": "Maximus the Greek",
+  "role": "theologian",
+  "kind": "person",
+  "when": "c.1475–1556"
+ },
+ {
+  "id": "nil-sorsky",
+  "name": "Nil Sorsky",
+  "wiki": "Nil Sorsky",
+  "role": "theologian",
+  "kind": "person",
+  "when": "1433–1508"
+ },
+ {
+  "id": "joseph-volotsky",
+  "name": "Joseph of Volotsk",
+  "wiki": "Joseph of Volotsk",
+  "role": "theologian",
+  "kind": "person",
+  "when": "1439–1515"
+ },
+ {
+  "id": "hermogenes",
+  "name": "Patriarch Hermogenes",
+  "wiki": "Patriarch Hermogenes of Moscow",
+  "role": "leader",
+  "kind": "person",
+  "when": "c.1530–1612"
+ },
+ {
+  "id": "lavrentiy-zizanius",
+  "name": "Lavrentiy Zizanius",
+  "wiki": "Lavrentij Zizanij",
+  "role": "theologian",
+  "kind": "person",
+  "when": "active 1590s–1630s"
+ },
+ {
+  "id": "simeon-polotsky",
+  "name": "Simeon of Polotsk",
+  "wiki": "Simeon of Polotsk",
+  "role": "theologian",
+  "kind": "person",
+  "when": "1629–80"
+ },
+ {
+  "id": "feofan-prokopovich",
+  "name": "Feofan Prokopovich",
+  "wiki": "Feofan Prokopovich",
+  "role": "theologian",
+  "kind": "person",
+  "when": "1681–1736"
+ },
+ {
+  "id": "andrey-kurbsky",
+  "name": "Andrey Kurbsky",
+  "wiki": "Andrey Kurbsky",
+  "role": "general",
+  "kind": "person",
+  "when": "1528–83"
+ },
+ {
+  "id": "josaphat-kuntsevych",
+  "name": "Josaphat Kuntsevych",
+  "wiki": "Josaphat Kuntsevych",
+  "role": "leader",
+  "kind": "person",
+  "when": "c.1580–1623"
+ },
+ {
+  "id": "al-karaki",
+  "name": "Ali al-Karaki",
+  "wiki": "Ali ibn Hussain al-Karaki",
+  "role": "theologian",
+  "kind": "person",
+  "when": "c.1466–1534"
+ },
+ {
+  "id": "mulla-sadra",
+  "name": "Mulla Sadra",
+  "wiki": "Mulla Sadra",
+  "role": "theologian",
+  "kind": "person",
+  "when": "c.1571–1640"
+ },
+ {
+  "id": "birgivi",
+  "name": "Mehmed Birgivi",
+  "wiki": "Birgivi Mehmed Efendi",
+  "role": "theologian",
+  "kind": "person",
+  "when": "1522–73"
+ },
+ {
+  "id": "moses-isserles",
+  "name": "Moses Isserles",
+  "wiki": "Moses Isserles",
+  "role": "theologian",
+  "kind": "person",
+  "when": "c.1520–72"
+ },
+ {
+  "id": "isaac-luria",
+  "name": "Isaac Luria",
+  "wiki": "Isaac Luria",
+  "role": "theologian",
+  "kind": "person",
+  "when": "1534–72"
+ },
+ {
+  "id": "joseph-nasi",
+  "name": "Joseph Nasi",
+  "wiki": "Joseph Nasi",
+  "role": "statesman",
+  "kind": "person",
+  "when": "c.1510–79"
+ },
+ {
+  "id": "nasir-bin-murshid",
+  "name": "Nasir bin Murshid al-Ya'rubi",
+  "wiki": "Nasir bin Murshid",
+  "role": "leader",
+  "kind": "person",
+  "when": "Imam 1624–49"
+ },
+ {
+  "id": "al-mansur-al-qasim",
+  "name": "Al-Mansur al-Qasim",
+  "wiki": "Al-Mansur al-Qasim",
+  "role": "leader",
+  "kind": "person",
+  "when": "Imam 1597–1620"
+ },
+ {
+  "id": "frundsberg",
+  "name": "Georg von Frundsberg",
+  "wiki": "Georg von Frundsberg",
+  "role": "general",
+  "kind": "person",
+  "when": "1473–1528"
+ },
+ {
+  "id": "alba",
+  "name": "Fernando Álvarez de Toledo, Duke of Alba",
+  "wiki": "Fernando Álvarez de Toledo, 3rd Duke of Alba",
+  "role": "general",
+  "kind": "person",
+  "when": "1507–82"
+ },
+ {
+  "id": "alexander-farnese",
+  "name": "Alexander Farnese, Duke of Parma",
+  "wiki": "Alexander Farnese, Duke of Parma",
+  "role": "general",
+  "kind": "person",
+  "when": "1545–92"
+ },
+ {
+  "id": "don-john-of-austria",
+  "name": "John of Austria",
+  "wiki": "Don John of Austria",
+  "role": "general",
+  "kind": "person",
+  "when": "1547–78"
+ },
+ {
+  "id": "andrea-doria",
+  "name": "Andrea Doria",
+  "wiki": "Andrea Doria",
+  "role": "general",
+  "kind": "person",
+  "when": "1466–1560"
+ },
+ {
+  "id": "barbarossa",
+  "name": "Hayreddin Barbarossa",
+  "wiki": "Hayreddin Barbarossa",
+  "role": "general",
+  "kind": "person",
+  "when": "c.1478–1546"
+ },
+ {
+  "id": "sokollu-mehmed",
+  "name": "Sokollu Mehmed Pasha",
+  "wiki": "Sokollu Mehmed Pasha",
+  "role": "statesman",
+  "kind": "person",
+  "when": "1506–79"
+ },
+ {
+  "id": "kara-mustafa",
+  "name": "Kara Mustafa Pasha",
+  "wiki": "Kara Mustafa Pasha",
+  "role": "general",
+  "kind": "person",
+  "when": "1634–83"
+ },
+ {
+  "id": "zrinski",
+  "name": "Nikola Šubić Zrinski",
+  "wiki": "Nikola Šubić Zrinski",
+  "role": "general",
+  "kind": "person",
+  "when": "1508–66"
+ },
+ {
+  "id": "istvan-dobo",
+  "name": "István Dobó",
+  "wiki": "István Dobó",
+  "role": "general",
+  "kind": "person",
+  "when": "c.1502–72"
+ },
+ {
+  "id": "hernan-cortes",
+  "name": "Hernán Cortés",
+  "wiki": "Hernán Cortés",
+  "role": "general",
+  "kind": "person",
+  "when": "1485–1547"
+ },
+ {
+  "id": "william-the-silent",
+  "name": "William the Silent",
+  "wiki": "William the Silent",
+  "role": "statesman",
+  "kind": "person",
+  "when": "1533–84"
+ },
+ {
+  "id": "maurice-of-nassau",
+  "name": "Maurice of Nassau",
+  "wiki": "Maurice, Prince of Orange",
+  "role": "general",
+  "kind": "person",
+  "when": "1567–1625"
+ },
+ {
+  "id": "frederick-henry",
+  "name": "Frederick Henry of Orange",
+  "wiki": "Frederick Henry, Prince of Orange",
+  "role": "general",
+  "kind": "person",
+  "when": "1584–1647"
+ },
+ {
+  "id": "ambrogio-spinola",
+  "name": "Ambrogio Spinola",
+  "wiki": "Ambrogio Spinola, 1st Marquis of the Balbases",
+  "role": "general",
+  "kind": "person",
+  "when": "1569–1630"
+ },
+ {
+  "id": "tilly",
+  "name": "Count of Tilly",
+  "wiki": "Johann Tserclaes, Count of Tilly",
+  "role": "general",
+  "kind": "person",
+  "when": "1559–1632"
+ },
+ {
+  "id": "wallenstein",
+  "name": "Albrecht von Wallenstein",
+  "wiki": "Albrecht von Wallenstein",
+  "role": "general",
+  "kind": "person",
+  "when": "1583–1634"
+ },
+ {
+  "id": "pappenheim",
+  "name": "Gottfried Heinrich zu Pappenheim",
+  "wiki": "Gottfried Heinrich Graf zu Pappenheim",
+  "role": "general",
+  "kind": "person",
+  "when": "1594–1632"
+ },
+ {
+  "id": "bernhard-of-saxe-weimar",
+  "name": "Bernhard of Saxe-Weimar",
+  "wiki": "Bernhard of Saxe-Weimar",
+  "role": "general",
+  "kind": "person",
+  "when": "1604–39"
+ },
+ {
+  "id": "johan-baner",
+  "name": "Johan Banér",
+  "wiki": "Johan Banér",
+  "role": "general",
+  "kind": "person",
+  "when": "1596–1641"
+ },
+ {
+  "id": "lennart-torstensson",
+  "name": "Lennart Torstensson",
+  "wiki": "Lennart Torstenson",
+  "role": "general",
+  "kind": "person",
+  "when": "1603–51"
+ },
+ {
+  "id": "chodkiewicz",
+  "name": "Jan Karol Chodkiewicz",
+  "wiki": "Jan Karol Chodkiewicz",
+  "role": "general",
+  "kind": "person",
+  "when": "1560–1621"
+ },
+ {
+  "id": "zolkiewski",
+  "name": "Stanisław Żółkiewski",
+  "wiki": "Stanisław Żółkiewski",
+  "role": "general",
+  "kind": "person",
+  "when": "1547–1620"
+ },
+ {
+  "id": "zamoyski",
+  "name": "Jan Zamoyski",
+  "wiki": "Jan Zamoyski",
+  "role": "statesman",
+  "kind": "person",
+  "when": "1542–1605"
+ },
+ {
+  "id": "pozharsky",
+  "name": "Dmitry Pozharsky",
+  "wiki": "Dmitry Pozharsky",
+  "role": "general",
+  "kind": "person",
+  "when": "1578–1642"
+ },
+ {
+  "id": "minin",
+  "name": "Kuzma Minin",
+  "wiki": "Kuzma Minin",
+  "role": "leader",
+  "kind": "person",
+  "when": "d. 1616"
+ },
+ {
+  "id": "bohdan-khmelnytsky",
+  "name": "Bohdan Khmelnytsky",
+  "wiki": "Bohdan Khmelnytsky",
+  "role": "general",
+  "kind": "person",
+  "when": "c.1595–1657"
+ },
+ {
+  "id": "coligny",
+  "name": "Gaspard de Coligny",
+  "wiki": "Gaspard de Coligny",
+  "role": "general",
+  "kind": "person",
+  "when": "1519–72"
+ },
+ {
+  "id": "francis-duke-of-guise",
+  "name": "Francis, Duke of Guise",
+  "wiki": "Francis, Duke of Guise",
+  "role": "general",
+  "kind": "person",
+  "when": "1519–63"
+ },
+ {
+  "id": "henri-de-rohan",
+  "name": "Henri de Rohan",
+  "wiki": "Henri, Duke of Rohan",
+  "role": "general",
+  "kind": "person",
+  "when": "1579–1638"
+ },
+ {
+  "id": "turenne",
+  "name": "Henri de La Tour d’Auvergne, Vicomte de Turenne",
+  "wiki": "Henri de La Tour d'Auvergne, Vicomte de Turenne",
+  "role": "general",
+  "kind": "person",
+  "when": "1611–75"
+ },
+ {
+  "id": "conde",
+  "name": "Louis II, Prince of Condé",
+  "wiki": "Louis II, Prince of Condé",
+  "role": "general",
+  "kind": "person",
+  "when": "1621–86"
+ },
+ {
+  "id": "oliver-cromwell",
+  "name": "Oliver Cromwell",
+  "wiki": "Oliver Cromwell",
+  "role": "general",
+  "kind": "person",
+  "when": "1599–1658"
+ },
+ {
+  "id": "thomas-fairfax",
+  "name": "Thomas Fairfax",
+  "wiki": "Thomas Fairfax, 3rd Lord Fairfax of Cameron",
+  "role": "general",
+  "kind": "person",
+  "when": "1612–71"
+ },
+ {
+  "id": "prince-rupert",
+  "name": "Prince Rupert of the Rhine",
+  "wiki": "Prince Rupert of the Rhine",
+  "role": "general",
+  "kind": "person",
+  "when": "1619–82"
+ },
+ {
+  "id": "ralph-hopton",
+  "name": "Ralph Hopton",
+  "wiki": "Ralph Hopton, 1st Baron Hopton",
+  "role": "general",
+  "kind": "person",
+  "when": "1596–1652"
+ },
+ {
+  "id": "bevil-grenville",
+  "name": "Bevil Grenville",
+  "wiki": "Bevil Grenville",
+  "role": "general",
+  "kind": "person",
+  "when": "1596–1643"
+ },
+ {
+  "id": "montrose",
+  "name": "James Graham, Marquess of Montrose",
+  "wiki": "James Graham, 1st Marquess of Montrose",
+  "role": "general",
+  "kind": "person",
+  "when": "1612–50"
+ },
+ {
+  "id": "francis-drake",
+  "name": "Francis Drake",
+  "wiki": "Francis Drake",
+  "role": "general",
+  "kind": "person",
+  "when": "c.1540–96"
+ },
+ {
+  "id": "charles-howard",
+  "name": "Charles Howard, Earl of Nottingham",
+  "wiki": "Charles Howard, 1st Earl of Nottingham",
+  "role": "general",
+  "kind": "person",
+  "when": "1536–1624"
+ },
+ {
+  "id": "thomas-wolsey",
+  "name": "Thomas Wolsey",
+  "wiki": "Thomas Wolsey",
+  "role": "statesman",
+  "kind": "person",
+  "when": "c.1473–1530"
+ },
+ {
+  "id": "thomas-cromwell",
+  "name": "Thomas Cromwell",
+  "wiki": "Thomas Cromwell",
+  "role": "statesman",
+  "kind": "person",
+  "when": "c.1485–1540"
+ },
+ {
+  "id": "william-cecil",
+  "name": "William Cecil, Lord Burghley",
+  "wiki": "William Cecil, 1st Baron Burghley",
+  "role": "statesman",
+  "kind": "person",
+  "when": "1520–98"
+ },
+ {
+  "id": "francis-walsingham",
+  "name": "Francis Walsingham",
+  "wiki": "Francis Walsingham",
+  "role": "statesman",
+  "kind": "person",
+  "when": "c.1532–90"
+ },
+ {
+  "id": "granvelle",
+  "name": "Antoine Perrenot de Granvelle",
+  "wiki": "Antoine Perrenot de Granvelle",
+  "role": "statesman",
+  "kind": "person",
+  "when": "1517–86"
+ },
+ {
+  "id": "catherine-de-medici",
+  "name": "Catherine de’ Medici",
+  "wiki": "Catherine de' Medici",
+  "role": "statesman",
+  "kind": "person",
+  "when": "1519–89"
+ },
+ {
+  "id": "michel-de-l-hopital",
+  "name": "Michel de l’Hôpital",
+  "wiki": "Michel de l'Hôpital",
+  "role": "statesman",
+  "kind": "person",
+  "when": "c.1507–73"
+ },
+ {
+  "id": "richelieu",
+  "name": "Cardinal Richelieu",
+  "wiki": "Cardinal Richelieu",
+  "role": "statesman",
+  "kind": "person",
+  "when": "1585–1642"
+ },
+ {
+  "id": "sully",
+  "name": "Maximilien de Béthune, Duke of Sully",
+  "wiki": "Maximilien de Béthune, Duke of Sully",
+  "role": "statesman",
+  "kind": "person",
+  "when": "1559–1641"
+ },
+ {
+  "id": "olivares",
+  "name": "Gaspar de Guzmán, Count-Duke of Olivares",
+  "wiki": "Gaspar de Guzmán, Count-Duke of Olivares",
+  "role": "statesman",
+  "kind": "person",
+  "when": "1587–1645"
+ },
+ {
+  "id": "oxenstierna",
+  "name": "Axel Oxenstierna",
+  "wiki": "Axel Oxenstierna",
+  "role": "statesman",
+  "kind": "person",
+  "when": "1583–1654"
+ },
+ {
+  "id": "oldenbarnevelt",
+  "name": "Johan van Oldenbarnevelt",
+  "wiki": "Johan van Oldenbarnevelt",
+  "role": "statesman",
+  "kind": "person",
+  "when": "1547–1619"
+ },
+ {
+  "id": "edward-hyde",
+  "name": "Edward Hyde",
+  "wiki": "Edward Hyde, 1st Earl of Clarendon",
+  "role": "statesman",
+  "kind": "person",
+  "when": "1609–74"
+ },
+ {
+  "id": "john-pym",
+  "name": "John Pym",
+  "wiki": "John Pym",
+  "role": "statesman",
+  "kind": "person",
+  "when": "1584–1643"
+ },
+ {
+  "id": "strafford",
+  "name": "Thomas Wentworth, Earl of Strafford",
+  "wiki": "Thomas Wentworth, 1st Earl of Strafford",
+  "role": "statesman",
+  "kind": "person",
+  "when": "1593–1641"
+ },
+ {
+  "id": "frederick-the-wise",
+  "name": "Frederick the Wise",
+  "wiki": "Frederick III, Elector of Saxony",
+  "role": "monarch",
+  "kind": "monarch",
+  "when": "Elector of Saxony 1486–1525"
+ },
+ {
+  "id": "philip-of-hesse",
+  "name": "Philip of Hesse",
+  "wiki": "Philip I, Landgrave of Hesse",
+  "role": "monarch",
+  "kind": "monarch",
+  "when": "Landgrave 1509–67"
+ },
+ {
+  "id": "christian-iii",
+  "name": "Christian III of Denmark",
+  "wiki": "Christian III of Denmark",
+  "role": "monarch",
+  "kind": "monarch",
+  "when": "1534–59"
+ },
+ {
+  "id": "gustav-vasa",
+  "name": "Gustav I of Sweden",
+  "wiki": "Gustav I of Sweden",
+  "role": "monarch",
+  "kind": "monarch",
+  "when": "1523–60"
+ },
+ {
+  "id": "matthias",
+  "name": "Matthias",
+  "wiki": "Matthias, Holy Roman Emperor",
+  "role": "monarch",
+  "kind": "monarch",
+  "when": "Emperor 1612–19"
+ },
+ {
+  "id": "ferdinand-iii",
+  "name": "Ferdinand III",
+  "wiki": "Ferdinand III, Holy Roman Emperor",
+  "role": "monarch",
+  "kind": "monarch",
+  "when": "Emperor 1637–57"
+ },
+ {
+  "id": "leopold-i",
+  "name": "Leopold I",
+  "wiki": "Leopold I, Holy Roman Emperor",
+  "role": "monarch",
+  "kind": "monarch",
+  "when": "Emperor 1658–1705"
+ },
+ {
+  "id": "louis-ii-hungary",
+  "name": "Louis II of Hungary",
+  "wiki": "Louis II of Hungary",
+  "role": "monarch",
+  "kind": "monarch",
+  "when": "1516–26"
+ },
+ {
+  "id": "frederick-iii-palatine",
+  "name": "Frederick III, Elector Palatine",
+  "wiki": "Frederick III, Elector Palatine",
+  "role": "monarch",
+  "kind": "monarch",
+  "when": "1559–76"
+ },
+ {
+  "id": "henry-ii-france",
+  "name": "Henry II of France",
+  "wiki": "Henry II of France",
+  "role": "monarch",
+  "kind": "monarch",
+  "when": "1547–59"
+ },
+ {
+  "id": "henry-iii",
+  "name": "Henry III of France and Poland",
+  "wiki": "Henry III of France",
+  "role": "monarch",
+  "kind": "monarch",
+  "when": "Poland 1573–75; France 1574–89"
+ },
+ {
+  "id": "louis-xiv",
+  "name": "Louis XIV",
+  "wiki": "Louis XIV",
+  "role": "monarch",
+  "kind": "monarch",
+  "when": "1643–1715"
+ },
+ {
+  "id": "mary-queen-of-scots",
+  "name": "Mary, Queen of Scots",
+  "wiki": "Mary, Queen of Scots",
+  "role": "monarch",
+  "kind": "monarch",
+  "when": "1542–67"
+ },
+ {
+  "id": "mary-i-england",
+  "name": "Mary I of England",
+  "wiki": "Mary I of England",
+  "role": "monarch",
+  "kind": "monarch",
+  "when": "1553–58"
+ },
+ {
+  "id": "charles-ii",
+  "name": "Charles II of England",
+  "wiki": "Charles II of England",
+  "role": "monarch",
+  "kind": "monarch",
+  "when": "1660–85"
+ },
+ {
+  "id": "james-ii",
+  "name": "James II and VII",
+  "wiki": "James II of England",
+  "role": "monarch",
+  "kind": "monarch",
+  "when": "1685–88"
+ },
+ {
+  "id": "sigismund-i",
+  "name": "Sigismund I the Old",
+  "wiki": "Sigismund I the Old",
+  "role": "monarch",
+  "kind": "monarch",
+  "when": "Poland 1506–48"
+ },
+ {
+  "id": "sigismund-ii-augustus",
+  "name": "Sigismund II Augustus",
+  "wiki": "Sigismund II Augustus",
+  "role": "monarch",
+  "kind": "monarch",
+  "when": "Poland 1548–72"
+ },
+ {
+  "id": "stephen-bathory",
+  "name": "Stephen Báthory",
+  "wiki": "Stephen Báthory",
+  "role": "monarch",
+  "kind": "monarch",
+  "when": "Poland 1576–86"
+ },
+ {
+  "id": "john-ii-casimir",
+  "name": "John II Casimir",
+  "wiki": "John II Casimir Vasa",
+  "role": "monarch",
+  "kind": "monarch",
+  "when": "Poland 1648–68"
+ },
+ {
+  "id": "john-iii-sobieski",
+  "name": "John III Sobieski",
+  "wiki": "John III Sobieski",
+  "role": "monarch",
+  "kind": "monarch",
+  "when": "Poland 1674–96"
+ },
+ {
+  "id": "vasili-iii",
+  "name": "Vasili III",
+  "wiki": "Vasili III of Russia",
+  "role": "monarch",
+  "kind": "monarch",
+  "when": "Grand Prince 1505–33"
+ },
+ {
+  "id": "fyodor-i",
+  "name": "Fyodor I",
+  "wiki": "Feodor I of Russia",
+  "role": "monarch",
+  "kind": "monarch",
+  "when": "Tsar 1584–98"
+ },
+ {
+  "id": "vasily-shuisky",
+  "name": "Vasily IV Shuisky",
+  "wiki": "Vasili IV of Russia",
+  "role": "monarch",
+  "kind": "monarch",
+  "when": "Tsar 1606–10"
+ },
+ {
+  "id": "false-dmitry-i",
+  "name": "False Dmitry I",
+  "wiki": "False Dmitry I",
+  "role": "monarch",
+  "kind": "monarch",
+  "when": "Tsar 1605–06"
+ },
+ {
+  "id": "alexis-of-russia",
+  "name": "Alexis of Russia",
+  "wiki": "Alexis of Russia",
+  "role": "monarch",
+  "kind": "monarch",
+  "when": "Tsar 1645–76"
+ },
+ {
+  "id": "peter-i",
+  "name": "Peter I of Russia",
+  "wiki": "Peter the Great",
+  "role": "monarch",
+  "kind": "monarch",
+  "when": "1682–1725"
+ },
+ {
+  "id": "selim-i",
+  "name": "Selim I",
+  "wiki": "Selim I",
+  "role": "monarch",
+  "kind": "monarch",
+  "when": "Sultan 1512–20"
+ },
+ {
+  "id": "ismail-i",
+  "name": "Ismail I",
+  "wiki": "Ismail I",
+  "role": "monarch",
+  "kind": "monarch",
+  "when": "Shah 1501–24"
+ },
+ {
+  "id": "tahmasp-i",
+  "name": "Tahmasp I",
+  "wiki": "Tahmasp I",
+  "role": "monarch",
+  "kind": "monarch",
+  "when": "Shah 1524–76"
+ },
+ {
+  "id": "selim-ii",
+  "name": "Selim II",
+  "wiki": "Selim II",
+  "role": "monarch",
+  "kind": "monarch",
+  "when": "Sultan 1566–74"
+ },
+ {
+  "id": "mehmed-iv",
+  "name": "Mehmed IV",
+  "wiki": "Mehmed IV",
+  "role": "monarch",
+  "kind": "monarch",
+  "when": "Sultan 1648–87"
+ },
+ {
+  "id": "philip-iii",
+  "name": "Philip III of Spain",
+  "wiki": "Philip III of Spain",
+  "role": "monarch",
+  "kind": "monarch",
+  "when": "1598–1621"
+ },
+ {
+  "id": "sebastian-of-portugal",
+  "name": "Sebastian of Portugal",
+  "wiki": "Sebastian of Portugal",
+  "role": "monarch",
+  "kind": "monarch",
+  "when": "1557–78"
+ },
+ {
+  "id": "christina-of-sweden",
+  "name": "Christina of Sweden",
+  "wiki": "Christina, Queen of Sweden",
+  "role": "monarch",
+  "kind": "monarch",
+  "when": "1632–54"
+ },
+ {
+  "id": "leonardo",
+  "name": "Leonardo da Vinci",
+  "wiki": "Leonardo da Vinci",
+  "role": "artist",
+  "kind": "person",
+  "when": "1452–1519"
+ },
+ {
+  "id": "raphael",
+  "name": "Raphael",
+  "wiki": "Raphael",
+  "role": "artist",
+  "kind": "person",
+  "when": "1483–1520"
+ },
+ {
+  "id": "michelangelo",
+  "name": "Michelangelo",
+  "wiki": "Michelangelo",
+  "role": "artist",
+  "kind": "person",
+  "when": "1475–1564"
+ },
+ {
+  "id": "titian",
+  "name": "Titian",
+  "wiki": "Titian",
+  "role": "artist",
+  "kind": "person",
+  "when": "c.1488–1576"
+ },
+ {
+  "id": "tintoretto",
+  "name": "Tintoretto",
+  "wiki": "Tintoretto",
+  "role": "artist",
+  "kind": "person",
+  "when": "1518–94"
+ },
+ {
+  "id": "el-greco",
+  "name": "El Greco",
+  "wiki": "El Greco",
+  "role": "artist",
+  "kind": "person",
+  "when": "1541–1614"
+ },
+ {
+  "id": "caravaggio",
+  "name": "Caravaggio",
+  "wiki": "Caravaggio",
+  "role": "artist",
+  "kind": "person",
+  "when": "1571–1610"
+ },
+ {
+  "id": "durer",
+  "name": "Albrecht Dürer",
+  "wiki": "Albrecht Dürer",
+  "role": "artist",
+  "kind": "person",
+  "when": "1471–1528"
+ },
+ {
+  "id": "cranach",
+  "name": "Lucas Cranach the Elder",
+  "wiki": "Lucas Cranach the Elder",
+  "role": "artist",
+  "kind": "person",
+  "when": "1472–1553"
+ },
+ {
+  "id": "holbein",
+  "name": "Hans Holbein the Younger",
+  "wiki": "Hans Holbein the Younger",
+  "role": "artist",
+  "kind": "person",
+  "when": "c.1497–1543"
+ },
+ {
+  "id": "bruegel",
+  "name": "Pieter Bruegel the Elder",
+  "wiki": "Pieter Bruegel the Elder",
+  "role": "artist",
+  "kind": "person",
+  "when": "c.1525–69"
+ },
+ {
+  "id": "rubens",
+  "name": "Peter Paul Rubens",
+  "wiki": "Peter Paul Rubens",
+  "role": "artist",
+  "kind": "person",
+  "when": "1577–1640"
+ },
+ {
+  "id": "van-dyck",
+  "name": "Anthony van Dyck",
+  "wiki": "Anthony van Dyck",
+  "role": "artist",
+  "kind": "person",
+  "when": "1599–1641"
+ },
+ {
+  "id": "rembrandt",
+  "name": "Rembrandt",
+  "wiki": "Rembrandt",
+  "role": "artist",
+  "kind": "person",
+  "when": "1606–69"
+ },
+ {
+  "id": "velazquez",
+  "name": "Diego Velázquez",
+  "wiki": "Diego Velázquez",
+  "role": "artist",
+  "kind": "person",
+  "when": "1599–1660"
+ },
+ {
+  "id": "simon-ushakov",
+  "name": "Simon Ushakov",
+  "wiki": "Simon Ushakov",
+  "role": "artist",
+  "kind": "person",
+  "when": "1626–86"
+ },
+ {
+  "id": "inigo-jones",
+  "name": "Inigo Jones",
+  "wiki": "Inigo Jones",
+  "role": "artist",
+  "kind": "person",
+  "when": "1573–1652"
+ },
+ {
+  "id": "palestrina",
+  "name": "Giovanni Pierluigi da Palestrina",
+  "wiki": "Giovanni Pierluigi da Palestrina",
+  "role": "artist",
+  "kind": "person",
+  "when": "c.1525–94"
+ },
+ {
+  "id": "lassus",
+  "name": "Orlande de Lassus",
+  "wiki": "Orlande de Lassus",
+  "role": "artist",
+  "kind": "person",
+  "when": "1532–94"
+ },
+ {
+  "id": "tallis",
+  "name": "Thomas Tallis",
+  "wiki": "Thomas Tallis",
+  "role": "artist",
+  "kind": "person",
+  "when": "c.1505–85"
+ },
+ {
+  "id": "schutz",
+  "name": "Heinrich Schütz",
+  "wiki": "Heinrich Schütz",
+  "role": "artist",
+  "kind": "person",
+  "when": "1585–1672"
+ },
+ {
+  "id": "monteverdi",
+  "name": "Claudio Monteverdi",
+  "wiki": "Claudio Monteverdi",
+  "role": "artist",
+  "kind": "person",
+  "when": "1567–1643"
+ },
+ {
+  "id": "copernicus",
+  "name": "Nicolaus Copernicus",
+  "wiki": "Nicolaus Copernicus",
+  "role": "scholar",
+  "kind": "person",
+  "when": "1473–1543"
+ },
+ {
+  "id": "tycho-brahe",
+  "name": "Tycho Brahe",
+  "wiki": "Tycho Brahe",
+  "role": "scholar",
+  "kind": "person",
+  "when": "1546–1601"
+ },
+ {
+  "id": "kepler",
+  "name": "Johannes Kepler",
+  "wiki": "Johannes Kepler",
+  "role": "scholar",
+  "kind": "person",
+  "when": "1571–1630"
+ },
+ {
+  "id": "galileo",
+  "name": "Galileo Galilei",
+  "wiki": "Galileo Galilei",
+  "role": "scholar",
+  "kind": "person",
+  "when": "1564–1642"
+ },
+ {
+  "id": "mercator",
+  "name": "Gerardus Mercator",
+  "wiki": "Gerardus Mercator",
+  "role": "scholar",
+  "kind": "person",
+  "when": "1512–94"
+ },
+ {
+  "id": "plantin",
+  "name": "Christophe Plantin",
+  "wiki": "Christophe Plantin",
+  "role": "scholar",
+  "kind": "person",
+  "when": "c.1520–89"
+ },
+ {
+  "id": "grotius",
+  "name": "Hugo Grotius",
+  "wiki": "Hugo Grotius",
+  "role": "scholar",
+  "kind": "person",
+  "when": "1583–1645"
+ },
+ {
+  "id": "johannes-matthiae",
+  "name": "Johannes Matthiae",
+  "wiki": "Johannes Matthiae",
+  "role": "leader",
+  "kind": "person",
+  "when": "1592–1670"
+ },
+ {
+  "id": "dositheos-of-jerusalem",
+  "name": "Dositheos II of Jerusalem",
+  "wiki": "Dositheos II of Jerusalem",
+  "role": "leader",
+  "kind": "person",
+  "when": "1641–1707"
+ },
+ {
+  "id": "hakob-iv-julfa",
+  "name": "Hakob IV of Julfa",
+  "wiki": "Hakob IV of Julfa",
+  "role": "leader",
+  "kind": "person",
+  "when": "d. 1680"
+ },
+ {
+  "id": "voskan-yerevantsi",
+  "name": "Voskan Yerevantsi",
+  "wiki": "Voskan Yerevantsi",
+  "role": "scholar",
+  "kind": "person",
+  "when": "1614–74"
+ }
+]

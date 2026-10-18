@@ -1,0 +1,1583 @@
+<!doctype html><html><head><meta charset=utf8><meta name=viewport content="width=device-width,initial-scale=1,viewport-fit=cover"><style>:root{color-scheme:light;box-sizing:border-box;padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px)}html{scroll-padding-top:env(safe-area-inset-top,0px)}body{margin:0;padding:0;font:14px -apple-system,BlinkMacSystemFont,sans-serif;background:#fff;color:#000}img{max-width:100%}[hidden]:not([hidden=until-found i]){display:none!important}</style></head><body>
+<title>Alternate Reformation Atlas</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=IM+Fell+English+SC&family=IM+Fell+English:ital@0;1&family=Alegreya+Sans:wght@400;500;700&display=swap">
+<style>
+/* Layout: an engraved-atlas instrument — a ledger panel beside a full-bleed map plate; on phones the panel becomes a sheet over the plate. */
+:root {
+  --bg: #E7ECEA; --panel: #F5F7F6; --ink: #1D2A2D; --muted: #586A6D; --line: #C6D1CF; --chip: #E0E8E6;
+  --accent: #2E6C66; --accent-ink: #FFFFFF; --sea: #C8D8DB; --dim: rgba(245,247,246,0.62);
+  --label: #1B2427; --halo: rgba(250,252,251,0.92);
+  --f-display: "IM Fell English SC", "IM Fell English", Georgia, "Times New Roman", serif;
+  --f-note: "IM Fell English", Georgia, "Times New Roman", serif;
+  --f-ui: "Alegreya Sans", "Gill Sans", "Segoe UI", system-ui, sans-serif;
+  --panel-w: 352px;
+}
+@media (prefers-color-scheme: dark) { :root:not([data-theme="light"]) {
+  --bg: #11191B; --panel: #172124; --ink: #E2E9E7; --muted: #94A5A7; --line: #2A393C; --chip: #203034;
+  --accent: #7DBDB4; --accent-ink: #0E1A19; --dim: rgba(17,25,27,0.55); color-scheme: dark } }
+:root[data-theme="dark"] {
+  --bg: #11191B; --panel: #172124; --ink: #E2E9E7; --muted: #94A5A7; --line: #2A393C; --chip: #203034;
+  --accent: #7DBDB4; --accent-ink: #0E1A19; --dim: rgba(17,25,27,0.55); color-scheme: dark }
+
+
+.leaflet-pane,
+.leaflet-tile,
+.leaflet-marker-icon,
+.leaflet-marker-shadow,
+.leaflet-tile-container,
+.leaflet-pane > svg,
+.leaflet-pane > canvas,
+.leaflet-zoom-box,
+.leaflet-image-layer,
+.leaflet-layer {
+	position: absolute;
+	left: 0;
+	top: 0;
+	}
+.leaflet-container {
+	overflow: hidden;
+	}
+.leaflet-tile,
+.leaflet-marker-icon,
+.leaflet-marker-shadow {
+	-webkit-user-select: none;
+	   -moz-user-select: none;
+	        user-select: none;
+	  -webkit-user-drag: none;
+	}
+.leaflet-tile::selection {
+	background: transparent;
+}
+.leaflet-safari .leaflet-tile {
+	image-rendering: -webkit-optimize-contrast;
+	}
+.leaflet-safari .leaflet-tile-container {
+	width: 1600px;
+	height: 1600px;
+	-webkit-transform-origin: 0 0;
+	}
+.leaflet-marker-icon,
+.leaflet-marker-shadow {
+	display: block;
+	}
+.leaflet-container .leaflet-overlay-pane svg {
+	max-width: none !important;
+	max-height: none !important;
+	}
+.leaflet-container .leaflet-marker-pane img,
+.leaflet-container .leaflet-shadow-pane img,
+.leaflet-container .leaflet-tile-pane img,
+.leaflet-container img.leaflet-image-layer,
+.leaflet-container .leaflet-tile {
+	max-width: none !important;
+	max-height: none !important;
+	width: auto;
+	padding: 0;
+	}
+.leaflet-container img.leaflet-tile {
+	mix-blend-mode: plus-lighter;
+}
+.leaflet-container.leaflet-touch-zoom {
+	-ms-touch-action: pan-x pan-y;
+	touch-action: pan-x pan-y;
+	}
+.leaflet-container.leaflet-touch-drag {
+	-ms-touch-action: pinch-zoom;
+	touch-action: none;
+	touch-action: pinch-zoom;
+}
+.leaflet-container.leaflet-touch-drag.leaflet-touch-zoom {
+	-ms-touch-action: none;
+	touch-action: none;
+}
+.leaflet-container {
+	-webkit-tap-highlight-color: transparent;
+}
+.leaflet-container a {
+	-webkit-tap-highlight-color: rgba(51, 181, 229, 0.4);
+}
+.leaflet-tile {
+	filter: inherit;
+	visibility: hidden;
+	}
+.leaflet-tile-loaded {
+	visibility: inherit;
+	}
+.leaflet-zoom-box {
+	width: 0;
+	height: 0;
+	-moz-box-sizing: border-box;
+	     box-sizing: border-box;
+	z-index: 800;
+	}
+.leaflet-overlay-pane svg {
+	-moz-user-select: none;
+	}
+.leaflet-pane         { z-index: 400; }
+.leaflet-tile-pane    { z-index: 200; }
+.leaflet-overlay-pane { z-index: 400; }
+.leaflet-shadow-pane  { z-index: 500; }
+.leaflet-marker-pane  { z-index: 600; }
+.leaflet-tooltip-pane   { z-index: 650; }
+.leaflet-popup-pane   { z-index: 700; }
+.leaflet-map-pane canvas { z-index: 100; }
+.leaflet-map-pane svg    { z-index: 200; }
+.leaflet-vml-shape {
+	width: 1px;
+	height: 1px;
+	}
+.leaflet-control {
+	position: relative;
+	z-index: 800;
+	pointer-events: visiblePainted; 
+	pointer-events: auto;
+	}
+.leaflet-top,
+.leaflet-bottom {
+	position: absolute;
+	z-index: 1000;
+	pointer-events: none;
+	}
+.leaflet-top {
+	top: 0;
+	}
+.leaflet-right {
+	right: 0;
+	}
+.leaflet-bottom {
+	bottom: 0;
+	}
+.leaflet-left {
+	left: 0;
+	}
+.leaflet-control {
+	float: left;
+	clear: both;
+	}
+.leaflet-right .leaflet-control {
+	float: right;
+	}
+.leaflet-top .leaflet-control {
+	margin-top: 10px;
+	}
+.leaflet-bottom .leaflet-control {
+	margin-bottom: 10px;
+	}
+.leaflet-left .leaflet-control {
+	margin-left: 10px;
+	}
+.leaflet-right .leaflet-control {
+	margin-right: 10px;
+	}
+.leaflet-fade-anim .leaflet-popup {
+	opacity: 0;
+	-webkit-transition: opacity 0.2s linear;
+	   -moz-transition: opacity 0.2s linear;
+	        transition: opacity 0.2s linear;
+	}
+.leaflet-fade-anim .leaflet-map-pane .leaflet-popup {
+	opacity: 1;
+	}
+.leaflet-zoom-animated {
+	-webkit-transform-origin: 0 0;
+	    -ms-transform-origin: 0 0;
+	        transform-origin: 0 0;
+	}
+svg.leaflet-zoom-animated {
+	will-change: transform;
+}
+.leaflet-zoom-anim .leaflet-zoom-animated {
+	-webkit-transition: -webkit-transform 0.25s cubic-bezier(0,0,0.25,1);
+	   -moz-transition:    -moz-transform 0.25s cubic-bezier(0,0,0.25,1);
+	        transition:         transform 0.25s cubic-bezier(0,0,0.25,1);
+	}
+.leaflet-zoom-anim .leaflet-tile,
+.leaflet-pan-anim .leaflet-tile {
+	-webkit-transition: none;
+	   -moz-transition: none;
+	        transition: none;
+	}
+.leaflet-zoom-anim .leaflet-zoom-hide {
+	visibility: hidden;
+	}
+.leaflet-interactive {
+	cursor: pointer;
+	}
+.leaflet-grab {
+	cursor: -webkit-grab;
+	cursor:    -moz-grab;
+	cursor:         grab;
+	}
+.leaflet-crosshair,
+.leaflet-crosshair .leaflet-interactive {
+	cursor: crosshair;
+	}
+.leaflet-popup-pane,
+.leaflet-control {
+	cursor: auto;
+	}
+.leaflet-dragging .leaflet-grab,
+.leaflet-dragging .leaflet-grab .leaflet-interactive,
+.leaflet-dragging .leaflet-marker-draggable {
+	cursor: move;
+	cursor: -webkit-grabbing;
+	cursor:    -moz-grabbing;
+	cursor:         grabbing;
+	}
+.leaflet-marker-icon,
+.leaflet-marker-shadow,
+.leaflet-image-layer,
+.leaflet-pane > svg path,
+.leaflet-tile-container {
+	pointer-events: none;
+	}
+.leaflet-marker-icon.leaflet-interactive,
+.leaflet-image-layer.leaflet-interactive,
+.leaflet-pane > svg path.leaflet-interactive,
+svg.leaflet-image-layer.leaflet-interactive path {
+	pointer-events: visiblePainted; 
+	pointer-events: auto;
+	}
+.leaflet-container {
+	background: #ddd;
+	outline-offset: 1px;
+	}
+.leaflet-container a {
+	color: #0078A8;
+	}
+.leaflet-zoom-box {
+	border: 2px dotted #38f;
+	background: rgba(255,255,255,0.5);
+	}
+.leaflet-container {
+	font-family: "Helvetica Neue", Arial, Helvetica, sans-serif;
+	font-size: 12px;
+	font-size: 0.75rem;
+	line-height: 1.5;
+	}
+.leaflet-bar {
+	box-shadow: 0 1px 5px rgba(0,0,0,0.65);
+	border-radius: 4px;
+	}
+.leaflet-bar a {
+	background-color: #fff;
+	border-bottom: 1px solid #ccc;
+	width: 26px;
+	height: 26px;
+	line-height: 26px;
+	display: block;
+	text-align: center;
+	text-decoration: none;
+	color: black;
+	}
+.leaflet-bar a,
+.leaflet-control-layers-toggle {
+	background-position: 50% 50%;
+	background-repeat: no-repeat;
+	display: block;
+	}
+.leaflet-bar a:hover,
+.leaflet-bar a:focus {
+	background-color: #f4f4f4;
+	}
+.leaflet-bar a:first-child {
+	border-top-left-radius: 4px;
+	border-top-right-radius: 4px;
+	}
+.leaflet-bar a:last-child {
+	border-bottom-left-radius: 4px;
+	border-bottom-right-radius: 4px;
+	border-bottom: none;
+	}
+.leaflet-bar a.leaflet-disabled {
+	cursor: default;
+	background-color: #f4f4f4;
+	color: #bbb;
+	}
+.leaflet-touch .leaflet-bar a {
+	width: 30px;
+	height: 30px;
+	line-height: 30px;
+	}
+.leaflet-touch .leaflet-bar a:first-child {
+	border-top-left-radius: 2px;
+	border-top-right-radius: 2px;
+	}
+.leaflet-touch .leaflet-bar a:last-child {
+	border-bottom-left-radius: 2px;
+	border-bottom-right-radius: 2px;
+	}
+.leaflet-control-zoom-in,
+.leaflet-control-zoom-out {
+	font: bold 18px 'Lucida Console', Monaco, monospace;
+	text-indent: 1px;
+	}
+.leaflet-touch .leaflet-control-zoom-in, .leaflet-touch .leaflet-control-zoom-out  {
+	font-size: 22px;
+	}
+.leaflet-control-layers {
+	box-shadow: 0 1px 5px rgba(0,0,0,0.4);
+	background: #fff;
+	border-radius: 5px;
+	}
+.leaflet-touch .leaflet-control-layers-toggle {
+	width: 44px;
+	height: 44px;
+	}
+.leaflet-control-layers .leaflet-control-layers-list,
+.leaflet-control-layers-expanded .leaflet-control-layers-toggle {
+	display: none;
+	}
+.leaflet-control-layers-expanded .leaflet-control-layers-list {
+	display: block;
+	position: relative;
+	}
+.leaflet-control-layers-expanded {
+	padding: 6px 10px 6px 6px;
+	color: #333;
+	background: #fff;
+	}
+.leaflet-control-layers-scrollbar {
+	overflow-y: scroll;
+	overflow-x: hidden;
+	padding-right: 5px;
+	}
+.leaflet-control-layers-selector {
+	margin-top: 2px;
+	position: relative;
+	top: 1px;
+	}
+.leaflet-control-layers label {
+	display: block;
+	font-size: 13px;
+	font-size: 1.08333em;
+	}
+.leaflet-control-layers-separator {
+	height: 0;
+	border-top: 1px solid #ddd;
+	margin: 5px -10px 5px -6px;
+	}
+.leaflet-container .leaflet-control-attribution {
+	background: #fff;
+	background: rgba(255, 255, 255, 0.8);
+	margin: 0;
+	}
+.leaflet-control-attribution,
+.leaflet-control-scale-line {
+	padding: 0 5px;
+	color: #333;
+	line-height: 1.4;
+	}
+.leaflet-control-attribution a {
+	text-decoration: none;
+	}
+.leaflet-control-attribution a:hover,
+.leaflet-control-attribution a:focus {
+	text-decoration: underline;
+	}
+.leaflet-attribution-flag {
+	display: inline !important;
+	vertical-align: baseline !important;
+	width: 1em;
+	height: 0.6669em;
+	}
+.leaflet-left .leaflet-control-scale {
+	margin-left: 5px;
+	}
+.leaflet-bottom .leaflet-control-scale {
+	margin-bottom: 5px;
+	}
+.leaflet-control-scale-line {
+	border: 2px solid #777;
+	border-top: none;
+	line-height: 1.1;
+	padding: 2px 5px 1px;
+	white-space: nowrap;
+	-moz-box-sizing: border-box;
+	     box-sizing: border-box;
+	background: rgba(255, 255, 255, 0.8);
+	text-shadow: 1px 1px #fff;
+	}
+.leaflet-control-scale-line:not(:first-child) {
+	border-top: 2px solid #777;
+	border-bottom: none;
+	margin-top: -2px;
+	}
+.leaflet-control-scale-line:not(:first-child):not(:last-child) {
+	border-bottom: 2px solid #777;
+	}
+.leaflet-touch .leaflet-control-attribution,
+.leaflet-touch .leaflet-control-layers,
+.leaflet-touch .leaflet-bar {
+	box-shadow: none;
+	}
+.leaflet-touch .leaflet-control-layers,
+.leaflet-touch .leaflet-bar {
+	border: 2px solid rgba(0,0,0,0.2);
+	background-clip: padding-box;
+	}
+.leaflet-popup {
+	position: absolute;
+	text-align: center;
+	margin-bottom: 20px;
+	}
+.leaflet-popup-content-wrapper {
+	padding: 1px;
+	text-align: left;
+	border-radius: 12px;
+	}
+.leaflet-popup-content {
+	margin: 13px 24px 13px 20px;
+	line-height: 1.3;
+	font-size: 13px;
+	font-size: 1.08333em;
+	min-height: 1px;
+	}
+.leaflet-popup-content p {
+	margin: 17px 0;
+	margin: 1.3em 0;
+	}
+.leaflet-popup-tip-container {
+	width: 40px;
+	height: 20px;
+	position: absolute;
+	left: 50%;
+	margin-top: -1px;
+	margin-left: -20px;
+	overflow: hidden;
+	pointer-events: none;
+	}
+.leaflet-popup-tip {
+	width: 17px;
+	height: 17px;
+	padding: 1px;
+	margin: -10px auto 0;
+	pointer-events: auto;
+	-webkit-transform: rotate(45deg);
+	   -moz-transform: rotate(45deg);
+	    -ms-transform: rotate(45deg);
+	        transform: rotate(45deg);
+	}
+.leaflet-popup-content-wrapper,
+.leaflet-popup-tip {
+	background: white;
+	color: #333;
+	box-shadow: 0 3px 14px rgba(0,0,0,0.4);
+	}
+.leaflet-container a.leaflet-popup-close-button {
+	position: absolute;
+	top: 0;
+	right: 0;
+	border: none;
+	text-align: center;
+	width: 24px;
+	height: 24px;
+	font: 16px/24px Tahoma, Verdana, sans-serif;
+	color: #757575;
+	text-decoration: none;
+	background: transparent;
+	}
+.leaflet-container a.leaflet-popup-close-button:hover,
+.leaflet-container a.leaflet-popup-close-button:focus {
+	color: #585858;
+	}
+.leaflet-popup-scrolled {
+	overflow: auto;
+	}
+.leaflet-oldie .leaflet-popup-content-wrapper {
+	-ms-zoom: 1;
+	}
+.leaflet-oldie .leaflet-popup-tip {
+	width: 24px;
+	margin: 0 auto;
+	-ms-filter: "progid:DXImageTransform.Microsoft.Matrix(M11=0.70710678, M12=0.70710678, M21=-0.70710678, M22=0.70710678)";
+	filter: progid:DXImageTransform.Microsoft.Matrix(M11=0.70710678, M12=0.70710678, M21=-0.70710678, M22=0.70710678);
+	}
+.leaflet-oldie .leaflet-control-zoom,
+.leaflet-oldie .leaflet-control-layers,
+.leaflet-oldie .leaflet-popup-content-wrapper,
+.leaflet-oldie .leaflet-popup-tip {
+	border: 1px solid #999;
+	}
+.leaflet-div-icon {
+	background: #fff;
+	border: 1px solid #666;
+	}
+.leaflet-tooltip {
+	position: absolute;
+	padding: 6px;
+	background-color: #fff;
+	border: 1px solid #fff;
+	border-radius: 3px;
+	color: #222;
+	white-space: nowrap;
+	-webkit-user-select: none;
+	-moz-user-select: none;
+	-ms-user-select: none;
+	user-select: none;
+	pointer-events: none;
+	box-shadow: 0 1px 3px rgba(0,0,0,0.4);
+	}
+.leaflet-tooltip.leaflet-interactive {
+	cursor: pointer;
+	pointer-events: auto;
+	}
+.leaflet-tooltip-top:before,
+.leaflet-tooltip-bottom:before,
+.leaflet-tooltip-left:before,
+.leaflet-tooltip-right:before {
+	position: absolute;
+	pointer-events: none;
+	border: 6px solid transparent;
+	background: transparent;
+	content: "";
+	}
+.leaflet-tooltip-bottom {
+	margin-top: 6px;
+}
+.leaflet-tooltip-top {
+	margin-top: -6px;
+}
+.leaflet-tooltip-bottom:before,
+.leaflet-tooltip-top:before {
+	left: 50%;
+	margin-left: -6px;
+	}
+.leaflet-tooltip-top:before {
+	bottom: 0;
+	margin-bottom: -12px;
+	border-top-color: #fff;
+	}
+.leaflet-tooltip-bottom:before {
+	top: 0;
+	margin-top: -12px;
+	margin-left: -6px;
+	border-bottom-color: #fff;
+	}
+.leaflet-tooltip-left {
+	margin-left: -6px;
+}
+.leaflet-tooltip-right {
+	margin-left: 6px;
+}
+.leaflet-tooltip-left:before,
+.leaflet-tooltip-right:before {
+	top: 50%;
+	margin-top: -6px;
+	}
+.leaflet-tooltip-left:before {
+	right: 0;
+	margin-right: -12px;
+	border-left-color: #fff;
+	}
+.leaflet-tooltip-right:before {
+	left: 0;
+	margin-left: -12px;
+	border-right-color: #fff;
+	}
+@media print {
+	.leaflet-control {
+		-webkit-print-color-adjust: exact;
+		print-color-adjust: exact;
+		}
+	}
+
+
+[hidden] { display: none !important; }
+html, body { height: 100%; }
+body { background: var(--bg); color: var(--ink); font-family: var(--f-ui); font-size: 15px; line-height: 1.45; overflow: hidden; }
+.app { display: grid; grid-template-columns: var(--panel-w) 1fr; height: 100%; }
+.panel { background: var(--panel); border-right: 1px solid var(--line); display: flex; flex-direction: column; min-height: 0; min-width: 0; }
+.panel-scroll > * { flex-shrink: 0; }
+.panel-scroll { overflow-y: auto; padding: 20px 20px 28px; display: flex; flex-direction: column; gap: 20px; min-height: 0; }
+.eyebrow { font-size: 12px; letter-spacing: .08em; text-transform: uppercase; color: var(--muted); font-weight: 500; }
+h1 { font-family: var(--f-display); font-weight: 400; font-size: 27px; line-height: 1.1; margin: 4px 0 0; text-wrap: balance; }
+.year-block { display: grid; grid-template-columns: auto 1fr; gap: 4px 16px; align-items: end; border-top: 1px solid var(--line); border-bottom: 1px solid var(--line); padding-block: 12px; }
+.year { font-family: var(--f-display); font-size: 64px; line-height: .9; font-variant-numeric: lining-nums; }
+.year-note { font-family: var(--f-note); font-style: italic; color: var(--muted); font-size: 15px; line-height: 1.35; align-self: center; }
+.status { grid-column: 1 / -1; font-size: 12px; color: var(--muted); }
+.status b { color: var(--accent); font-weight: 700; }
+.timeline { display: grid; grid-template-columns: repeat(6, 1fr); gap: 1px; background: var(--line); border: 1px solid var(--line); border-radius: 6px; overflow: hidden; }
+.timeline .tl-fill { background: var(--panel); }
+.timeline button { font: 500 13px var(--f-ui); font-variant-numeric: tabular-nums; padding: 7px 0; border: 0; background: var(--panel); color: var(--muted); cursor: pointer; position: relative; }
+.timeline button.c17 { color: var(--ink); }
+.timeline button[aria-pressed="true"] { background: var(--accent); color: var(--accent-ink); }
+.timeline button.planned::after { content: ""; position: absolute; left: 50%; bottom: 3px; width: 4px; height: 4px; margin-left: -2px; border-radius: 50%; background: var(--line); }
+.label-row { display: flex; justify-content: space-between; align-items: baseline; gap: 8px; }
+.seg { display: grid; grid-template-columns: repeat(3, 1fr); gap: 4px; background: var(--chip); padding: 4px; border-radius: 8px; }
+.seg button { font: 500 14px var(--f-ui); border: 0; border-radius: 5px; padding: 6px 4px; background: transparent; color: var(--ink); cursor: pointer; }
+.seg button[aria-pressed="true"] { background: var(--panel); box-shadow: 0 1px 2px rgba(0,0,0,.12); }
+.seg button:disabled { color: var(--muted); opacity: .6; cursor: not-allowed; }
+.toggles { display: flex; flex-wrap: wrap; gap: 6px 18px; font-size: 14px; }
+.toggles label { display: flex; align-items: center; gap: 6px; cursor: pointer; }
+.toggles input { accent-color: var(--accent); width: 16px; height: 16px; }
+button:focus-visible, input:focus-visible { outline: 2px solid var(--accent); outline-offset: 2px; }
+
+.inspect { border: 1px solid var(--line); border-radius: 8px; padding: 12px 14px; min-height: 108px; display: flex; flex-direction: column; gap: 6px; }
+.inspect .hint { color: var(--muted); font-size: 14px; }
+.inspect h3 { font-family: var(--f-display); font-weight: 400; font-size: 21px; line-height: 1.15; margin: 0; text-wrap: balance; }
+.chips { display: flex; flex-wrap: wrap; gap: 4px; }
+.chip { font-size: 12px; padding: 1px 7px; border-radius: 99px; background: var(--chip); color: var(--muted); }
+.chip.hre { color: var(--ink); box-shadow: inset 0 0 0 1px #AA288C; }
+.facts { display: grid; grid-template-columns: auto 1fr; gap: 3px 10px; font-size: 14px; margin: 0; }
+.facts dt { color: var(--muted); }
+.facts dd { margin: 0; display: flex; align-items: center; gap: 6px; min-width: 0; }
+.zone-note { font-family: var(--f-note); font-style: italic; font-size: 14px; color: var(--muted); margin: 0; }
+.clear { align-self: flex-start; font: 500 13px var(--f-ui); color: var(--accent); background: none; border: 0; padding: 0; cursor: pointer; text-decoration: underline; text-underline-offset: 2px; }
+
+.sw { width: 14px; height: 14px; border-radius: 3px; flex: none; box-shadow: inset 0 0 0 1px rgba(0,0,0,.25); }
+.sw.dot { border-radius: 50%; width: 11px; height: 11px; margin-inline: 1.5px; box-shadow: 0 0 0 1.5px #fff, 0 0 0 2.5px rgba(0,0,0,.45); }
+.key h2 { font-family: var(--f-display); font-weight: 400; font-size: 20px; margin: 0; }
+.key-search { width: 100%; font: 15px var(--f-ui); padding: 7px 10px; border: 1px solid var(--line); border-radius: 6px; background: var(--panel); color: var(--ink); box-sizing: border-box; }
+.key-group { margin-top: 12px; }
+.key-group h4 { margin: 0 0 4px; font-size: 12px; letter-spacing: .08em; text-transform: uppercase; color: var(--muted); font-weight: 500; }
+.key-list { list-style: none; margin: 0; padding: 0; display: flex; flex-direction: column; }
+.key-list button { width: 100%; display: flex; align-items: center; gap: 8px; text-align: left; font: 14px var(--f-ui); color: var(--ink); background: none; border: 0; border-radius: 5px; padding: 3px 6px; cursor: pointer; }
+.key-list button:hover, .key-list button[aria-pressed="true"] { background: var(--chip); }
+.key-list .name { flex: 1; min-width: 0; overflow-wrap: anywhere; }
+.key-list .tag { font-size: 11px; color: #AA288C; letter-spacing: .04em; }
+.key-list .count { font-size: 12px; color: var(--muted); font-variant-numeric: tabular-nums; }
+.key-note { font-size: 13px; color: var(--muted); margin: 8px 0 0; }
+.hatch-demo { background: repeating-linear-gradient(135deg, #E3C25B 0 3px, #6E9BC9 3px 6px); }
+.hre-demo { width: 22px; height: 0; border-top: 3px dashed #AA288C; flex: none; }
+
+.map-wrap { position: relative; min-width: 0; min-height: 0; }
+#map { position: absolute; inset: 0; background: var(--sea); }
+.leaflet-container { font-family: var(--f-ui); background: var(--sea); }
+.mapimg { image-rendering: auto; }
+.crisp .mapimg { image-rendering: pixelated; }
+.lbl { pointer-events: none; white-space: nowrap; }
+.lbl span { display: block; transform: translate(-50%, -50%); font-family: var(--f-display); color: var(--label);
+  text-shadow: 0 0 2px var(--halo), 0 0 3px var(--halo), 0 0 5px var(--halo); letter-spacing: .06em; line-height: 1; }
+.mode-conf .lbl span, .mode-jur .lbl span { font-family: var(--f-note); font-style: italic; letter-spacing: .02em; opacity: .85; }
+.leaflet-tooltip { font: 13px var(--f-ui); color: #1D2A2D; background: #F7F9F8; border: 1px solid #B9C6C4; border-radius: 5px; box-shadow: 0 1px 4px rgba(0,0,0,.18); padding: 3px 7px; }
+.leaflet-control-zoom a { color: #1D2A2D; }
+.sheet-toggle { display: none; }
+.seat { display: block; box-sizing: border-box; border: 1.5px solid #fff; box-shadow: 0 0 0 1px rgba(0,0,0,.55); }
+.seat-pope { width: 15px; height: 15px; transform: rotate(45deg); }
+.seat-patriarch { width: 12px; height: 12px; }
+.seat-primate { width: 9px; height: 9px; border-radius: 50%; }
+.seat-consistory { width: 12px; height: 12px; border-radius: 2px; }
+.seat-evangelical { width: 13px; height: 13px; border-radius: 50% 50% 0 50%; transform: rotate(45deg); }
+.seat-eastern { width: 12px; height: 12px; border-radius: 50%; border-width: 3px; }
+.evm { display: block; width: 12px; height: 12px; border-radius: 50%; background: #F7F9F8; border: 3px solid #A11D1D; box-sizing: border-box; box-shadow: 0 0 0 1px rgba(0,0,0,.4); }
+.ev-demo { background: repeating-linear-gradient(135deg, #B22222 0 2px, transparent 2px 6px); box-shadow: inset 0 0 0 1.5px #961414; }
+.key-list .sub { display: block; font-size: 12px; color: var(--muted); }
+.legend-mini { position: absolute; left: 12px; bottom: 12px; z-index: 500; background: rgba(247,249,248,.92); color: #1D2A2D; border: 1px solid #B9C6C4; border-radius: 6px; padding: 6px 9px; font-size: 12px; display: flex; gap: 6px 14px; flex-wrap: wrap; align-items: center; max-width: calc(100% - 24px); box-sizing: border-box; }
+.legend-mini span { display: inline-flex; align-items: center; gap: 6px; }
+
+@media (max-width: 760px) {
+  .app { grid-template-columns: 1fr; grid-template-rows: 1fr auto; }
+  .map-wrap { grid-row: 1; }
+  .panel { grid-row: 2; border-right: 0; border-top: 1px solid var(--line); max-height: 46vh; }
+  .panel.collapsed .collapsible { display: none; }
+  .panel-scroll { padding: 12px 16px 16px; gap: 12px; }
+  h1 { font-size: 21px; }
+  .year { font-size: 44px; }
+  .sheet-toggle { display: block; font: 500 13px var(--f-ui); color: var(--accent); background: none; border: 0; padding: 0; cursor: pointer; }
+  .legend-mini { display: none; }
+}
+@media (prefers-reduced-motion: reduce) { .leaflet-zoom-anim .leaflet-zoom-animated { transition: none !important; } }
+
+/* ---- map toolbar, search, compare, scale, dialogs ---- */
+.toolbar { position: absolute; top: 10px; right: 10px; z-index: 600; display: flex; flex-direction: column; gap: 6px; }
+.tool { width: 36px; height: 36px; display: grid; place-items: center; border-radius: 6px; border: 1px solid #B9C6C4; background: #F7F9F8; color: #1D2A2D; cursor: pointer; box-shadow: 0 1px 3px rgba(0,0,0,.15); }
+.tool:hover { background: #E7EEEC; }
+.tool[aria-pressed="true"] { background: #2E6C66; color: #fff; border-color: #2E6C66; }
+.tool:disabled { opacity: .45; cursor: not-allowed; }
+.tool svg { width: 18px; height: 18px; fill: none; stroke: currentColor; stroke-width: 1.8; stroke-linecap: round; stroke-linejoin: round; }
+.search { position: absolute; top: 10px; left: 56px; z-index: 600; width: min(340px, calc(100% - 120px)); }
+.search input { width: 100%; box-sizing: border-box; font: 15px var(--f-ui); padding: 8px 11px; border-radius: 6px; border: 1px solid #B9C6C4; background: #F7F9F8; color: #1D2A2D; box-shadow: 0 1px 3px rgba(0,0,0,.15); }
+.search input::placeholder { color: #6A7A7C; }
+.results { margin: 4px 0 0; padding: 4px; list-style: none; background: #F7F9F8; color: #1D2A2D; border: 1px solid #B9C6C4; border-radius: 6px; box-shadow: 0 4px 14px rgba(0,0,0,.18); max-height: 320px; overflow-y: auto; }
+.results button { width: 100%; display: flex; justify-content: space-between; gap: 10px; text-align: left; font: 14px var(--f-ui); color: inherit; background: none; border: 0; border-radius: 4px; padding: 6px 8px; cursor: pointer; }
+.results button:hover, .results button.active { background: #E0E8E6; }
+.results .kind { font-size: 12px; color: #586A6D; white-space: nowrap; }
+.results .none { padding: 6px 8px; font-size: 14px; color: #586A6D; }
+.pin { width: 16px; height: 16px; border-radius: 50%; border: 3px solid #2E6C66; background: rgba(255,255,255,.7); box-sizing: border-box; animation: pin 1.6s ease-out 2; }
+@keyframes pin { from { box-shadow: 0 0 0 0 rgba(46,108,102,.6); } to { box-shadow: 0 0 0 18px rgba(46,108,102,0); } }
+.plbl span { display: block; transform: translate(9px, -50%); font: italic 12px var(--f-note); color: var(--label); white-space: nowrap; text-shadow: 0 0 2px var(--halo), 0 0 3px var(--halo), 0 0 4px var(--halo); }
+.plbl.town span { transform: translate(6px, -50%); font: 12px var(--f-ui); color: #33434A; }
+.towndot { width: 4px; height: 4px; border-radius: 50%; background: #2A3438; box-shadow: 0 0 0 1px rgba(255,255,255,.8); }
+
+.cmpbar { position: absolute; top: 56px; left: 50%; transform: translateX(-50%); z-index: 620; display: flex; align-items: center; gap: 10px; background: #F7F9F8; color: #1D2A2D; border: 1px solid #B9C6C4; border-radius: 6px; padding: 5px 8px 5px 12px; font-size: 14px; box-shadow: 0 1px 3px rgba(0,0,0,.15); white-space: nowrap; }
+.cmpbar select { font: 14px var(--f-ui); padding: 3px 6px; border-radius: 4px; border: 1px solid #B9C6C4; background: #fff; color: #1D2A2D; }
+.cmpbar button { font: 500 13px var(--f-ui); border: 0; background: none; color: #2E6C66; cursor: pointer; text-decoration: underline; }
+.divider { position: absolute; top: 0; bottom: 0; z-index: 610; width: 24px; margin-left: -12px; cursor: ew-resize; touch-action: none; }
+.divider::before { content: ""; position: absolute; left: 10.5px; top: 0; bottom: 0; width: 3px; background: #F7F9F8; box-shadow: 0 0 0 1px rgba(0,0,0,.35); }
+.divider .knob { position: absolute; top: 50%; left: 12px; transform: translate(-50%, -50%); width: 30px; height: 30px; border-radius: 50%; background: #F7F9F8; border: 1px solid #8A9A98; display: grid; place-items: center; font: 600 14px var(--f-ui); color: #1D2A2D; box-shadow: 0 1px 4px rgba(0,0,0,.25); }
+.divider:focus-visible .knob { outline: 2px solid #2E6C66; outline-offset: 2px; }
+.cmptag { position: absolute; top: 98px; z-index: 605; font: 400 22px var(--f-display); color: #1B2427; text-shadow: 0 0 3px #fff, 0 0 6px #fff; pointer-events: none; }
+
+.scale { position: absolute; right: 10px; bottom: 12px; z-index: 500; background: rgba(247,249,248,.92); color: #1D2A2D; border: 1px solid #B9C6C4; border-radius: 6px; padding: 5px 9px 6px; font-size: 11.5px; line-height: 1.25; font-variant-numeric: tabular-nums; }
+.scale .bar { height: 5px; border: 1.5px solid #1D2A2D; border-top: 0; margin: 2px 0 3px; }
+.scale .coord { color: #586A6D; }
+.legend-mini { right: auto; max-width: calc(100% - 210px); z-index: 615; }
+.scale { z-index: 615; }
+
+.overlay { position: fixed; inset: 0; z-index: 2000; background: rgba(10,18,20,.45); display: grid; place-items: center; padding: 16px; box-sizing: border-box; }
+.dialog { background: var(--panel); color: var(--ink); border: 1px solid var(--line); border-radius: 10px; box-shadow: 0 12px 40px rgba(0,0,0,.3); width: min(560px, 100%); max-height: calc(100% - 8px); overflow-y: auto; padding: 18px 20px 20px; box-sizing: border-box; display: flex; flex-direction: column; gap: 14px; }
+.dialog h2 { font: 400 23px var(--f-display); margin: 0; }
+.dialog .row { display: grid; grid-template-columns: 96px 1fr; gap: 6px 12px; align-items: center; font-size: 14px; }
+.dialog .row > span { color: var(--muted); }
+.dialog .opts { display: flex; flex-wrap: wrap; gap: 6px 16px; }
+.dialog .opts label { display: flex; align-items: center; gap: 6px; cursor: pointer; }
+.dialog input[type=radio], .dialog input[type=checkbox] { accent-color: var(--accent); }
+.dialog .actions { display: flex; flex-wrap: wrap; gap: 8px; justify-content: flex-end; }
+.btn { font: 500 14px var(--f-ui); padding: 8px 14px; border-radius: 6px; border: 1px solid var(--line); background: var(--chip); color: var(--ink); cursor: pointer; }
+.btn.primary { background: var(--accent); color: var(--accent-ink); border-color: var(--accent); }
+.btn:disabled { opacity: .5; cursor: progress; }
+.preview { width: 100%; border: 1px solid var(--line); border-radius: 6px; background: var(--sea); display: block; }
+.note { font-size: 13px; color: var(--muted); margin: 0; }
+.keys { display: grid; grid-template-columns: auto 1fr; gap: 6px 14px; font-size: 14px; margin: 0; }
+.keys dt { font: 600 12.5px var(--f-ui); }
+.keys dt kbd { display: inline-block; min-width: 18px; text-align: center; padding: 1px 6px; border: 1px solid var(--line); border-bottom-width: 2px; border-radius: 4px; background: var(--chip); font: inherit; }
+.keys dd { margin: 0; }
+.change-row b { color: var(--accent); }
+.timeline-wrap { display: grid; grid-template-columns: auto 1fr auto; gap: 6px; align-items: stretch; }
+.step { font: 500 16px var(--f-ui); width: 30px; border: 1px solid var(--line); border-radius: 6px; background: transparent; color: var(--ink); cursor: pointer; }
+.step:disabled { opacity: .35; cursor: default; }
+.foot { display: flex; flex-wrap: wrap; gap: 6px 16px; font-size: 13px; }
+.foot button { font: 500 13px var(--f-ui); color: var(--accent); background: none; border: 0; padding: 0; cursor: pointer; text-decoration: underline; text-underline-offset: 2px; }
+.app:fullscreen { background: var(--bg); }
+@media (max-width: 760px) {
+  .search { left: 52px; width: calc(100% - 104px); }
+  .scale { bottom: 8px; right: 8px; }
+  .cmptag { top: 98px; font-size: 18px; }
+  .cmpbar { top: auto; bottom: 8px; left: 8px; right: 8px; transform: none; justify-content: space-between; gap: 6px; padding: 5px 8px; font-size: 13px; }
+  .comparing .scale { display: none; }
+  .cmptag { top: 52px; }
+}
+</style>
+
+<div class="app" id="app">
+  <aside class="panel" id="panel" aria-label="Atlas controls">
+    <div class="panel-scroll">
+      <header>
+        <div class="label-row">
+          <span class="eyebrow">Europe and the Atlantic, 1500–1789</span>
+          <a style="font:500 13px var(--f-ui);color:var(--accent)" href="index.html">← Compendium</a>
+          <button class="sheet-toggle" id="sheetToggle" type="button" aria-expanded="true">Hide key</button>
+        </div>
+        <h1>Alternate Reformation Atlas</h1>
+      </header>
+
+      <section class="year-block" aria-live="polite">
+        <div class="year" id="yearNum">1500</div>
+        <p class="year-note" id="yearNote"></p>
+        <div class="status" id="yearStatus"></div>
+      </section>
+
+      <div class="timeline-wrap">
+        <button class="step" id="prevYear" type="button" aria-label="Previous snapshot" title="Previous snapshot (←)">‹</button>
+        <nav class="timeline" id="timeline" aria-label="Snapshot year"></nav>
+        <button class="step" id="nextYear" type="button" aria-label="Next snapshot" title="Next snapshot (→)">›</button>
+      </div>
+
+      <div class="seg" role="group" aria-label="Map layer">
+        <button type="button" id="modePol" aria-pressed="true" title="Political (1)">Political</button>
+        <button type="button" id="modeConf" aria-pressed="false" title="Confession (2)">Confession</button>
+        <button type="button" id="modeJur" aria-pressed="false" title="Jurisdiction (3)">Jurisdiction</button>
+      </div>
+
+      <div class="toggles collapsible">
+        <label><input type="checkbox" id="tLabels" checked> Labels</label>
+        <label><input type="checkbox" id="tDots" checked> <span id="dotsLabel">Cities and enclaves</span></label>
+        <label id="evToggle" hidden><input type="checkbox" id="tEvent" checked> <span id="evLabel"></span></label>
+      </div>
+
+      <section class="inspect" id="inspect" aria-live="polite"></section>
+
+      <section class="key collapsible" id="key"></section>
+
+      <div class="foot collapsible">
+        <button type="button" id="openKeys">Keyboard shortcuts</button>
+        <button type="button" id="resetView">Reset view</button>
+      </div>
+    </div>
+  </aside>
+  <div class="map-wrap" id="mapWrap">
+    <div id="map" role="application" aria-label="Map of Europe, the Mediterranean and the Atlantic"></div>
+    <div class="search" id="search">
+      <input id="searchInput" type="search" placeholder="Find a town or state" aria-label="Find a town or state" autocomplete="off">
+      <ul class="results" id="results" hidden></ul>
+    </div>
+    <div class="toolbar" role="toolbar" aria-label="Map tools">
+      <button class="tool" id="toolChanges" type="button" aria-pressed="false" title="Show changes since the previous snapshot (C)" aria-label="Show changes since the previous snapshot">
+        <svg viewBox="0 0 24 24"><path d="M4 7h11l-3-3M20 17H9l3 3"/></svg></button>
+      <button class="tool" id="toolCompare" type="button" aria-pressed="false" title="Compare two years side by side (V)" aria-label="Compare two years">
+        <svg viewBox="0 0 24 24"><rect x="3.5" y="4.5" width="17" height="15" rx="1.5"/><path d="M12 3v18"/></svg></button>
+      <button class="tool" id="toolExport" type="button" title="Export an image of the map (S)" aria-label="Export an image of the map">
+        <svg viewBox="0 0 24 24"><path d="M4 8.5h3l1.6-2.5h6.8L17 8.5h3v10H4z"/><circle cx="12" cy="13" r="3.4"/></svg></button>
+      <button class="tool" id="toolFull" type="button" title="Full screen (F)" aria-label="Full screen">
+        <svg viewBox="0 0 24 24"><path d="M4 9V4h5M20 9V4h-5M4 15v5h5M20 15v5h-5"/></svg></button>
+    </div>
+    <div class="cmpbar" id="cmpbar" hidden>
+      <span id="cmpLeft"></span><span aria-hidden="true">|</span>
+      <label for="cmpYear">Right side</label><select id="cmpYear"></select>
+      <button type="button" id="cmpClose">Stop comparing</button>
+    </div>
+    <div class="divider" id="divider" hidden tabindex="0" role="slider" aria-label="Comparison divider" aria-valuemin="0" aria-valuemax="100" aria-valuenow="50"><span class="knob">⇔</span></div>
+    <div class="cmptag" id="cmpTagL" hidden></div>
+    <div class="cmptag" id="cmpTagR" hidden></div>
+    <div class="legend-mini" id="legendMini"></div>
+    <div class="scale" id="scale" aria-hidden="true"></div>
+  </div>
+</div>
+
+<div class="overlay" id="exportDlg" hidden>
+  <div class="dialog" role="dialog" aria-modal="true" aria-labelledby="exportTitle">
+    <h2 id="exportTitle">Export an image</h2>
+    <div class="row"><span>Area</span>
+      <div class="opts"><label><input type="radio" name="exArea" id="exView" value="view" checked> Current view</label>
+        <label><input type="radio" name="exArea" id="exWhole" value="whole"> Whole map</label></div></div>
+    <div class="row"><span>Size</span>
+      <div class="opts"><label><input type="radio" name="exSize" id="exS1" value="1" checked> <span id="exS1L">Standard</span></label>
+        <label><input type="radio" name="exSize" id="exS2" value="2"> <span id="exS2L">Large</span></label></div></div>
+    <div class="row"><span>Include</span>
+      <div class="opts"><label><input type="checkbox" id="exTitle" checked> Title</label>
+        <label><input type="checkbox" id="exLegend" checked> Legend</label>
+        <label><input type="checkbox" id="exScale" checked> Scale bar</label></div></div>
+    <p class="note" id="exNote">Labels, markers and overlays follow what the map shows now.</p>
+    <img class="preview" id="exPreview" alt="Preview of the exported map" hidden>
+    <p class="note" id="exStatus" aria-live="polite"></p>
+    <div class="actions">
+      <button class="btn" type="button" id="exCancel">Close</button>
+      <button class="btn" type="button" id="exCopy" hidden>Copy image</button>
+      <button class="btn primary" type="button" id="exGo">Create image</button>
+      <button class="btn primary" type="button" id="exSave" hidden>Save PNG</button>
+    </div>
+  </div>
+</div>
+
+<div class="overlay" id="keysDlg" hidden>
+  <div class="dialog" role="dialog" aria-modal="true" aria-labelledby="keysTitle">
+    <h2 id="keysTitle">Keyboard shortcuts</h2>
+    <dl class="keys">
+      <dt><kbd>←</kbd> <kbd>→</kbd></dt><dd>Previous or next snapshot</dd>
+      <dt><kbd>1</kbd> <kbd>2</kbd> <kbd>3</kbd></dt><dd>Political, confession or jurisdiction layer</dd>
+      <dt><kbd>/</kbd></dt><dd>Find a town or state</dd>
+      <dt><kbd>C</kbd></dt><dd>Show changes since the previous snapshot</dd>
+      <dt><kbd>V</kbd></dt><dd>Compare two years side by side</dd>
+      <dt><kbd>S</kbd></dt><dd>Export an image</dd>
+      <dt><kbd>L</kbd> <kbd>D</kbd> <kbd>E</kbd></dt><dd>Labels, markers, event overlay</dd>
+      <dt><kbd>F</kbd></dt><dd>Full screen</dd>
+      <dt><kbd>+</kbd> <kbd>−</kbd></dt><dd>Zoom in or out</dd>
+      <dt><kbd>Esc</kbd></dt><dd>Clear the selection or close a dialog</dd>
+    </dl>
+    <div class="actions"><button class="btn primary" type="button" id="keysClose">Close</button></div>
+  </div>
+</div>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/leaflet/1.9.4/leaflet.js"></script>
+<script>
+(async function () {
+  const $ = (id) => document.getElementById(id);
+  const FAMILY = { kalmar: 'Kalmar Union under King Hans', dk: 'Danish crown', jagiellon: 'Jagiellonian dynasty', france: 'French crown',
+    spain: 'Spanish crowns', habsburg: 'House of Habsburg', wittelsbach: 'House of Wittelsbach', hohenzollern: 'House of Hohenzollern',
+    welf: 'House of Welf', wettin: 'House of Wettin', nassau: 'House of Nassau', eccl: 'Ecclesiastical principality',
+    ottoman: 'Ottoman Empire and its vassals', commonwealth: 'Polish-Lithuanian Commonwealth', morocco: 'Saadian Morocco', stuart: 'Stuart crowns (union of 1603)' };
+  const BLANK = 'data:image/gif;base64,R0lGODlhAQABAAAAACw=';
+  const IMG = { pol: 'political', conf: 'confession', jur: 'jurisdiction' };
+  const LAYER_NAME = { pol: 'Political map', conf: 'Confessions', jur: 'Communion and jurisdiction' };
+  const FONT_DISPLAY = '"IM Fell English SC", "IM Fell English", Georgia, serif';
+  const FONT_NOTE = '"IM Fell English", Georgia, serif';
+  const FONT_UI = '"Alegreya Sans", "Gill Sans", "Segoe UI", system-ui, sans-serif';
+  const store = {
+    get() { try { return JSON.parse(localStorage.getItem('ara-view-v1') || 'null'); } catch (e) { return null; } },
+    set(v) { try { localStorage.setItem('ara-view-v1', JSON.stringify(v)); } catch (e) { /* storage unavailable */ } },
+  };
+  const dlPromise = (window.claude && typeof window.claude.use === 'function') ? window.claude.use('downloads').catch(() => null) : Promise.resolve(null);
+
+  const atlas = await (await fetch('atlas.json')).json();
+  const READY = atlas.snapshots.filter((s) => s.ready).map((s) => s.year);
+  const cache = {};
+  const loadYear = (y) => cache[y] || (cache[y] = fetch(`data_${y}.json`).then((r) => r.json()));
+  const places = await fetch('places.json').then((r) => r.json()).catch(() => []);
+  const saved = store.get() || {};
+  const hashM = /^#(\d{4})(?:-(conf|jur|pol))?$/.exec(location.hash || '');
+  if (hashM) { const hy = +hashM[1]; saved.year = READY.reduce((b, y) => (y <= hy ? y : b), READY[0]); if (hashM[2]) saved.mode = hashM[2]; saved.view = null; }
+  const startYear = READY.includes(saved.year) ? saved.year : READY[0];
+  let D = await loadYear(startYear);
+  let P = null;                                            // data of the previous snapshot, for change view
+  const W = D.W, H = D.H;
+  const state = { mode: IMG[saved.mode] ? saved.mode : 'pol', sel: null, labels: saved.labels !== false, dots: saved.dots !== false,
+    event: saved.event !== false, year: startYear, shown: startYear, query: '', changes: false, compare: null, divX: 0.5 };
+  $('tLabels').checked = state.labels; $('tDots').checked = state.dots; $('tEvent').checked = state.event;
+
+  // ---------- projection (matches the fitted cylindrical projection of the base map)
+  const PJ = { X0: 2636.3663, SX: 15.635, Y0: 1300.0558, SY: 15.7667, K: 0.6802, CX: 1093, CY: 43 };
+  const unitLat = (y) => { const v = ((PJ.Y0 - (y / 2 + PJ.CY)) / PJ.SY) * Math.PI / 180; return ((2 * Math.atan(Math.exp(PJ.K * v)) - Math.PI / 2) / PJ.K) * 180 / Math.PI; };
+  const unitLon = (x) => (x / 2 + PJ.CX - PJ.X0) / PJ.SX;
+  const kmPerUnit = (lat) => (111.32 * Math.cos(lat * Math.PI / 180)) / (PJ.SX * 2);
+
+  // ---------- map
+  const map = L.map('map', { crs: L.CRS.Simple, minZoom: -2.75, maxZoom: 3, zoomSnap: 0.25, zoomDelta: 0.5,
+    wheelPxPerZoomLevel: 90, attributionControl: false, maxBoundsViscosity: 0.8 });
+  const ll = (x, y) => L.latLng(-y, x);
+  const bounds = L.latLngBounds(ll(0, H), ll(W, 0));
+  const HOME = L.latLngBounds(ll(2480, 1330), ll(4560, 140));
+  map.setMaxBounds(bounds.pad(0.15));
+  if (saved.view && isFinite(saved.view[0])) map.setView(L.latLng(saved.view[0], saved.view[1]), saved.view[2]);
+  else map.fitBounds(HOME);
+  const base = L.imageOverlay(`${IMG[state.mode]}_${startYear}.png`, bounds, { className: 'mapimg' }).addTo(map);
+  const cmp = L.imageOverlay(BLANK, bounds, { className: 'mapimg', interactive: false }).addTo(map);
+  const ev = L.imageOverlay(BLANK, bounds, { className: 'mapimg', interactive: false }).addTo(map);
+  const hl = L.imageOverlay(BLANK, bounds, { className: 'mapimg', interactive: false }).addTo(map);
+  let hlActive = false;
+  const crisp = () => map.getContainer().classList.toggle('crisp', map.getZoom() >= 0.5);
+  map.on('zoomend', crisp); crisp();
+  const setBase = () => { base.setUrl(`${IMG[state.mode]}_${state.shown}.png`); if (state.compare) cmp.setUrl(`${IMG[state.mode]}_${state.compare}.png`); };
+  const persist = () => { const c = map.getCenter(); store.set({ year: state.shown, mode: state.mode, labels: state.labels, dots: state.dots, event: state.event, view: [c.lat, c.lng, map.getZoom()] }); };
+  map.on('moveend', persist);
+
+  // ---------- province index
+  const idx = await new Promise((res) => {
+    const im = new Image(); im.onload = () => {
+      const c = document.createElement('canvas'); c.width = im.width; c.height = im.height;
+      const g = c.getContext('2d', { willReadFrequently: true }); g.drawImage(im, 0, 0);
+      const px = g.getImageData(0, 0, im.width, im.height).data; const ids = new Uint16Array(im.width * im.height);
+      for (let i = 0, j = 0; i < ids.length; i++, j += 4) ids[i] = px[j] * 256 + px[j + 1];
+      res({ w: im.width, h: im.height, ids });
+    }; im.src = 'index.png';
+  });
+  function idAt(x, y) {
+    x = Math.floor(x); y = Math.floor(y);
+    for (let r = 0; r <= 2; r++) for (let dy = -r; dy <= r; dy++) for (let dx = -r; dx <= r; dx++) {
+      const xx = x + dx, yy = y + dy; if (xx < 0 || yy < 0 || xx >= idx.w || yy >= idx.h) continue;
+      const v = idx.ids[yy * idx.w + xx]; if (v) return v;
+    }
+    return 0;
+  }
+  const keyOf = (Dx, p, mode) => mode === 'pol' ? (Dx.owner[p] >= 0 ? Dx.pols[Dx.owner[p]].k : '') : mode === 'conf' ? Dx.cats[Dx.conf[p][0]][0] : (Dx.jur[p][0] >= 0 ? Dx.jurs[Dx.jur[p][0]][0] : '');
+  const prevYear = () => { const i = READY.indexOf(state.shown); return i > 0 ? READY[i - 1] : null; };
+
+  // ---------- highlight: fade everything outside the selection or the changed provinces
+  function keepFn() {
+    const s = state.sel;
+    if (s) return (p) => s.type === 'pol' ? D.owner[p] === s.i : s.type === 'cat' ? D.conf[p][0] === s.i : s.type === 'min' ? D.conf[p][1] >= 0
+      : s.type === 'jur' ? D.jur[p][0] === s.i : s.type === 'jmin' ? D.jur[p][1] >= 0 : s.type === 'ev' ? D.event && D.event.zone[p] >= 0 && D.event.zcat[D.event.zone[p]] === s.i : false;
+    if (state.changes && P) return (p) => keyOf(P, p, state.mode) !== keyOf(D, p, state.mode);
+    return null;
+  }
+  function drawHighlight() {
+    const keep = keepFn();
+    if (!keep) { hl.setUrl(BLANK); hlActive = false; return; }
+    const c = document.createElement('canvas'); c.width = idx.w; c.height = idx.h;
+    const g = c.getContext('2d'); const im = g.createImageData(idx.w, idx.h); const d = im.data;
+    const k = new Uint8Array(D.owner.length + 1);
+    for (let p = 0; p < D.owner.length; p++) k[p + 1] = keep(p) ? 1 : 0;
+    const m = (getComputedStyle(document.documentElement).getPropertyValue('--dim').match(/[\d.]+/g) || [245, 247, 246, 0.62]).map(Number);
+    const a = Math.round(m[3] * 255);
+    for (let i = 0, j = 0; i < idx.ids.length; i++, j += 4) {
+      const v = idx.ids[i]; if (v && k[v]) continue;
+      d[j] = m[0]; d[j + 1] = m[1]; d[j + 2] = m[2]; d[j + 3] = a;
+    }
+    g.putImageData(im, 0, 0); hl.setUrl(c.toDataURL()); hlActive = true;
+  }
+
+  // ---------- points shown for the current layer
+  const short = (n) => n.split(/[:(,]/)[0].trim();
+  function points() {
+    const out = [];
+    if (state.dots) {
+      if (state.mode === 'pol') {
+        const pk = Object.fromEntries(D.pols.map((p, i) => [p.k, i]));
+        D.pdots.forEach(([n, x, y, k]) => { const p = D.pols[pk[k]]; out.push({ x, y, n, kind: 'pdot', col: p ? p.c : '#888', tip: k === 'NUR' ? 'Free imperial city or enclave' : p ? p.n : '' }); });
+      } else if (state.mode === 'conf') {
+        D.cdots.forEach(([n, x, y, k]) => { const [kind, col] = D.dotkinds[k]; out.push({ x, y, n, kind: 'cdot', col, tip: kind }); });
+      } else {
+        D.seats.forEach(([n, x, y, k]) => { const [kind, col] = D.seatkinds[k]; out.push({ x, y, n, kind: 'seat', seat: k, col, tip: kind }); });
+      }
+    }
+    if (D.event && state.event) D.event.markers.forEach(([n, x, y, d]) => out.push({ x, y, n, kind: 'evm', col: '#A11D1D', tip: d }));
+    return out;
+  }
+  const pointLayer = L.layerGroup().addTo(map);
+  function seatHTML(k, col) { return `<span class="seat seat-${k}" style="background:${k === 'eastern' ? '#fff' : col};${k === 'eastern' ? `border-color:${col}` : ''}"></span>`; }
+  function syncPoints() {
+    pointLayer.clearLayers();
+    $('dotsLabel').textContent = { pol: 'Cities and enclaves', conf: 'Congregations', jur: 'Church seats' }[state.mode];
+    ev.setUrl(D.event && state.event ? D.event.img : BLANK);
+    if (state.compare) return;
+    for (const p of points()) {
+      let m;
+      if (p.kind === 'pdot') m = L.circleMarker(ll(p.x, p.y), { radius: 4.5, color: '#1D2A2D', weight: 1.2, fillColor: p.col, fillOpacity: 1 });
+      else if (p.kind === 'cdot') m = L.circleMarker(ll(p.x, p.y), { radius: 4.5, color: '#FFFFFF', weight: 1.5, fillColor: p.col, fillOpacity: 1 });
+      else if (p.kind === 'seat') m = L.marker(ll(p.x, p.y), { icon: L.divIcon({ className: '', html: seatHTML(p.seat, p.col), iconSize: [16, 16], iconAnchor: [8, 8] }) });
+      else m = L.marker(ll(p.x, p.y), { icon: L.divIcon({ className: '', html: '<span class="evm"></span>', iconSize: [12, 12], iconAnchor: [6, 6] }) });
+      pointLayer.addLayer(m.bindTooltip(`<b>${p.n}</b><br>${p.tip}`, { direction: 'top', offset: [0, -6] }));
+    }
+  }
+
+  // ---------- label placement (shared by the screen and the image export)
+  const meas = document.createElement('canvas').getContext('2d');
+  function textW(t, font) { meas.font = font; return meas.measureText(t).width; }
+  function stateLabels() {
+    const out = [];
+    D.pols.forEach((p) => p.an.forEach(([x, y, area, r]) => out.push({ x, y, area, r, text: p.s, len: p.s.length })));
+    return out;
+  }
+  // Z = screen pixels per map unit; proj maps units to output pixels; u multiplies sizes for high-resolution export
+  function layout(Z, proj, w, h, u) {
+    const res = { states: [], points: [], towns: [] }; if (!state.labels || state.compare) return res;
+    const placed = []; const hit = (b) => placed.some((q) => !(b[2] < q[0] || b[0] > q[2] || b[3] < q[1] || b[1] > q[3]));
+    const cand = stateLabels().map((L0) => {
+      const side = Math.sqrt(L0.area) * 2 * Z, r = L0.r * Z;
+      return { L0, f: Math.min(0.26 * side, (2.9 * r) / (0.62 * L0.len + 0.6), 1.15 * r, 30) };
+    }).filter((c) => c.f >= 9.5).sort((a, b) => b.f - a.f);
+    for (const c of cand) {
+      const [px, py] = proj(c.L0.x, c.L0.y); const f = c.f * u;
+      if (px < -200 * u || py < -50 * u || px > w + 200 * u || py > h + 50 * u) continue;
+      const bw = f * (0.62 * c.L0.len + 0.6) * 1.06, bh = f * 1.15;
+      const box = [px - bw / 2, py - bh / 2, px + bw / 2, py + bh / 2];
+      if (hit(box)) continue; placed.push(box); res.states.push({ x: px, y: py, size: f, text: c.L0.text });
+    }
+    if (Z >= 1.6) {
+      const pts = points(); const fs = 12 * u;
+      for (const p of pts) {
+        const [px, py] = proj(p.x, p.y); if (px < 0 || py < 0 || px > w || py > h) continue;
+        const t = short(p.n); const tw = textW(t, `italic ${fs}px ${FONT_NOTE}`);
+        const box = [px + 9 * u, py - fs * 0.6, px + 9 * u + tw, py + fs * 0.6];
+        placed.push([px - 6 * u, py - 6 * u, px + 6 * u, py + 6 * u]);
+        if (hit(box)) continue; placed.push(box); res.points.push({ x: px, y: py, text: t, size: fs });
+      }
+      if (Z >= 2.4) {
+        const taken = pts.map((p) => proj(p.x, p.y));
+        for (const [n, x, y] of places) {
+          const [px, py] = proj(x, y); if (px < 0 || py < 0 || px > w || py > h) continue;
+          if (taken.some(([qx, qy]) => Math.abs(qx - px) < 10 * u && Math.abs(qy - py) < 10 * u)) continue;
+          const tw = textW(n, `${fs}px ${FONT_UI}`);
+          const box = [px + 6 * u, py - fs * 0.6, px + 6 * u + tw, py + fs * 0.6];
+          if (hit(box)) continue; placed.push(box); res.towns.push({ x: px, y: py, text: n, size: fs });
+        }
+      }
+    }
+    return res;
+  }
+  const labelLayer = L.layerGroup().addTo(map);
+  function placeLabels() {
+    labelLayer.clearLayers();
+    const Z = Math.pow(2, map.getZoom()); const size = map.getSize();
+    const toPt = (x, y) => { const p = map.latLngToContainerPoint(ll(x, y)); return [p.x, p.y]; };
+    const res = layout(Z, toPt, size.x, size.y, 1);
+    const back = (px, py) => map.containerPointToLatLng([px, py]);
+    for (const s of res.states) labelLayer.addLayer(L.marker(back(s.x, s.y), { interactive: false, keyboard: false, icon: L.divIcon({ className: 'lbl', html: `<span style="font-size:${s.size.toFixed(1)}px">${s.text}</span>`, iconSize: null }) }));
+    for (const s of res.points) labelLayer.addLayer(L.marker(back(s.x, s.y), { interactive: false, keyboard: false, icon: L.divIcon({ className: 'plbl', html: `<span>${s.text}</span>`, iconSize: null }) }));
+    for (const s of res.towns) {
+      labelLayer.addLayer(L.marker(back(s.x, s.y), { interactive: false, keyboard: false, icon: L.divIcon({ className: '', html: '<span class="towndot"></span>', iconSize: [4, 4], iconAnchor: [2, 2] }) }));
+      labelLayer.addLayer(L.marker(back(s.x, s.y), { interactive: false, keyboard: false, icon: L.divIcon({ className: 'plbl town', html: `<span>${s.text}</span>`, iconSize: null }) }));
+    }
+  }
+  map.on('zoomend moveend', placeLabels);
+
+  // ---------- scale bar and coordinates
+  function nice(v) { const e = Math.pow(10, Math.floor(Math.log10(v))); const m = v / e; return (m >= 5 ? 5 : m >= 2 ? 2 : 1) * e; }
+  let cursor = null;
+  function drawScale() {
+    const c = map.getCenter(); const lat = unitLat(-c.lat);
+    const kmPx = kmPerUnit(lat) / Math.pow(2, map.getZoom());
+    const km = nice(110 * kmPx); const px = km / kmPx; const miles = km / 7.42;
+    const coord = cursor ? `${Math.abs(cursor[0]).toFixed(1)}° ${cursor[0] >= 0 ? 'N' : 'S'}, ${Math.abs(cursor[1]).toFixed(1)}° ${cursor[1] >= 0 ? 'E' : 'W'}` : `Scale at ${Math.round(lat)}° N`;
+    $('scale').innerHTML = `<div>${km.toLocaleString()} km · ${miles >= 10 ? Math.round(miles) : miles.toFixed(1)} German miles</div><div class="bar" style="width:${px.toFixed(0)}px"></div><div class="coord">${coord}</div>`;
+  }
+  map.on('zoomend moveend', drawScale);
+
+  // ---------- inspector
+  const sw = (c) => `<span class="sw" style="background:${c}"></span>`;
+  function inspectHTML(pid) {
+    const p0 = pid - 1, o = D.owner[p0], [mj, mn] = D.conf[p0], [jm, jn] = D.jur[p0], z = D.zone[p0];
+    const p = o >= 0 ? D.pols[o] : null; const cat = D.cats, jur = D.jurs;
+    const chips = [];
+    if (p && p.h) chips.push('<span class="chip hre">Holy Roman Empire</span>');
+    if (p && p.f) chips.push(`<span class="chip">${FAMILY[p.f] || p.f}</span>`);
+    if (p && p.r && state.mode === 'pol') chips.push(`<span class="chip">${p.r}</span>`);
+    const head = state.mode === 'pol' ? (p ? p.n : 'Unclaimed land') : state.mode === 'conf' ? cat[mj][1] : jm >= 0 ? jur[jm][1] : '';
+    const evz = D.event && state.event ? D.event.zone[p0] : -1;
+    let changes = '';
+    if (state.changes && P) {
+      const po = P.owner[p0], pp = po >= 0 ? P.pols[po] : null, [pm] = P.conf[p0], [pj] = P.jur[p0];
+      const row = (label, a, b) => `<dt>${label}</dt><dd class="change-row">${a === b ? 'unchanged' : `${a} → <b>${b}</b>`}</dd>`;
+      changes = `<dt style="grid-column:1/-1;margin-top:4px">Since ${prevYear()}</dt>
+        ${row('Ruler', pp ? pp.s : 'none', p ? p.s : 'none')}${row('Majority', P.cats[pm][1], cat[mj][1])}${row('Church', pj >= 0 ? P.jurs[pj][1] : 'none', jm >= 0 ? jur[jm][1] : 'none')}`;
+    }
+    return `<h3>${head}</h3>${chips.length ? `<div class="chips">${chips.join('')}</div>` : ''}
+      <dl class="facts">
+        ${state.mode !== 'pol' ? `<dt>Ruler</dt><dd>${p ? p.n : 'none'}</dd>` : ''}
+        <dt>Majority</dt><dd>${sw(cat[mj][2])}${cat[mj][1]}</dd>
+        <dt>Minority</dt><dd>${mn >= 0 ? sw(cat[mn][2]) + cat[mn][1] + ' (25% or more)' : 'none above 25%'}</dd>
+        ${jm >= 0 ? `<dt>Church</dt><dd>${sw(jur[jm][2])}${jur[jm][1]}</dd>` : ''}
+        ${jn >= 0 ? `<dt>Also</dt><dd>${sw(jur[jn][2])}${jur[jn][1]}</dd>` : ''}
+        ${changes}
+      </dl>${z >= 0 ? `<p class="zone-note">${D.zones[z]}</p>` : ''}${evz >= 0 ? `<p class="zone-note" style="color:${D.event.cats[D.event.zcat[evz]][2]}"><b>${D.event.cats[D.event.zcat[evz]][1]}.</b> ${D.event.zones[evz]}</p>` : ''}`;
+  }
+  function selHTML() {
+    const s = state.sel;
+    if (s.type === 'pol') { const p = D.pols[s.i]; return `<h3>${p.n}</h3><div class="chips">${p.h ? '<span class="chip hre">Holy Roman Empire</span>' : ''}${p.f ? `<span class="chip">${FAMILY[p.f] || p.f}</span>` : ''}<span class="chip">${p.r}</span></div>`; }
+    if (s.type === 'cat') return `<h3>${D.cats[s.i][1]}</h3><p class="hint">Provinces where this is the majority confession are picked out.</p>`;
+    if (s.type === 'jur') return `<h3>${D.jurs[s.i][1]}</h3><p class="hint">${D.jurs[s.i][3] || 'Provinces under this jurisdiction are picked out.'}</p>`;
+    if (s.type === 'ev') return `<h3>${D.event.cats[s.i][1]}</h3><p class="hint">${D.event.name}. These regions are picked out; hover over one for details.</p>`;
+    return `<h3>${s.type === 'jmin' ? 'A second jurisdiction' : 'Significant minorities'}</h3><p class="hint">${s.type === 'jmin' ? 'Provinces where a second church hierarchy serves a large community are picked out.' : 'Provinces with a second confession of 25% or more are picked out.'}</p>`;
+  }
+  function changeSummary() {
+    let n = 0; for (let p = 0; p < D.owner.length; p++) if (keyOf(P, p, state.mode) !== keyOf(D, p, state.mode)) n++;
+    const what = { pol: 'changed ruler', conf: 'changed majority confession', jur: 'changed church jurisdiction' }[state.mode];
+    return `<h3>Changes since ${prevYear()}</h3><p class="hint">${n} provinces ${what}. They stay bright; everything else is faded. Switch layers to compare rulers, confessions or churches.</p>`;
+  }
+  function showInspect(pid) {
+    const box = $('inspect');
+    const clear = state.sel ? '<button class="clear" id="clearSel" type="button">Clear selection</button>' : state.changes ? '<button class="clear" id="clearSel" type="button">Stop showing changes</button>' : '';
+    if (pid) box.innerHTML = inspectHTML(pid) + clear;
+    else if (state.sel) box.innerHTML = selHTML() + clear;
+    else if (state.changes && P) box.innerHTML = changeSummary() + clear;
+    else box.innerHTML = `<p class="hint">Hover over a province, or tap it on a touch screen, to see who ruled it, how it worshipped and which church governed it in ${state.shown}. Click anything in the key to pick it out on the map.</p>`;
+    const c = $('clearSel'); if (c) c.onclick = () => state.sel ? select(null) : setChanges(false);
+  }
+  let hoverId = 0, raf = 0;
+  map.on('mousemove', (e) => {
+    cursor = [unitLat(-e.latlng.lat), unitLon(e.latlng.lng)];
+    if (raf) return; raf = requestAnimationFrame(() => {
+      raf = 0; drawScale(); const id = idAt(e.latlng.lng / 2, -e.latlng.lat / 2);
+      if (id !== hoverId) { hoverId = id; showInspect(id); }
+    });
+  });
+  map.on('mouseout', () => { hoverId = 0; cursor = null; drawScale(); showInspect(0); });
+  map.on('click', (e) => {
+    const id = idAt(e.latlng.lng / 2, -e.latlng.lat / 2); if (!id) { select(null); return; }
+    if (!state.changes) {
+      if (state.mode === 'pol' && D.owner[id - 1] >= 0) select({ type: 'pol', i: D.owner[id - 1] }, false);
+      else if (state.mode === 'conf') select({ type: 'cat', i: D.conf[id - 1][0] }, false);
+      else if (state.mode === 'jur' && D.jur[id - 1][0] >= 0) select({ type: 'jur', i: D.jur[id - 1][0] }, false);
+    }
+    hoverId = id; showInspect(id);
+  });
+  function select(s, fly = true) {
+    state.sel = s; drawHighlight(); renderKey(); showInspect(0);
+    if (s && s.type === 'pol' && fly) flyToState(s.i);
+  }
+  function flyToState(i) {
+    const an = D.pols[i].an; if (!an.length) return;
+    const pts = an.map(([x, y, a]) => { const h = Math.sqrt(a) * 1.4; return [ll(x - h, y + h), ll(x + h, y - h)]; }).flat();
+    map.flyToBounds(L.latLngBounds(pts), { maxZoom: 1.5, duration: 0.6, padding: [40, 40] });
+  }
+  const same = (a, b) => !!(a && b && a.type === b.type && a.i === b.i);
+
+  // ---------- key
+  function eventKey() {
+    if (!D.event || !state.event) return '';
+    return `<div class="key-group"><h4>${D.event.name}</h4><ul class="key-list">
+      ${D.event.cats.map(([k, name, col], i) => `<li><button type="button" data-evc="${i}" aria-pressed="${same(state.sel, { type: 'ev', i })}"><span class="sw" style="background:repeating-linear-gradient(135deg, ${col} 0 2px, transparent 2px 6px);box-shadow:inset 0 0 0 1.5px ${col}"></span><span class="name">${name}</span></button></li>`).join('')}
+      ${D.event.markers.map(([n, x, y, d], i) => `<li><button type="button" data-evm="${i}"><span class="evm" style="flex:none"></span><span class="name">${n}<span class="sub">${d}</span></span></button></li>`).join('')}</ul></div>`;
+  }
+  function wireEventKey(k) {
+    k.querySelectorAll('[data-evc]').forEach((b) => b.onclick = () => { const i = +b.dataset.evc; select(same(state.sel, { type: 'ev', i }) ? null : { type: 'ev', i }, false); });
+    k.querySelectorAll('[data-evm]').forEach((b) => b.onclick = () => { const [, x, y] = D.event.markers[+b.dataset.evm]; map.flyTo(ll(x, y), 1, { duration: 0.6 }); });
+  }
+  function renderKey() {
+    const k = $('key'); const s = state.sel;
+    if (state.mode === 'pol') {
+      const q = state.query.trim().toLowerCase(); const groups = {};
+      D.pols.forEach((p, i) => { if (!p.a) return; if (q && !(p.n.toLowerCase().includes(q) || p.s.toLowerCase().includes(q))) return; (groups[p.r] = groups[p.r] || []).push([p, i]); });
+      const total = D.pols.filter((p) => p.a).length;
+      k.innerHTML = `<div class="label-row"><h2>Map key</h2><span class="key-note" style="margin:0">${total} states</span></div>
+        <input class="key-search" id="keySearch" type="search" placeholder="Filter the list of states" value="${state.query.replace(/"/g, '&quot;')}" aria-label="Filter the list of states">
+        ${eventKey()}
+        ${Object.entries(groups).map(([g, items]) => `<div class="key-group"><h4>${g}</h4><ul class="key-list">${items.sort((a, b) => a[0].s.localeCompare(b[0].s)).map(([p, i]) =>
+          `<li><button type="button" data-i="${i}" aria-pressed="${same(s, { type: 'pol', i })}" title="${p.n}"><span class="sw" style="background:${p.c}"></span><span class="name">${p.s}</span>${p.h ? '<span class="tag">HRE</span>' : ''}</button></li>`).join('')}</ul></div>`).join('') || '<p class="key-note">No state matches that name.</p>'}
+        <p class="key-note"><span class="tag" style="color:#AA288C">HRE</span> marks members of the Holy Roman Empire, whose outer edge is the dashed magenta line.</p>`;
+      const inp = $('keySearch'); inp.oninput = () => { state.query = inp.value; const pos = inp.selectionStart; renderKey(); const n = $('keySearch'); n.focus(); n.setSelectionRange(pos, pos); };
+      k.querySelectorAll('[data-i]').forEach((b) => b.onclick = () => { const i = +b.dataset.i; select(same(s, { type: 'pol', i }) ? null : { type: 'pol', i }); });
+    } else if (state.mode === 'conf') {
+      const counts = new Array(D.cats.length).fill(0); D.conf.forEach(([a]) => counts[a]++);
+      const minCount = D.conf.filter(([, b]) => b >= 0).length;
+      k.innerHTML = `<h2>Map key</h2>${eventKey()}
+        <div class="key-group"><h4>Majority confession</h4><ul class="key-list">${D.cats.map(([key, name, col], i) =>
+          `<li><button type="button" data-c="${i}" aria-pressed="${same(s, { type: 'cat', i })}"><span class="sw" style="background:${col}"></span><span class="name">${name}</span><span class="count">${counts[i]}</span></button></li>`).join('')}</ul></div>
+        <div class="key-group"><h4>Minorities</h4><ul class="key-list"><li><button type="button" data-m="1" aria-pressed="${!!(s && s.type === 'min')}"><span class="sw hatch-demo"></span><span class="name">Stripes in a second colour: a minority of 25% or more</span><span class="count">${minCount}</span></button></li></ul></div>
+        <div class="key-group"><h4>Congregations</h4><ul class="key-list">${Object.values(D.dotkinds).map(([name, col]) =>
+          `<li><button type="button" tabindex="-1" style="cursor:default"><span class="sw dot" style="background:${col}"></span><span class="name">${name}</span></button></li>`).join('')}</ul></div>
+        <p class="key-note">Counts are provinces. Dots mark the principal organised communities, not every congregation. Dark lines are state borders; grey lines separate confessions inside a state.</p>`;
+      k.querySelectorAll('[data-c]').forEach((b) => b.onclick = () => { const i = +b.dataset.c; select(same(s, { type: 'cat', i }) ? null : { type: 'cat', i }, false); });
+      k.querySelector('[data-m]').onclick = () => select(s && s.type === 'min' ? null : { type: 'min' }, false);
+    } else {
+      const counts = new Array(D.jurs.length).fill(0); D.jur.forEach(([a]) => a >= 0 && counts[a]++);
+      const minCount = D.jur.filter(([, b]) => b >= 0).length;
+      k.innerHTML = `<h2>Map key</h2>${eventKey()}
+        <div class="key-group"><h4>Communion and jurisdiction</h4><ul class="key-list">${D.jurs.map(([key, name, col, note], i) => counts[i] ?
+          `<li><button type="button" data-j="${i}" aria-pressed="${same(s, { type: 'jur', i })}"><span class="sw" style="background:${col}"></span><span class="name">${name}${note ? `<span class="sub">${note}</span>` : ''}</span><span class="count">${counts[i]}</span></button></li>` : '').join('')}</ul></div>
+        <div class="key-group"><h4>Parallel hierarchies</h4><ul class="key-list"><li><button type="button" data-jm="1" aria-pressed="${!!(s && s.type === 'jmin')}"><span class="sw hatch-demo"></span><span class="name">Stripes: a second church serves a large community, such as Orthodox parishes under Latin rule</span><span class="count">${minCount}</span></button></li></ul></div>
+        <div class="key-group"><h4>Church seats</h4><ul class="key-list">${Object.entries(D.seatkinds).map(([k2, [name, col]]) =>
+          `<li><button type="button" tabindex="-1" style="cursor:default"><span style="width:16px;display:flex;justify-content:center;flex:none">${seatHTML(k2, col)}</span><span class="name">${name}</span></button></li>`).join('')}</ul></div>
+        <p class="key-note">Dark lines separate jurisdictions; grey lines are state borders inside one jurisdiction. Muslim and other non-Christian majorities are shown in the neutral colour.</p>`;
+      k.querySelectorAll('[data-j]').forEach((b) => b.onclick = () => { const i = +b.dataset.j; select(same(s, { type: 'jur', i }) ? null : { type: 'jur', i }, false); });
+      k.querySelector('[data-jm]').onclick = () => select(s && s.type === 'jmin' ? null : { type: 'jmin' }, false);
+    }
+    wireEventKey(k);
+  }
+  function renderMini() {
+    const evi = D.event && state.event && !state.compare ? D.event.cats.map(([k, name, col]) => `<span><span class="sw" style="background:repeating-linear-gradient(135deg, ${col} 0 2px, transparent 2px 6px);box-shadow:inset 0 0 0 1.5px ${col}"></span>${D.event.cats.length > 1 ? name : D.event.name}</span>`).join('') : '';
+    $('legendMini').innerHTML = (state.mode === 'pol'
+      ? '<span><span class="hre-demo"></span>Holy Roman Empire</span><span><span class="sw dot" style="background:#8A8A8A"></span>Free city or enclave</span><span>Darker shade: thinly settled land</span>'
+      : state.mode === 'conf' ? '<span><span class="sw hatch-demo"></span>Minority of 25% or more</span><span><span class="sw dot" style="background:#7A4FA3"></span>Congregation</span>'
+      : '<span><span class="sw hatch-demo"></span>Second jurisdiction</span><span><span class="seat seat-pope" style="background:#B8860B;width:11px;height:11px"></span>Church seat</span>') + evi;
+  }
+
+  // ---------- timeline, modes, toggles
+  function renderTimeline() {
+    $('timeline').innerHTML = atlas.snapshots.map((s) => `<button type="button" data-y="${s.year}" class="${s.ready ? '' : 'planned'}${s.year > 1600 && s.ready ? ' c17' : ''}" aria-pressed="${s.year === state.shown}" title="${s.ready ? '' : 'In preparation'}">${s.year}</button>`).join('') + '<span class="tl-fill"></span>'.repeat((6 - atlas.snapshots.length % 6) % 6);
+    $('timeline').querySelectorAll('button').forEach((b) => b.onclick = () => showYear(+b.dataset.y));
+  }
+  function refresh() {
+    setBase(); drawHighlight(); syncPoints(); renderKey(); renderMini(); showInspect(0); placeLabels(); drawScale(); syncCompareUI(); persist();
+    $('toolChanges').disabled = !prevYear();
+  }
+  async function showYear(y) {
+    const s = atlas.snapshots.find((x) => x.year === y);
+    state.year = y;
+    $('yearNum').textContent = y; $('yearNote').textContent = s.note;
+    if (s.ready) {
+      D = await loadYear(y); state.shown = y; state.sel = null;
+      const py = prevYear(); P = py ? await loadYear(py) : null;
+      if (!P) state.changes = false;
+      $('toolChanges').setAttribute('aria-pressed', String(state.changes));
+      if (state.compare === y) state.compare = READY.find((r) => r !== y);
+      $('evToggle').hidden = !D.event; if (D.event) $('evLabel').textContent = D.event.name;
+      $('yearStatus').innerHTML = '<b>On the map.</b> Political, confession and jurisdiction layers are drawn for this year.';
+      refresh();
+    } else $('yearStatus').innerHTML = `<b>In preparation.</b> The map still shows ${state.shown}.`;
+    $('timeline').querySelectorAll('button').forEach((b) => b.setAttribute('aria-pressed', String(+b.dataset.y === (s.ready ? y : state.shown))));
+    const i = READY.indexOf(state.shown); $('prevYear').disabled = i <= 0; $('nextYear').disabled = i >= READY.length - 1;
+  }
+  const step = (d) => { const i = READY.indexOf(state.shown) + d; if (i >= 0 && i < READY.length) showYear(READY[i]); };
+  function setMode(m) {
+    state.mode = m; state.sel = null;
+    ['Pol', 'Conf', 'Jur'].forEach((n) => $('mode' + n).setAttribute('aria-pressed', String(m === n.toLowerCase())));
+    $('app').classList.toggle('mode-conf', m === 'conf'); $('app').classList.toggle('mode-jur', m === 'jur');
+    refresh();
+  }
+  function setChanges(on) {
+    state.changes = on && !!P; if (state.changes) { state.sel = null; setCompare(null, true); }
+    $('toolChanges').setAttribute('aria-pressed', String(state.changes));
+    drawHighlight(); renderKey(); showInspect(0);
+  }
+  $('modePol').onclick = () => setMode('pol'); $('modeConf').onclick = () => setMode('conf'); $('modeJur').onclick = () => setMode('jur');
+  $('prevYear').onclick = () => step(-1); $('nextYear').onclick = () => step(1);
+  $('tLabels').onchange = (e) => { state.labels = e.target.checked; placeLabels(); persist(); };
+  $('tDots').onchange = (e) => { state.dots = e.target.checked; syncPoints(); placeLabels(); persist(); };
+  $('tEvent').onchange = (e) => { state.event = e.target.checked; if (!state.event && state.sel && state.sel.type === 'ev') state.sel = null; drawHighlight(); syncPoints(); renderKey(); renderMini(); placeLabels(); persist(); };
+  $('toolChanges').onclick = () => setChanges(!state.changes);
+  $('resetView').onclick = () => map.flyToBounds(HOME, { duration: 0.6 });
+  $('sheetToggle').onclick = () => { const p = $('panel'); const c = p.classList.toggle('collapsed'); $('sheetToggle').textContent = c ? 'Show key' : 'Hide key'; $('sheetToggle').setAttribute('aria-expanded', String(!c)); setTimeout(() => map.invalidateSize(), 50); };
+  if (matchMedia('(max-width: 760px)').matches) { $('panel').classList.add('collapsed'); $('sheetToggle').textContent = 'Show key'; $('sheetToggle').setAttribute('aria-expanded', 'false'); }
+  matchMedia('(prefers-color-scheme: dark)').addEventListener('change', drawHighlight);
+
+  // ---------- compare two years with a swipe divider
+  function syncCompareUI() {
+    const on = !!state.compare;
+    $('mapWrap').classList.toggle('comparing', on);
+    $('cmpbar').hidden = !on; $('divider').hidden = !on; $('cmpTagL').hidden = !on; $('cmpTagR').hidden = !on;
+    $('toolCompare').setAttribute('aria-pressed', String(on));
+    if (!on) { cmp.setUrl(BLANK); const el = cmp.getElement(); if (el) el.style.clipPath = ''; return; }
+    $('cmpLeft').textContent = `Left: ${state.shown}`;
+    $('cmpYear').innerHTML = READY.filter((y) => y !== state.shown).map((y) => `<option value="${y}" ${y === state.compare ? 'selected' : ''}>${y}</option>`).join('');
+    $('cmpTagL').textContent = state.shown; $('cmpTagR').textContent = state.compare;
+    clipCompare();
+  }
+  function clipCompare() {
+    if (!state.compare) return;
+    const wrap = $('mapWrap').getBoundingClientRect(); const x = state.divX * wrap.width;
+    $('divider').style.left = `${x}px`; $('divider').setAttribute('aria-valuenow', String(Math.round(state.divX * 100)));
+    $('cmpTagL').style.left = `${Math.max(8, x - 70)}px`; $('cmpTagR').style.left = `${Math.min(wrap.width - 70, x + 14)}px`;
+    const el = cmp.getElement(); if (!el) return;
+    const r = el.getBoundingClientRect(); const mr = map.getContainer().getBoundingClientRect();
+    const k = el.offsetWidth / (r.width || 1);
+    el.style.clipPath = `inset(0 0 0 ${Math.max(0, (mr.left + x - r.left) * k)}px)`;
+  }
+  function setCompare(y, quiet) {
+    if (y && state.changes && !quiet) setChanges(false);
+    state.compare = y || null; setBase(); syncCompareUI(); syncPoints(); placeLabels(); renderMini();
+  }
+  map.on('move zoom zoomend viewreset resize', clipCompare);
+  $('toolCompare').onclick = () => setCompare(state.compare ? null : (prevYear() || READY.find((y) => y !== state.shown)));
+  $('cmpYear').onchange = (e) => setCompare(+e.target.value);
+  $('cmpClose').onclick = () => setCompare(null);
+  (function divider() {
+    const d = $('divider'); let drag = false;
+    const move = (cx) => { const r = $('mapWrap').getBoundingClientRect(); state.divX = Math.min(0.98, Math.max(0.02, (cx - r.left) / r.width)); clipCompare(); };
+    d.addEventListener('pointerdown', (e) => { drag = true; d.setPointerCapture(e.pointerId); e.preventDefault(); e.stopPropagation(); });
+    d.addEventListener('pointermove', (e) => { if (drag) move(e.clientX); });
+    d.addEventListener('pointerup', () => { drag = false; });
+    d.addEventListener('keydown', (e) => { if (e.key === 'ArrowLeft' || e.key === 'ArrowRight') { state.divX = Math.min(0.98, Math.max(0.02, state.divX + (e.key === 'ArrowLeft' ? -0.03 : 0.03))); clipCompare(); e.preventDefault(); e.stopPropagation(); } });
+    L.DomEvent.disableClickPropagation(d);
+  })();
+
+  // ---------- place search
+  const searchIn = $('searchInput'), results = $('results'); let hits = [], active = -1;
+  L.DomEvent.disableClickPropagation($('search')); L.DomEvent.disableScrollPropagation($('search'));
+  function runSearch() {
+    const q = searchIn.value.trim().toLowerCase(); hits = []; active = -1;
+    if (q.length < 2) { results.hidden = true; return; }
+    const norm = (t) => t.toLowerCase().normalize('NFD').replace(/[̀-ͯ]/g, '');
+    const nq = norm(q); const score = (t) => { const n = norm(t); return n.startsWith(nq) ? 0 : n.includes(' ' + nq) ? 1 : n.includes(nq) ? 2 : -1; };
+    for (const [n, x, y] of places) { const s = score(n); if (s >= 0) hits.push({ s, n, kind: 'Town', x, y }); }
+    D.pols.forEach((p, i) => { if (!p.a) return; const s = Math.min(...[score(p.s), score(p.n)].map((v) => v < 0 ? 9 : v)); if (s < 9) hits.push({ s: s + 0.5, n: p.s, kind: 'State', i }); });
+    for (const p of points()) { const t = short(p.n); const s = score(t); if (s >= 0 && !hits.some((h) => h.n === t)) hits.push({ s: s + 0.2, n: t, kind: p.tip.length > 34 ? 'Marker' : p.tip, x: p.x, y: p.y }); }
+    hits.sort((a, b) => a.s - b.s || a.n.localeCompare(b.n)); hits = hits.slice(0, 12);
+    results.innerHTML = hits.length ? hits.map((h, i) => `<li><button type="button" data-h="${i}"><span>${h.n}</span><span class="kind">${h.kind}</span></button></li>`).join('') : '<li class="none">Nothing on the map by that name.</li>';
+    results.hidden = false;
+    results.querySelectorAll('[data-h]').forEach((b) => b.onclick = () => go(hits[+b.dataset.h]));
+  }
+  let pin = null;
+  function go(h) {
+    results.hidden = true; searchIn.value = h.n; searchIn.blur();
+    if (h.kind === 'State') { select({ type: 'pol', i: h.i }); return; }
+    map.flyTo(ll(h.x, h.y), Math.max(map.getZoom(), 1.25), { duration: 0.7 });
+    if (pin) map.removeLayer(pin);
+    pin = L.marker(ll(h.x, h.y), { interactive: false, icon: L.divIcon({ className: '', html: '<span class="pin"></span>', iconSize: [16, 16], iconAnchor: [8, 8] }) }).addTo(map);
+    setTimeout(() => { if (pin) { map.removeLayer(pin); pin = null; } }, 4500);
+  }
+  searchIn.addEventListener('input', runSearch);
+  searchIn.addEventListener('keydown', (e) => {
+    const bs = results.querySelectorAll('[data-h]');
+    if (e.key === 'ArrowDown' || e.key === 'ArrowUp') { if (!bs.length) return; active = (active + (e.key === 'ArrowDown' ? 1 : -1) + bs.length) % bs.length; bs.forEach((b, i) => b.classList.toggle('active', i === active)); e.preventDefault(); }
+    else if (e.key === 'Enter') { if (hits.length) go(hits[Math.max(0, active)]); }
+    else if (e.key === 'Escape') { results.hidden = true; searchIn.blur(); }
+  });
+  document.addEventListener('click', (e) => { if (!$('search').contains(e.target)) results.hidden = true; });
+
+  // ---------- full screen
+  const fsOK = document.fullscreenEnabled && $('app').requestFullscreen;
+  $('toolFull').hidden = !fsOK;
+  const toggleFull = () => { if (!fsOK) return; (document.fullscreenElement ? document.exitFullscreen() : $('app').requestFullscreen()).catch(() => { $('toolFull').hidden = true; }); };
+  $('toolFull').onclick = toggleFull;
+  document.addEventListener('fullscreenchange', () => { $('toolFull').setAttribute('aria-pressed', String(!!document.fullscreenElement)); setTimeout(() => { map.invalidateSize(); clipCompare(); }, 80); });
+
+  // ---------- dialogs
+  let lastFocus = null;
+  function openDlg(id) { lastFocus = document.activeElement; $(id).hidden = false; const f = $(id).querySelector('button, input'); if (f) f.focus(); }
+  function closeDlg(id) { $(id).hidden = true; if (lastFocus && lastFocus.focus) lastFocus.focus(); }
+  $('openKeys').onclick = () => openDlg('keysDlg'); $('keysClose').onclick = () => closeDlg('keysDlg');
+  ['keysDlg', 'exportDlg'].forEach((id) => $(id).addEventListener('click', (e) => { if (e.target === $(id)) closeDlg(id); }));
+
+  // ---------- image export
+  const fmt = (n) => Math.round(n).toLocaleString();
+  function viewRect() {
+    const b = map.getBounds(); const x0 = Math.max(0, b.getWest()), x1 = Math.min(W, b.getEast()), y0 = Math.max(0, -b.getNorth()), y1 = Math.min(H, -b.getSouth());
+    return [x0, y0, x1 - x0, y1 - y0];
+  }
+  function updateExportSizes() {
+    const whole = $('exWhole').checked; const Z = whole ? 1 : Math.pow(2, map.getZoom()); const [, , rw, rh] = whole ? [0, 0, W, H] : viewRect();
+    $('exS1L').textContent = `Standard (${fmt(rw * Z)} × ${fmt(rh * Z)})`; $('exS2L').textContent = `Large (${fmt(rw * Z * 2)} × ${fmt(rh * Z * 2)})`;
+  }
+  function openExport() {
+    updateExportSizes(); $('exPreview').hidden = true; $('exSave').hidden = true; $('exCopy').hidden = true; $('exGo').hidden = false; $('exStatus').textContent = '';
+    openDlg('exportDlg');
+  }
+  ['exView', 'exWhole'].forEach((id) => $(id).onchange = () => { updateExportSizes(); $('exPreview').hidden = true; $('exSave').hidden = true; $('exCopy').hidden = true; $('exGo').hidden = false; });
+  $('toolExport').onclick = openExport; $('exCancel').onclick = () => closeDlg('exportDlg');
+  const loaded = (img) => img.complete && img.naturalWidth ? Promise.resolve() : (img.decode ? img.decode().catch(() => {}) : Promise.resolve());
+
+  function drawSwatch(g, it, x, y, s) {
+    g.save(); g.lineWidth = Math.max(1, s / 12);
+    if (it.t === 'fill') { g.fillStyle = it.c; g.fillRect(x, y, s, s); g.strokeStyle = 'rgba(0,0,0,.35)'; g.strokeRect(x, y, s, s); }
+    else if (it.t === 'stripe' || it.t === 'event') {
+      g.beginPath(); g.rect(x, y, s, s); g.clip(); if (it.t === 'stripe') { g.fillStyle = it.c; g.fillRect(x, y, s, s); }
+      g.strokeStyle = it.c2 || it.c; g.lineWidth = s / 5;
+      for (let k = -s; k < 2 * s; k += s / 2.5) { g.beginPath(); g.moveTo(x + k, y + s); g.lineTo(x + k + s, y); g.stroke(); }
+      g.restore(); g.save(); g.strokeStyle = it.t === 'event' ? it.c : 'rgba(0,0,0,.35)'; g.lineWidth = Math.max(1, s / 8); g.strokeRect(x, y, s, s);
+    } else if (it.t === 'line') { g.strokeStyle = '#AA288C'; g.lineWidth = s / 4; g.setLineDash([s / 3, s / 4]); g.beginPath(); g.moveTo(x, y + s / 2); g.lineTo(x + s * 1.4, y + s / 2); g.stroke(); }
+    else if (it.t === 'note') { /* text only */ }
+    else drawPoint(g, it.p, x + s / 2, y + s / 2, s / 11);
+    g.restore();
+  }
+  function drawPoint(g, p, x, y, u) {
+    g.save(); g.lineWidth = 1.4 * u;
+    if (p.kind === 'pdot' || p.kind === 'cdot') { g.beginPath(); g.arc(x, y, 4.5 * u, 0, Math.PI * 2); g.fillStyle = p.col; g.fill(); g.strokeStyle = p.kind === 'pdot' ? '#1D2A2D' : '#FFFFFF'; g.stroke(); if (p.kind === 'cdot') { g.beginPath(); g.arc(x, y, 5.6 * u, 0, Math.PI * 2); g.strokeStyle = 'rgba(30,30,30,.6)'; g.lineWidth = u; g.stroke(); } }
+    else if (p.kind === 'evm') { g.beginPath(); g.arc(x, y, 4.5 * u, 0, Math.PI * 2); g.fillStyle = '#F7F9F8'; g.fill(); g.lineWidth = 3 * u; g.strokeStyle = '#A11D1D'; g.stroke(); }
+    else {
+      const k = p.seat, s = (k === 'pope' ? 7.5 : k === 'primate' ? 4.5 : 6) * u; g.fillStyle = k === 'eastern' ? '#fff' : p.col; g.strokeStyle = k === 'eastern' ? p.col : '#fff'; g.lineWidth = (k === 'eastern' ? 3 : 1.5) * u;
+      g.beginPath();
+      if (k === 'pope') { g.moveTo(x, y - s * 1.3); g.lineTo(x + s * 1.3, y); g.lineTo(x, y + s * 1.3); g.lineTo(x - s * 1.3, y); g.closePath(); }
+      else if (k === 'primate' || k === 'eastern') g.arc(x, y, s, 0, Math.PI * 2);
+      else if (k === 'evangelical') { g.arc(x, y - s * 0.3, s * 0.85, Math.PI * 0.85, Math.PI * 0.15); g.lineTo(x, y + s * 1.05); g.closePath(); }
+      else g.rect(x - s, y - s, 2 * s, 2 * s);
+      g.fill(); g.stroke(); if (k !== 'eastern') { g.strokeStyle = 'rgba(0,0,0,.55)'; g.lineWidth = u; g.stroke(); }
+    }
+    g.restore();
+  }
+  function legendItems(rect) {
+    const [rx, ry, rw, rh] = rect; const seen = new Set();
+    const x0 = Math.floor(rx / 2), y0 = Math.floor(ry / 2), x1 = Math.ceil((rx + rw) / 2), y1 = Math.ceil((ry + rh) / 2);
+    const st = Math.max(1, Math.floor(Math.sqrt(((x1 - x0) * (y1 - y0)) / 400000)));
+    for (let y = y0; y < y1; y += st) for (let x = x0; x < x1; x += st) { const v = idx.ids[y * idx.w + x]; if (v) seen.add(v - 1); }
+    const inView = (x, y) => x >= rx && y >= ry && x <= rx + rw && y <= ry + rh;
+    const items = []; const pts = points().filter((p) => inView(p.x, p.y));
+    if (state.mode === 'pol') {
+      const area = new Map(); seen.forEach((p) => { const o = D.owner[p]; if (o >= 0) area.set(o, (area.get(o) || 0) + 1); });
+      if ([...area.keys()].some((o) => D.pols[o].h)) items.push({ t: 'line', l: 'Holy Roman Empire' });
+      if (pts.some((p) => p.kind === 'pdot')) items.push({ t: 'pt', p: { kind: 'pdot', col: '#8A8A8A' }, l: 'Free city or enclave' });
+      const states = [...area.entries()].sort((a, b) => b[1] - a[1]).map(([o]) => D.pols[o]);
+      if (states.length <= 28) states.forEach((p) => items.push({ t: 'fill', c: p.c, l: p.s }));
+      else items.push({ t: 'note', l: `${states.length} states, named on the map` });
+    } else if (state.mode === 'conf') {
+      const cnt = new Map(); let mi = false; seen.forEach((p) => { cnt.set(D.conf[p][0], (cnt.get(D.conf[p][0]) || 0) + 1); if (D.conf[p][1] >= 0) mi = true; });
+      [...cnt.entries()].sort((a, b) => b[1] - a[1]).forEach(([c]) => items.push({ t: 'fill', c: D.cats[c][2], l: D.cats[c][1] }));
+      if (mi) items.push({ t: 'stripe', c: '#E3C25B', c2: '#6E9BC9', l: 'Stripes: a minority of 25% or more' });
+      const kinds = new Map(); pts.filter((p) => p.kind === 'cdot').forEach((p) => kinds.set(p.tip, p));
+      kinds.forEach((p, t) => items.push({ t: 'pt', p, l: t }));
+    } else {
+      const cnt = new Map(); let mi = false; seen.forEach((p) => { const j = D.jur[p][0]; if (j >= 0) cnt.set(j, (cnt.get(j) || 0) + 1); if (D.jur[p][1] >= 0) mi = true; });
+      [...cnt.entries()].sort((a, b) => b[1] - a[1]).forEach(([j]) => items.push({ t: 'fill', c: D.jurs[j][2], l: D.jurs[j][1] }));
+      if (mi) items.push({ t: 'stripe', c: '#E6D08A', c2: '#9DBDDE', l: 'Stripes: a second church hierarchy' });
+      const kinds = new Map(); pts.filter((p) => p.kind === 'seat').forEach((p) => kinds.set(p.seat, p));
+      kinds.forEach((p) => items.push({ t: 'pt', p, l: D.seatkinds[p.seat][0] }));
+    }
+    if (D.event && state.event && !state.compare) {
+      const zc = new Set(); seen.forEach((p) => { const z = D.event.zone[p]; if (z >= 0) zc.add(D.event.zcat[z]); });
+      [...zc].sort().forEach((i) => items.push({ t: 'event', c: D.event.cats[i][2], l: D.event.cats.length > 1 ? D.event.cats[i][1] : D.event.name }));
+      if (pts.some((p) => p.kind === 'evm')) items.push({ t: 'pt', p: { kind: 'evm' }, l: 'Battle, siege or event' });
+    }
+    if (hlActive) items.push({ t: 'note', l: state.changes ? `Faded: unchanged since ${prevYear()}` : 'Faded: outside the selection' });
+    return items;
+  }
+  async function renderExport(whole, mult, opt) {
+    if (document.fonts) await Promise.all([`20px ${FONT_DISPLAY}`, `italic 20px ${FONT_NOTE}`, `20px ${FONT_UI}`].map((f) => document.fonts.load(f).catch(() => {})));
+    const rect = whole ? [0, 0, W, H] : viewRect(); const [rx, ry, rw, rh] = rect;
+    const Z = whole ? 1 : Math.pow(2, map.getZoom()); const u = mult; const f = Z * u;
+    const cw = Math.round(rw * f), ch = Math.round(rh * f);
+    if (cw < 10 || ch < 10) throw new Error('empty');
+    if (cw > 16384 || ch > 16384 || cw * ch > 60e6) throw new Error('too_big');
+    const c = document.createElement('canvas'); c.width = cw; c.height = ch;
+    const g = c.getContext('2d'); if (!g) throw new Error('too_big');
+    g.fillStyle = '#C8D8DB'; g.fillRect(0, 0, cw, ch);
+    if (g.getImageData(0, 0, 1, 1).data[3] === 0) throw new Error('too_big');
+    g.imageSmoothingEnabled = f < 1;
+    const draw = (img) => { const k = img.naturalWidth / W; g.drawImage(img, rx * k, ry * k, rw * k, rh * k, 0, 0, cw, ch); };
+    const bImg = base.getElement(); await loaded(bImg); draw(bImg);
+    if (state.compare) {
+      const cImg = cmp.getElement(); await loaded(cImg);
+      const cut = map.containerPointToLatLng([state.divX * map.getSize().x, 0]).lng;
+      const cx = Math.max(0, Math.min(cw, (cut - rx) * f));
+      g.save(); g.beginPath(); g.rect(cx, 0, cw - cx, ch); g.clip(); draw(cImg); g.restore();
+      g.fillStyle = '#F7F9F8'; g.fillRect(cx - 1.5 * u, 0, 3 * u, ch);
+    }
+    if (D.event && state.event && !state.compare) { const eImg = ev.getElement(); await loaded(eImg); draw(eImg); }
+    if (hlActive) { const hImg = hl.getElement(); await loaded(hImg); g.imageSmoothingEnabled = false; draw(hImg); }
+    g.imageSmoothingEnabled = true;
+    const proj = (x, y) => [(x - rx) * f, (y - ry) * f];
+    if (!state.compare) for (const p of points()) { const [px, py] = proj(p.x, p.y); if (px > -10 && py > -10 && px < cw + 10 && py < ch + 10) drawPoint(g, p, px, py, u); }
+    const lay = layout(Z, proj, cw, ch, u);
+    g.lineJoin = 'round'; g.textBaseline = 'middle';
+    const halo = (t, x, y, font, size, fill, align) => { g.font = font; g.textAlign = align; g.strokeStyle = 'rgba(250,252,251,0.92)'; g.lineWidth = Math.max(2, size * 0.3); g.strokeText(t, x, y); g.fillStyle = fill; g.fillText(t, x, y); };
+    for (const t of lay.towns) { g.beginPath(); g.arc(t.x, t.y, 2 * u, 0, Math.PI * 2); g.fillStyle = '#2A3438'; g.fill(); halo(t.text, t.x + 6 * u, t.y, `${t.size}px ${FONT_UI}`, t.size, '#33434A', 'left'); }
+    for (const t of lay.points) halo(t.text, t.x + 9 * u, t.y, `italic ${t.size}px ${FONT_NOTE}`, t.size, '#1B2427', 'left');
+    if ('letterSpacing' in g) g.letterSpacing = '0px';
+    for (const t of lay.states) { if ('letterSpacing' in g) g.letterSpacing = `${(t.size * 0.06).toFixed(2)}px`; halo(t.text, t.x, t.y, state.mode === 'pol' ? `${t.size}px ${FONT_DISPLAY}` : `italic ${t.size}px ${FONT_NOTE}`, t.size, '#1B2427', 'center'); }
+    if ('letterSpacing' in g) g.letterSpacing = '0px';
+    const U = whole ? u * 2.4 : u;                 // title, key and scale bar are larger on whole-map exports
+    const box = (x, y, w, h) => { g.save(); g.shadowColor = 'rgba(0,0,0,.18)'; g.shadowBlur = 8 * U; g.fillStyle = 'rgba(248,246,239,0.95)'; g.fillRect(x, y, w, h); g.restore(); g.strokeStyle = '#7D725C'; g.lineWidth = 1.5 * U; g.strokeRect(x, y, w, h); g.lineWidth = 0.75 * U; g.strokeRect(x + 4 * U, y + 4 * U, w - 8 * U, h - 8 * U); };
+    const m = 16 * U;
+    if (opt.title) {
+      const l1 = 'ALTERNATE REFORMATION ATLAS', l3 = LAYER_NAME[state.mode] + (state.compare ? ` · left ${state.shown}, right ${state.compare}` : state.changes ? ` · changes since ${prevYear()}` : '');
+      const l4 = D.event && state.event && !state.compare ? D.event.name : 'An alternate history';
+      g.font = `${12 * U}px ${FONT_UI}`; const w1 = g.measureText(l1).width * 1.12; g.font = `${46 * U}px ${FONT_DISPLAY}`; const w2 = g.measureText(String(state.shown)).width;
+      g.font = `italic ${16 * U}px ${FONT_NOTE}`; const w3 = Math.max(g.measureText(l3).width, g.measureText(l4).width);
+      const bw = Math.max(w1, w2, w3) + 34 * U, bh = 128 * U; box(m, m, bw, bh);
+      g.textAlign = 'left'; g.textBaseline = 'alphabetic'; g.fillStyle = '#5A5240';
+      if ('letterSpacing' in g) g.letterSpacing = `${1.5 * U}px`; g.font = `500 ${12 * U}px ${FONT_UI}`; g.fillText(l1, m + 17 * U, m + 28 * U); if ('letterSpacing' in g) g.letterSpacing = '0px';
+      g.fillStyle = '#1B2427'; g.font = `${46 * U}px ${FONT_DISPLAY}`; g.fillText(String(state.shown), m + 15 * U, m + 72 * U);
+      g.font = `italic ${16 * U}px ${FONT_NOTE}`; g.fillStyle = '#2E3A3D'; g.fillText(l3, m + 17 * U, m + 96 * U); g.fillStyle = '#5A5240'; g.fillText(l4, m + 17 * U, m + 116 * U);
+    }
+    if (opt.legend) {
+      const items = legendItems(rect); const rowH = 19 * U, sw0 = 13 * U, fs = 13 * U, head = 30 * U;
+      g.font = `${fs}px ${FONT_UI}`;
+      const maxRows = Math.max(4, Math.floor((ch * 0.55 - head) / rowH)); const ncol = Math.max(1, Math.ceil(items.length / maxRows)); const rows = Math.ceil(items.length / ncol);
+      const colW = Math.min(cw * 0.42 / ncol, Math.max(...items.map((it) => g.measureText(it.l).width)) + sw0 + 26 * U);
+      const bw = colW * ncol + 22 * U, bh = head + rows * rowH + 14 * U; const bx = m, by = ch - m - bh;
+      if (items.length) {
+        box(bx, by, bw, bh); g.fillStyle = '#1B2427'; g.textAlign = 'left'; g.textBaseline = 'alphabetic'; g.font = `${18 * U}px ${FONT_DISPLAY}`; g.fillText('Key', bx + 14 * U, by + 24 * U);
+        g.font = `${fs}px ${FONT_UI}`; g.textBaseline = 'middle';
+        items.forEach((it, i) => {
+          const col = Math.floor(i / rows), row = i % rows; const x = bx + 12 * U + col * colW, y = by + head + row * rowH;
+          if (it.t !== 'note') drawSwatch(g, it, x, y, sw0);
+          g.fillStyle = it.t === 'note' ? '#5A5240' : '#1B2427'; g.font = `${it.t === 'note' ? 'italic ' : ''}${fs}px ${it.t === 'note' ? FONT_NOTE : FONT_UI}`;
+          let t = it.l; while (t.length > 4 && g.measureText(t).width > colW - sw0 - 18 * U) t = t.slice(0, -2);
+          if (t !== it.l) t = t.trim() + '…';
+          g.fillText(t, x + (it.t === 'note' ? 0 : sw0 + 8 * U), y + sw0 / 2);
+        });
+      }
+    }
+    if (opt.scale) {
+      const lat = unitLat(ry + rh / 2); const kmPx = kmPerUnit(lat) / f; const km = nice(150 * U * kmPx); const len = km / kmPx; const miles = km / 7.42;
+      const bw = Math.max(len, 150 * U) + 30 * U, bh = 54 * U, bx = cw - m - bw, by = ch - m - bh; box(bx, by, bw, bh);
+      const x0 = bx + 15 * U, yb = by + 32 * U; g.fillStyle = '#1B2427'; g.strokeStyle = '#1B2427'; g.lineWidth = 1.5 * U;
+      for (let k = 0; k < 4; k++) { g.fillStyle = k % 2 ? '#F8F6EF' : '#1B2427'; g.fillRect(x0 + (len / 4) * k, yb, len / 4, 5 * U); }
+      g.strokeRect(x0, yb, len, 5 * U);
+      g.fillStyle = '#1B2427'; g.textAlign = 'left'; g.textBaseline = 'alphabetic'; g.font = `${12 * U}px ${FONT_UI}`;
+      g.fillText(`${km.toLocaleString()} km · ${miles >= 10 ? Math.round(miles) : miles.toFixed(1)} German miles`, x0, by + 24 * U);
+      g.fillStyle = '#5A5240'; g.font = `italic ${11 * U}px ${FONT_NOTE}`; g.fillText(`east–west scale at ${Math.round(lat)}° N`, x0, by + 49 * U);
+    }
+    return c;
+  }
+  let lastBlob = null;
+  const fileName = () => `reformation-atlas-${state.shown}-${{ pol: 'political', conf: 'confession', jur: 'jurisdiction' }[state.mode]}${state.compare ? '-vs-' + state.compare : ''}.png`;
+  $('exGo').onclick = async () => {
+    const whole = $('exWhole').checked, mult = $('exS2').checked ? 2 : 1;
+    $('exGo').disabled = true; $('exStatus').textContent = 'Drawing the map…';
+    try {
+      const canvas = await renderExport(whole, mult, { title: $('exTitle').checked, legend: $('exLegend').checked, scale: $('exScale').checked });
+      lastBlob = await new Promise((res, rej) => canvas.toBlob((b) => b ? res(b) : rej(new Error('too_big')), 'image/png'));
+      $('exPreview').src = URL.createObjectURL(lastBlob); $('exPreview').hidden = false;
+      const dl = await dlPromise;
+      $('exGo').hidden = true; $('exSave').hidden = !dl; $('exCopy').hidden = !(navigator.clipboard && navigator.clipboard.write && window.ClipboardItem);
+      $('exStatus').textContent = `${fmt(canvas.width)} × ${fmt(canvas.height)} pixels, ${(lastBlob.size / 1048576).toFixed(1)} MB.` + (dl ? '' : ' Right-click or long-press the preview to save it.');
+    } catch (e) {
+      $('exStatus').textContent = e.message === 'too_big' ? 'That size is too large for this device. Try Standard, or export the current view instead.' : e.message === 'empty' ? 'The current view shows no part of the map. Pan back to the map and try again.' : 'The image could not be drawn. Try again, or choose a smaller size.';
+    } finally { $('exGo').disabled = false; }
+  };
+  $('exSave').onclick = async () => {
+    const dl = await dlPromise; if (!dl || !lastBlob) return;
+    try { await dl.save({ filename: fileName(), data: lastBlob }); $('exStatus').textContent = 'Saved.'; }
+    catch (e) {
+      const code = e && e.code;
+      $('exStatus').textContent = code === 'declined' ? 'Save cancelled.' : code === 'rate_limited' ? 'A save prompt is already open. Finish it, then try again.'
+        : 'Saving is not available here. Right-click or long-press the preview to save it.';
+    }
+  };
+  $('exCopy').onclick = () => {
+    if (!lastBlob) return;
+    navigator.clipboard.write([new ClipboardItem({ 'image/png': lastBlob })])
+      .then(() => { $('exStatus').textContent = 'Copied to the clipboard.'; })
+      .catch(() => { $('exStatus').textContent = 'Copying images is not allowed here. Use Save PNG, or right-click the preview.'; });
+  };
+
+  // ---------- keyboard
+  document.addEventListener('keydown', (e) => {
+    if (e.metaKey || e.ctrlKey || e.altKey) return;
+    const t = e.target; const typing = t && (t.tagName === 'INPUT' || t.tagName === 'SELECT' || t.tagName === 'TEXTAREA');
+    if (e.key === 'Escape') { if (!$('exportDlg').hidden) closeDlg('exportDlg'); else if (!$('keysDlg').hidden) closeDlg('keysDlg'); else if (state.sel) select(null); else if (state.changes) setChanges(false); else if (state.compare) setCompare(null); return; }
+    if (typing || !$('exportDlg').hidden || !$('keysDlg').hidden) return;
+    const k = e.key.toLowerCase(); let done = true;
+    if (e.key === 'ArrowLeft') step(-1); else if (e.key === 'ArrowRight') step(1);
+    else if (k === '1') setMode('pol'); else if (k === '2') setMode('conf'); else if (k === '3') setMode('jur');
+    else if (k === '/') { searchIn.focus(); searchIn.select(); }
+    else if (k === 'c') { if (prevYear()) setChanges(!state.changes); }
+    else if (k === 'v') $('toolCompare').click();
+    else if (k === 's') openExport();
+    else if (k === 'f') toggleFull();
+    else if (k === 'l') { $('tLabels').click(); }
+    else if (k === 'd') { $('tDots').click(); }
+    else if (k === 'e') { if (D.event) $('tEvent').click(); }
+    else if (k === '?') openDlg('keysDlg');
+    else done = false;
+    if (done) e.preventDefault();
+  });
+
+  renderTimeline(); await showYear(startYear); setMode(state.mode);
+  if (document.fonts) document.fonts.ready.then(placeLabels);
+})();
+</script>
+
+</body></html>
