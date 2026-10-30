@@ -16,4 +16,7 @@ Everyone in it is a real person, sometimes in a role history did not give them. 
 
 ## Known gaps
 
-The atlas images and notes were made before the Schmalkaldic rout, the Lambeth formula and the later decisions, and do not yet show them.
+The atlas images, boundaries and snapshot JSON predate the revised first-century lore. In particular, they do not yet show the prolonged Schmalkaldic War (1546–49), the failed Princes’ Revolt (1552), Augustus’s Gnesio turn in Saxony, or the French foothold at Turin confirmed in 1559. Consult the compendium entries for the revised chronology; the atlas is not evidence for the older outcomes.
+
+The first-century revisions are collected in `source/c_first_century.py`, loaded after the earlier decisions. Exact Piedmontese boundaries, the first joint ordaining ministers at Lambeth, and Saxony’s transition to its later recorded Cranmerian alignment remain open questions.
+

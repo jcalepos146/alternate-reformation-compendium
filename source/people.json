@@ -685,7 +685,7 @@
   "wiki": "Maurice, Elector of Saxony",
   "role": "monarch",
   "kind": "monarch",
-  "when": "Elector 1547–53"
+  "when": "Elector 1547–52"
  },
  {
   "id": "john-george-i",
@@ -2262,5 +2262,13 @@
   "role": "scholar",
   "kind": "person",
   "when": "1614–74"
+ },
+ {
+  "id": "augustus-of-saxony",
+  "name": "Augustus, Elector of Saxony",
+  "wiki": "Augustus, Elector of Saxony",
+  "role": "monarch",
+  "kind": "monarch",
+  "when": "Elector 1552–86"
  }
 ]

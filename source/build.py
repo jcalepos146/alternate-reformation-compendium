@@ -3,7 +3,7 @@ BASE = os.path.dirname(os.path.abspath(__file__))
 sys.path.insert(0, BASE)
 from common import ENT
 
-for m in ("c_faiths", "c_people", "c_monarchs", "c_factions", "c_battles", "c_docs", "c_people_a", "c_people_b", "c_people_c", "c_monarchs_b", "c_battles_b", "c_docs_b", "c_people_d", "c_decisions", "c_library"):
+for m in ("c_faiths", "c_people", "c_monarchs", "c_factions", "c_battles", "c_docs", "c_people_a", "c_people_b", "c_people_c", "c_monarchs_b", "c_battles_b", "c_docs_b", "c_people_d", "c_decisions", "c_first_century", "c_library"):
     importlib.import_module(m)
 
 FAMILIES = [
@@ -90,3 +90,4 @@ out = tpl.replace("/*DATA*/", payload)
 open(args.out, "w", encoding="utf-8").write(out)
 from collections import Counter
 print("ok", len(ENT), dict(Counter(e["t"] for e in ENT)), dict(Counter(e["st"] for e in ENT)), len(out) // 1024, "KB")
+
