@@ -41,11 +41,12 @@ DETAIL["gnesio-catholic"] = dict(
 DETAIL["cranmerian"] = dict(
   beliefs=[
     ["The Lambeth formula", "Christ is spiritually present in the Supper through the Spirit and the consecration. The presence does not depend on the faith of the receiver, but the benefit does ([[lambeth-formula]]). This rejects transubstantiation, the Lutheran bodily presence and pure receptionism. The classical exposition is John Cosin's ([[john-cosin]])."],
+    ["Episcopacy and ministry", "The [[lambeth-constitution]] treats episcopacy as providential and ultimately prudential in its apostolic development. Existing ministers are recognized; new synodal bishops receive joint English–Lutheran ordination. Cranmer retains the inherited rite for polemical continuity while rejecting the Roman theology of the Mass ([[unchanged-ordinal]])."],
     ["Justification", "By faith alone, in the evangelical sense of the Augsburg Confession ([[augsburg-confession]]) as read by Melanchthon."],
     ["Liturgy", "The Book of Common Prayer ([[book-of-common-prayer]]) in English, and vernacular liturgies on its pattern elsewhere."],
-    ["The formula and the hardliners", "The formula is why the stricter Calvinists will not join: they hold that the presence is given only in the believing reception ([[hardline-reformed]])."]],
+    ["The formula and the hardliners", "The formula is one reason the stricter Calvinists will not join; they also dispute the [[lambeth-constitution]] and [[unchanged-ordinal]]. In the Eucharist, they hold that the presence is given only in the believing reception ([[hardline-reformed]])."]],
   structure=["Two systems overlap. Bishops govern by diocese. Archpresbyters govern regions as the analogue of dioceses. A bishop and an archpresbyter are counterparts, and each can stand in the other's place at councils.",
-             "Presbyterian consistories and synods sit under both and often overlap with them, so the lines of authority are tangled. It works by custom rather than by design: the continental churches brought superintendents and consistories ([[johannes-bugenhagen]]) and England brought bishops. Canterbury is the senior see, but it does not rule the Communion."],
+             "Presbyterian consistories and synods sit under both and often overlap with them, so the lines of authority are tangled. Its shared constitution comes from Lambeth ([[lambeth-constitution]]): existing ministers are recognized, while new bishops representing synods receive joint ordination from an English bishop and a Lutheran superintendent. Continental churches retain superintendents and consistories ([[johannes-bugenhagen]]) and England brought bishops. Canterbury is the senior see, but it does not rule the Communion."],
   theologians=["cranmer", "melanchthon", "bucer", "vermigli", "a-lasco", "bullinger", "hemmingsen", "brenz", "john-jewel", "richard-hooker", "john-cosin", "zacharias-ursinus", "johannes-bugenhagen", "matthew-parker"])
 
 DETAIL["hardline-reformed"] = dict(
@@ -53,7 +54,7 @@ DETAIL["hardline-reformed"] = dict(
     ["Eucharist", "The presence is spiritual and given only to the believing receiver. The Lambeth formula's presence through consecration alone ([[lambeth-formula]]) seems to them to come too close to the Roman and Lutheran errors."],
     ["Predestination", "Double predestination in the Genevan sense, which later becomes the issue at Dort ([[synod-of-dort]])."],
     ["Worship", "Scripture alone regulates worship. Plain churches, no ceremonies without a command."]],
-  structure=["Presbyterian: ministers, elders and deacons; consistory, presbytery, provincial and national assembly. No bishops. The Geneva Company of Pastors and the Scottish General Assembly are the model. Their parity with the Communion's archpresbyters is the point of contact, and the source of confusion, with the Cranmerian churches."],
+  structure=["Presbyterian: ministers, elders and deacons; consistory, presbytery, provincial and national assembly. No bishops. The Geneva Company of Pastors and the Scottish General Assembly are the model. The Communion's jointly ordained synodal bishops and retained Ordinal are additional points of dispute ([[lambeth-constitution]], [[unchanged-ordinal]])."],
   theologians=["calvin", "beza", "knox", "andrew-melville", "gomarus", "jeanne-d-albret"])
 
 DETAIL["byzantinists"] = dict(
@@ -162,3 +163,4 @@ DETAIL["traditional-religions"] = dict(
   beliefs=[["Diverse practice", "Ancestral religion, shamanism and local cults, mapped as one category."]],
   structure=["Local authorities: lineage elders, chiefs, shamans. Missionary Christian and Muslim communities appear as dots on the map."],
   theologians=[])
+
