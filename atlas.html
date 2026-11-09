@@ -1,4 +1,4 @@
-<!doctype html><html><head><meta charset=utf8><meta name=viewport content="width=device-width,initial-scale=1,viewport-fit=cover"><style>:root{color-scheme:light;box-sizing:border-box;padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px)}html{scroll-padding-top:env(safe-area-inset-top,0px)}body{margin:0;padding:0;font:14px -apple-system,BlinkMacSystemFont,sans-serif;background:#fff;color:#000}img{max-width:100%}[hidden]:not([hidden=until-found i]){display:none!important}</style></head><body>
+<!doctype html><html lang="en"><head><meta charset=utf-8><meta name=viewport content="width=device-width,initial-scale=1,viewport-fit=cover"><style>:root{color-scheme:light;box-sizing:border-box;padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px)}html{scroll-padding-top:env(safe-area-inset-top,0px)}body{margin:0;padding:0;font:14px -apple-system,BlinkMacSystemFont,sans-serif;background:#fff;color:#000}img{max-width:100%}[hidden]:not([hidden=until-found i]){display:none!important}</style><meta name="description" content="An interactive map of an alternate Reformation, with political, confessional and church-jurisdiction snapshots of Europe and the Atlantic from 1500 to 1635."><link rel="icon" href="favicon.svg" type="image/svg+xml"><meta property="og:type" content="website"><meta property="og:site_name" content="Alternate Reformation Compendium"><meta property="og:title" content="Alternate Reformation Atlas"><meta property="og:description" content="An interactive map of an alternate Reformation, with political, confessional and church-jurisdiction snapshots of Europe and the Atlantic from 1500 to 1635."><meta property="og:url" content="https://jcalepos146.github.io/alternate-reformation-compendium/atlas.html"><meta property="og:image" content="https://jcalepos146.github.io/alternate-reformation-compendium/assets/preview.jpg"><meta property="og:image:width" content="1200"><meta property="og:image:height" content="630"><meta name="twitter:card" content="summary_large_image"></head><body>
 <title>Alternate Reformation Atlas</title>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -891,11 +891,11 @@ button:focus-visible, input:focus-visible { outline: 2px solid var(--accent); ou
   };
   const dlPromise = (window.claude && typeof window.claude.use === 'function') ? window.claude.use('downloads').catch(() => null) : Promise.resolve(null);
 
-  const atlas = await (await fetch('atlas.json')).json();
+  const atlas = await (await fetch('maps/atlas.json')).json();
   const READY = atlas.snapshots.filter((s) => s.ready).map((s) => s.year);
   const cache = {};
-  const loadYear = (y) => cache[y] || (cache[y] = fetch(`data_${y}.json`).then((r) => r.json()));
-  const places = await fetch('places.json').then((r) => r.json()).catch(() => []);
+  const loadYear = (y) => cache[y] || (cache[y] = fetch(`maps/data_${y}.json`).then((r) => r.json()));
+  const places = await fetch('maps/places.json').then((r) => r.json()).catch(() => []);
   const saved = store.get() || {};
   const hashM = /^#(\d{4})(?:-(conf|jur|pol))?$/.exec(location.hash || '');
   if (hashM) { const hy = +hashM[1]; saved.year = READY.reduce((b, y) => (y <= hy ? y : b), READY[0]); if (hashM[2]) saved.mode = hashM[2]; saved.view = null; }
@@ -922,14 +922,14 @@ button:focus-visible, input:focus-visible { outline: 2px solid var(--accent); ou
   map.setMaxBounds(bounds.pad(0.15));
   if (saved.view && isFinite(saved.view[0])) map.setView(L.latLng(saved.view[0], saved.view[1]), saved.view[2]);
   else map.fitBounds(HOME);
-  const base = L.imageOverlay(`${IMG[state.mode]}_${startYear}.png`, bounds, { className: 'mapimg' }).addTo(map);
+  const base = L.imageOverlay(`maps/${IMG[state.mode]}_${startYear}.png`, bounds, { className: 'mapimg' }).addTo(map);
   const cmp = L.imageOverlay(BLANK, bounds, { className: 'mapimg', interactive: false }).addTo(map);
   const ev = L.imageOverlay(BLANK, bounds, { className: 'mapimg', interactive: false }).addTo(map);
   const hl = L.imageOverlay(BLANK, bounds, { className: 'mapimg', interactive: false }).addTo(map);
   let hlActive = false;
   const crisp = () => map.getContainer().classList.toggle('crisp', map.getZoom() >= 0.5);
   map.on('zoomend', crisp); crisp();
-  const setBase = () => { base.setUrl(`${IMG[state.mode]}_${state.shown}.png`); if (state.compare) cmp.setUrl(`${IMG[state.mode]}_${state.compare}.png`); };
+  const setBase = () => { base.setUrl(`maps/${IMG[state.mode]}_${state.shown}.png`); if (state.compare) cmp.setUrl(`maps/${IMG[state.mode]}_${state.compare}.png`); };
   const persist = () => { const c = map.getCenter(); store.set({ year: state.shown, mode: state.mode, labels: state.labels, dots: state.dots, event: state.event, view: [c.lat, c.lng, map.getZoom()] }); };
   map.on('moveend', persist);
 
@@ -941,7 +941,7 @@ button:focus-visible, input:focus-visible { outline: 2px solid var(--accent); ou
       const px = g.getImageData(0, 0, im.width, im.height).data; const ids = new Uint16Array(im.width * im.height);
       for (let i = 0, j = 0; i < ids.length; i++, j += 4) ids[i] = px[j] * 256 + px[j + 1];
       res({ w: im.width, h: im.height, ids });
-    }; im.src = 'index.png';
+    }; im.src = 'maps/index.png';
   });
   function idAt(x, y) {
     x = Math.floor(x); y = Math.floor(y);
@@ -1000,7 +1000,7 @@ button:focus-visible, input:focus-visible { outline: 2px solid var(--accent); ou
   function syncPoints() {
     pointLayer.clearLayers();
     $('dotsLabel').textContent = { pol: 'Cities and enclaves', conf: 'Congregations', jur: 'Church seats' }[state.mode];
-    ev.setUrl(D.event && state.event ? D.event.img : BLANK);
+    ev.setUrl(D.event && state.event ? 'maps/' + D.event.img : BLANK);
     if (state.compare) return;
     for (const p of points()) {
       let m;

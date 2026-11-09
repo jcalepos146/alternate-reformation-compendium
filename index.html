@@ -1,4 +1,19 @@
+<!doctype html>
+<html lang="en">
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
 <title>Alternate Reformation Compendium</title>
+<meta name="description" content="An encyclopedia and atlas for an alternate history in which Zwingli dies at Marignano in 1515 and the Reformation runs a different course, 1500–1789.">
+<link rel="icon" href="favicon.svg" type="image/svg+xml">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="Alternate Reformation Compendium">
+<meta property="og:title" content="Alternate Reformation Compendium">
+<meta property="og:description" content="An encyclopedia and atlas for an alternate history in which Zwingli dies at Marignano in 1515 and the Reformation runs a different course, 1500–1789.">
+<meta property="og:url" content="https://jcalepos146.github.io/alternate-reformation-compendium/">
+<meta property="og:image" content="https://jcalepos146.github.io/alternate-reformation-compendium/assets/preview.jpg">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta name="twitter:card" content="summary_large_image">
 <meta name="claude:viewport-fit-sides" content="cover">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -237,7 +252,7 @@ img.portrait { display: block; width: 100%; max-height: 360px; object-fit: conta
     return '<div class="eyebrow">Companion to the map of 1500–1789</div><h1>Alternate Reformation Compendium</h1>' +
       '<p class="lede">An encyclopedia of a world in which Zwingli dies at Marignano in 1515 and the Reformation reorders itself: a Gnesio-Catholic church that keeps seven sacraments, a Gallican France under the Primate of Lyon, a Russian church with a Lutheran-flavoured catechism, and an English king who leads the reformers.</p>' +
       '<div class="stat">' + counts + '</div>' +
-      '<div class="body"><p>Each faith has a page, with its leaders, rulers, rivals and open questions. Leaders, monarchs, factions, battles and documents each have their own entries, all cross-linked. Every entry carries a status mark: <b>canon</b> if the map project settled it, <b>historical</b> if it is carried over from our history, and <b>proposed</b> if it is new here and waiting for your decision. The map itself is the <a href="https://claude.ai/code/artifact/71fe4da5-2d43-42d4-9ce3-f06505ce4cae">Alternate Reformation Atlas</a>.</p></div>' +
+      '<div class="body"><p>Each faith has a page, with its leaders, rulers, rivals and open questions. Leaders, monarchs, factions, battles and documents each have their own entries, all cross-linked. Every entry carries a status mark: <b>canon</b> if the map project settled it, <b>historical</b> if it is carried over from our history, and <b>proposed</b> if it is new here and waiting for your decision. The map itself is the <a href="atlas.html">Alternate Reformation Atlas</a>.</p></div>' +
       '<div class="sec"><h2>Start with a faith</h2><div class="cards">' + feat.map(card).join('') + '</div><p><a href="#faiths">All ' + ofType('faith').length + ' faiths</a></p></div>' +
       '<div class="sec"><h2>The twelve forks</h2><p class="body" style="margin-bottom:6px">The points where this timeline leaves ours, in order.</p><ol class="forks">' +
       forks.map(function (e) { return '<li><span class="y">' + e.y + '</span><span><a href="#' + e.id + '"><b>' + esc(e.name) + '</b></a> ' + badge(e.st) + '<br><span style="color:var(--muted);font-size:15px">' + esc(e.sum) + '</span></span></li>'; }).join('') +
@@ -439,4 +454,3 @@ img.portrait { display: block; width: 100%; max-height: 360px; object-fit: conta
   render();
 })();
 </script>
-
